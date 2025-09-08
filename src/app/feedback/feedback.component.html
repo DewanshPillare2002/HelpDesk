@@ -1,0 +1,83 @@
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title" id="staticBackdropLabel">Feedback Form</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <form id="feedBackForm" [formGroup]="feedbackForm" (submit)="AddDataInBackend()">
+                        <div class="row text-center my-3">
+                            <h3>Give Rating</h3>
+                            <div class="col">
+                                <input type="radio" id="1" name="rating" value="very bad" class="hidden-radio"
+                                    formControlName="rating">
+                                <label for="1"><span class="emoji">😠</span></label>
+                            </div>
+                            <div class="col">
+                                <input type="radio" id="2" name="rating" value="bad" class="hidden-radio"
+                                    formControlName="rating">
+                                <label for="2"><span class="emoji">😕</span></label>
+                            </div>
+                            <div class="col">
+                                <input type="radio" id="3" name="rating" value="neutral" class="hidden-radio"
+                                    formControlName="rating">
+                                <label for="3"><span class="emoji">😐</span></label>
+                            </div>
+                            <div class="col">
+                                <input type="radio" id="4" name="rating" value="good" class="hidden-radio"
+                                    formControlName="rating">
+                                <label for="4"><span class="emoji">🙂</span></label>
+                            </div>
+                            <div class="col">
+                                <input type="radio" id="5" name="rating" value="very good" class="hidden-radio"
+                                    formControlName="rating">
+                                <label for="5"><span class="emoji">😀</span></label>
+                            </div>
+                        </div>
+                        <br><br>
+
+                        <section class="Feedback" style="max-width: 1000px; align-items: center; margin: auto;">
+                            <div class="card">
+                                <h5 class="card-header">Enter your feedback here <img src="arrow-down.svg" alt=""></h5>
+                                <div class="card-body">
+                                    <!-- <form class="d-flex"> -->
+                                    <input class="form-control me-2" type="text" name="feedback" formControlName="text"
+                                        placeholder="Please give your feedback here..." aria-label="Feedback">
+                                    <button class="btn btn-outline-success" type="submit">Send</button>
+                                    <!-- </form> -->
+                                </div>
+                            </div>
+                        </section>
+                        <br><br>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<button class="btn btn-outline-success" (click)="getDataFromService()"> Display all feedbacks</button>
+
+
+
+<table class="table table-hover table-bordered">
+    <thead>
+        <th>uid</th>
+        <th>rating</th>
+        <th>text</th>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let feedback of feedbackList">
+            <td>{{feedback.uid}}</td>
+            <td>{{feedback.rating}}</td>
+            <td>{{feedback.text}}</td>
+        </tr>
+    </tbody>
+</table>

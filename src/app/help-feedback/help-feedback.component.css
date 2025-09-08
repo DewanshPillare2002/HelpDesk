@@ -1,0 +1,155 @@
+.profile{
+    margin-left: auto;
+}
+
+.nav{
+    display: flex;
+    justify-content: center;
+}
+
+.hero.container{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.hero.nav{
+  background: linear-gradient(300deg, #007af5, #6cf5ff, #00dbf3);
+  background-size: 150% 150%;
+  animation: gradient-animation 3s ease infinite;
+  margin: 0px;
+  width: 100%;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+h1, h3{
+  margin: 0px;
+}
+/* faq box */
+/* Main container for the entire search and FAQ section */
+.search-box {
+  max-width: 1000px; /* Limits the container width to 1000 pixels. */
+  margin: auto; /* Centers the container horizontally on the page. */
+  padding: 20px; /* Adds 20px of space inside the container, around the content. */
+}
+
+/* Styling for the card that holds the search bar */
+.card.search-box {
+  background-color: #f8f9fa; /* Sets a light grey background color for the card. */
+  border-radius: 10px; /* Rounds the corners of the card. */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a shadow behind the card. */
+    /*
+      - First value (0): Horizontal offset. 0 means no horizontal shift.
+      - Second value (4px): Vertical offset. Pushes the shadow 4px down.
+      - Third value (8px): Blur radius. Makes the shadow soft and spread out.
+      - Fourth value (rgba(0, 0, 0, 0.1)): Shadow color and opacity.
+          - rgba(0, 0, 0) is black.
+          - 0.1 is the opacity (10% visible).
+    */
+  margin-bottom: 30px; /* Adds 30px of space below the card. */
+}
+
+/* Style the search input field */
+.search-box .search-box {
+  width: 100%; /* Makes the input field fill 100% of its container's width. */
+  border-radius: 25px; /* Creates a pill-shaped input field by rounding the corners. */
+  border: 1px solid #ccc; /* Sets a 1px solid, light grey border. */
+  padding: 12px 20px; /* Adds 12px of padding on top/bottom and 20px on left/right. */
+  transition: all 0.3s ease; /* Makes all property changes animate smoothly over 0.3 seconds. */
+}
+
+.search-box .search-box:focus {
+  border-color: #007bff; /* Changes the border color to blue when the input is clicked (focused). */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Adds a blue glow shadow when focused. */
+    /*
+      - First value (0): No horizontal offset.
+      - Second value (0): No vertical offset.
+      - Third value (5px): Blur radius. Creates a glow effect around the element.
+      - Fourth value (rgba(0, 123, 255, 0.5)): Blue color with 50% opacity.
+    */
+  outline: none; /* Removes the default browser outline that appears on focus. */
+}
+
+/* Style the search button */
+.search-box .btn-primary {
+  border-radius: 25px; /* Rounds the button corners to match the input field. */
+  padding: 10px 25px; /* Adds space inside the button for a larger click area. */
+  margin-left: 10px; /* Adds a 10px space to the left of the button. */
+  background-color: #007bff; /* Sets the button's background to a primary blue color. */
+  border-color: #007bff; /* Sets the button's border color to match the background. */
+  transition: background-color 0.3s ease; /* Smoothly animates the background color change. */
+}
+
+.search-box .btn-primary:hover {
+  background-color: #0056b3; /* Darkens the button's background on mouse hover. */
+  border-color: #004085; /* Darkens the button's border on mouse hover. */
+}
+
+/* General styling for the FAQ list container */
+.faq-list {
+  margin-top: 20px; /* Adds a 20px space above the FAQ list. */
+}
+
+/* Accordion item styles */
+.accordion-item {
+  border: 1px solid #dee2e6; /* Sets a light grey border around each accordion item. */
+  border-radius: 8px; /* Rounds the corners of each accordion item. */
+  margin-bottom: 10px; /* Adds a 10px space below each accordion item. */
+  overflow: hidden; /* Clips any content that extends beyond the element's rounded corners. */
+}
+
+.accordion-header {
+  background-color: #e9ecef; /* Sets a slightly darker background for the header section. */
+}
+
+/* Accordion button styles */
+.accordion-button {
+  width: 100%; /* Makes the button fill the entire width of its container. */
+  text-align: left; /* Aligns the text to the left side of the button. */
+  font-weight: 600; /* Makes the font semi-bold. */
+  color: #333; /* Sets the text color to a dark grey. */
+  padding: 15px 20px; /* Adds space inside the button for a larger clickable area. */
+  background-color: #e9ecef; /* Sets the background color of the button. */
+  border: none; /* Removes any default button borders. */
+  transition: background-color 0.2s; /* Animates the background color change over 0.2 seconds. */
+  box-shadow: none !important; /* Overrides any default box shadow to ensure a clean look. */
+}
+
+.accordion-button:not(.collapsed) {
+  color: #0056b3; /* Changes text color to a darker blue when the accordion is open. */
+  background-color: #d6e9f8; /* Changes background color when the accordion is open. */
+}
+
+.accordion-button:hover {
+  background-color: #dee2e6; /* Changes the background color on mouse hover. */
+}
+
+/* Accordion body styles */
+.accordion-body {
+  padding: 20px; /* Adds 20px of space inside the body, around the answer text. */
+  font-size: 1rem; /* Sets the font size to 1rem (16px by default). */
+  line-height: 1.6; /* Sets the spacing between lines of text for better readability. */
+  color: #555; /* Sets the text color to a lighter grey. */
+}
+
+/* Optional: a subtle border for the body section */
+.accordion-body + .accordion-body {
+  border-top: 1px solid #dee2e6; /* Adds a top border to a body element that immediately follows another. */
+}
+
+/* Add a class for search results when no match is found */
+.no-results-message {
+  text-align: center; /* Centers the "no results" message text. */
+  padding: 20px; /* Adds 20px of space around the message. */
+  color: #6c757d; /* Sets the text color to a muted grey. */
+  font-style: italic; /* Makes the text italic. */
+}

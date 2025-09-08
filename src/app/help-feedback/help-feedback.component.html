@@ -1,0 +1,177 @@
+<!-- NAVBAR -->
+<section class="navbar-expand border-bottom border-body">
+  <nav class="nav d-flex">
+    <a class="navbar logo" href="#" style="color: black;">
+      <img src="logo.png" alt="Bootstrap" width="auto" height="30px" >
+    </a>
+    <a href="#" class="nav-link contnet " style="color: black; text-align: center;">HOME</a>
+    <a href="#" class="nav-link content" style="color: black;text-align: center;">SERVICE</a>
+    <a href="#" class="nav-link content" style="color: black; text-align: center;">CONTACT US</a>
+    <a href="#" class="nav-link profile"><img src="person-circle.svg" alt="profile"></a>
+  </nav>
+</section>
+
+<!-- HERO AREA -->
+<div class="hero nav">
+  <section class="hero container" style="min-width: none; max-width: fit-content;">
+    <div class="row"
+      style="padding-top: 100px; font-size: 60px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; text-align: center;">
+      Help & Support 🎯
+    </div>
+    <div class="row">
+      <h3>Find quick answers to your queires</h3>
+    </div>
+  </section>
+</div>
+<br><br>
+
+<!-- SEARCH AREA AND FAQ SECTION -->
+
+<section class="search" style="max-width: 1000px;
+    align-items: center;
+    margin: auto;">
+  <div class="card search-box" style="border: 0px ;">
+    <div class="card-body">
+      <form class="d-flex">
+        <input type="text" [(ngModel)]="searchQuery" name="search" class="search-box"
+          placeholder="Search your Query here....">
+        <button class="btn btn-primary" (click)="onSearch()">Search</button>
+      </form>
+    </div>
+    <div class="faq-list">
+      <div *ngFor="let faq of filteredFaqs; let i = index">
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" [id]="'heading-' + i">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              [attr.data-bs-target]="'#collapse-' + i" aria-expanded="false" [attr.aria-controls]='"collapse-" + i'>
+              {{faq.question}}
+            </button>
+          </h2>
+          <div [id]="'collapse-' + i" class="accordion-collapse collapse" [attr.aria-labelledby]="'heading-' + i"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              {{faq.answer}}
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+<br><br> <br><br>
+
+<!-- **************FAQ*************** -->
+<section class="faq container">
+  <h2><b>Frequently Asked Questions</b></h2> <br>
+  <div class="accordion" id="accordionExample">
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+          aria-expanded="true" aria-controls="collapseOne">
+          Q1. How do I reset my password?
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+        data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          Go to the login page and click "Forgot Password." Enter your email address, and we'll send you a link to reset
+          your password.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+          aria-expanded="false" aria-controls="collapseTwo">
+          Q2. How do I find an available parking spot?
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+        data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          Use the app's map view to see real-time availability of all parking spots. Spots are color-coded to show their
+          status: available, occupied, or reserved.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Q3. How do I pay for parking?
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+        data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          You can pay directly through the app using a stored credit card or other supported payment methods.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFour">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          Q4. What if I need to extend my parking time?
+        </button>
+      </h2>
+      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+        data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          You can easily extend your parking session from within the app, provided the spot is still available.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFive">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+          Q5. The app isn't showing my reservation.
+        </button>
+      </h2>
+      <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+        data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          First, check your internet connection. If the issue persists, try refreshing the app. You can also contact our
+          support team with your booking details.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<br><br>
+
+<!-- FOOTER -->
+<hr class="footerline">
+<section id="footer" style="text-align: center;">
+  <div class="card-group container">
+    <div class="card row" style="background-color: transparent; border: 0cap;">
+      <div class="card-body">
+        <h5 class="card-title">Support No.</h5>
+        <p class="card-text"><strong>123456789</strong></p>
+      </div>
+
+    </div>
+    <div class="card row" style="background-color: transparent; border: 0cap;">
+      <div class="card-body">
+        <h5 class="card-title">Email Id.</h5>
+        <p class="card-text"><strong>vps.gmail.com</strong></p>
+      </div>
+
+    </div>
+    <div class="card row" style="background-color: transparent; border: 0cap;">
+      <div class="card-body">
+        <h5 class="card-title">Trademark</h5>
+        <p class="card-text"><strong>© 1990 VPS Services <br> All Rights Reserved.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>

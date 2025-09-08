@@ -1,0 +1,29 @@
+/* Hide the default radio button */
+.hidden-radio {
+  opacity: 0;
+}
+
+/* Span class */
+.emoji { 
+  font-size: 3rem; /* Make the emoji larger */
+  cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+  filter: grayscale(100%); /* Make emojis gray by default */
+  transition: all 0.2s ease-in-out; /* Add a smooth transition for effects */
+}
+
+/* Add a visual effect when the emoji is hovered over */
+.emoji:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+}
+
+/* Change the appearance when the corresponding radio button is selected */
+/* Find the <input type="radio"> that is currently checked, then find the <label> right next to it, and finally, apply these styles to the element with the class .emoji that's inside that <label> */
+input[type="radio"]:checked + label .emoji {
+  filter: grayscale(0%); /* Remove the grayscale filter */
+  transform: scale(1.2); /* Make the selected emoji even larger */
+}
+
+.footerline{
+  border: 2px solid gray;
+}
