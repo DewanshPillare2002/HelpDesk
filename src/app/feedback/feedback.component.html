@@ -6,37 +6,49 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title" id="staticBackdropLabel">Feedback Form</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h1 class="modal-title" id="staticBackdropLabel">Feedback</h1>
+                <button type="button" class="btn-close crossButton" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="container">
                     <form id="feedBackForm" [formGroup]="feedbackForm" (submit)="AddDataInBackend()">
+                        <!-- I will be doing code of ngClass here -->
+                        <div class="col">
+                            <div class="row" style="display: flex; justify-content: center;" [ngClass]="{
+                                'very-bad-bg': rating === 'very bad',
+                                'bad-bg': rating === 'bad',
+                                'neutral-bg': rating === 'neutral',
+                                'good-bg': rating === 'good',
+                                'very-good-bg': rating === 'very good'
+                            }" style="display: flex; justify-content: center;">
+                                {{emoji}}
+                            </div>
+                        </div>
                         <div class="row text-center my-3">
-                            <h3>Give Rating</h3>
+                            <h2>How would you like to <br> rate us</h2>
                             <div class="col">
                                 <input type="radio" id="1" name="rating" value="very bad" class="hidden-radio"
-                                    formControlName="rating">
+                                    formControlName="rating" (change)="showEmoji()">
                                 <label for="1"><span class="emoji">😠</span></label>
                             </div>
                             <div class="col">
                                 <input type="radio" id="2" name="rating" value="bad" class="hidden-radio"
-                                    formControlName="rating">
+                                    formControlName="rating" (change)="showEmoji()">
                                 <label for="2"><span class="emoji">😕</span></label>
                             </div>
                             <div class="col">
                                 <input type="radio" id="3" name="rating" value="neutral" class="hidden-radio"
-                                    formControlName="rating">
+                                    formControlName="rating" (change)="showEmoji()">
                                 <label for="3"><span class="emoji">😐</span></label>
                             </div>
                             <div class="col">
                                 <input type="radio" id="4" name="rating" value="good" class="hidden-radio"
-                                    formControlName="rating">
+                                    formControlName="rating" (change)="showEmoji()">
                                 <label for="4"><span class="emoji">🙂</span></label>
                             </div>
                             <div class="col">
                                 <input type="radio" id="5" name="rating" value="very good" class="hidden-radio"
-                                    formControlName="rating">
+                                    formControlName="rating" (change)="showEmoji()">
                                 <label for="5"><span class="emoji">😀</span></label>
                             </div>
                         </div>
@@ -44,14 +56,21 @@
 
                         <section class="Feedback" style="max-width: 1000px; align-items: center; margin: auto;">
                             <div class="card">
-                                <h5 class="card-header">Enter your feedback here <img src="arrow-down.svg" alt=""></h5>
+                                <h5 class="card-header">Enter your feedback here </h5>
                                 <div class="card-body">
-                                    <!-- <form class="d-flex"> -->
                                     <input class="form-control me-2" type="text" name="feedback" formControlName="text"
                                         placeholder="Please give your feedback here..." aria-label="Feedback">
-                                    <button class="btn btn-outline-success" type="submit">Send</button>
-                                    <!-- </form> -->
+
+                                    <div
+                                        *ngIf="feedbackForm.controls['text'].invalid && (feedbackForm.controls['text'].dirty || feedbackForm.controls['text'].touched)">
+                                        <div *ngIf="feedbackForm.controls['text'].errors?.['required']">
+                                            <h6>Please enter feedback</h6>
+                                        </div>
+                                    </div>
+
+                                    <button class="btn feedbackButton" type="submit">Send</button>
                                 </div>
+                                <img class="cardLogo" src="./logo2.png" alt="company logo">
                             </div>
                         </section>
                         <br><br>

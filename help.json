@@ -5,280 +5,531 @@
       "name": "Reservations",
       "question": "How do I make a reservation?",
       "answer": "You can make a reservation through the app by selecting your preferred parking facility, date, and time. You can choose to reserve a specific slot or a general spot.",
-      "tags": ["reservation", "book", "make", "how-to", "start"]
+      "tags": [
+        "reservation",
+        "book",
+        "make",
+        "how-to",
+        "start"
+      ]
     },
     {
       "id": "2",
       "name": "Reservations",
       "question": "Can I cancel a reservation?",
       "answer": "Yes, you can cancel your reservation directly from the app's 'My Reservations' section. Please refer to our cancellation policy for any associated fees.",
-      "tags": ["cancel", "reservation", "cancel-policy", "refund"]
+      "tags": [
+        "cancel",
+        "reservation",
+        "cancel-policy",
+        "refund"
+      ]
     },
     {
       "id": "3",
       "name": "Reservations",
       "question": "How far in advance can I book?",
       "answer": "You can book a reservation up to 30 days in advance.",
-      "tags": ["reservation", "book", "advance", "timing"]
+      "tags": [
+        "reservation",
+        "book",
+        "advance",
+        "timing"
+      ]
     },
     {
       "id": "4",
       "name": "Reservations",
       "question": "What if I am late for my reservation?",
       "answer": "Reservations are held for a grace period of 15 minutes. After this time, your slot may be released to another user.",
-      "tags": ["reservation", "late", "timing", "arrival"]
+      "tags": [
+        "reservation",
+        "late",
+        "timing",
+        "arrival"
+      ]
     },
     {
       "id": "5",
       "name": "Reservations",
       "question": "How do I modify my reservation details?",
       "answer": "You can modify the date, time, or vehicle on an existing reservation in the 'My Reservations' section of the app. Note that certain changes may incur a fee.",
-      "tags": ["reservation", "modify", "change", "edit"]
+      "tags": [
+        "reservation",
+        "modify",
+        "change",
+        "edit"
+      ]
     },
     {
       "id": "6",
       "name": "Reservations",
       "question": "Can I book a spot for a friend's vehicle?",
       "answer": "Yes, you can. When making a reservation, you'll have the option to enter the details of the vehicle that will be using the spot.",
-      "tags": ["reservation", "book", "friend", "guest", "vehicle"]
+      "tags": [
+        "reservation",
+        "book",
+        "friend",
+        "guest",
+        "vehicle"
+      ]
     },
     {
       "id": "7",
       "name": "Reservations",
       "question": "What is the cancellation policy?",
       "answer": "For a full refund, reservations must be canceled at least 24 hours in advance. Cancellations made within 24 hours are subject to a cancellation fee.",
-      "tags": ["cancellation", "policy", "refund", "fee"]
+      "tags": [
+        "cancellation",
+        "policy",
+        "refund",
+        "fee"
+      ]
     },
     {
       "id": "8",
       "name": "Reservations",
       "question": "Do I need to create an account to reserve?",
       "answer": "Yes, you must have a registered account to make and manage reservations.",
-      "tags": ["account", "reservation", "required"]
+      "tags": [
+        "account",
+        "reservation",
+        "required"
+      ]
     },
     {
       "id": "9",
       "name": "Reservations",
       "question": "How do I view my upcoming reservations?",
       "answer": "All your upcoming and past reservations are listed in the 'My Reservations' tab in your profile.",
-      "tags": ["view", "reservations", "upcoming", "check"]
+      "tags": [
+        "view",
+        "reservations",
+        "upcoming",
+        "check"
+      ]
     },
     {
       "id": "10",
       "name": "Reservations",
       "question": "What happens if my reservation is a no-show?",
       "answer": "If you do not show up for your reservation and do not cancel, the full amount will be charged.",
-      "tags": ["no-show", "reservation", "charge"]
+      "tags": [
+        "no-show",
+        "reservation",
+        "charge"
+      ]
     },
     {
       "id": "11",
       "name": "Payment",
       "question": "How do I pay for a reservation?",
       "answer": "You can pay for your reservation directly through the app using a stored credit card, UPI, or other supported payment methods.",
-      "tags": ["payment", "pay", "reservation", "credit card", "upi"]
+      "tags": [
+        "payment",
+        "pay",
+        "reservation",
+        "credit card",
+        "upi"
+      ]
     },
     {
       "id": "12",
       "name": "Payment",
       "question": "What payment methods are accepted?",
       "answer": "We accept major credit cards (Visa, Mastercard, Amex), debit cards, UPI, and net banking.",
-      "tags": ["payment", "methods", "accepted", "credit card", "debit card", "upi"]
+      "tags": [
+        "payment",
+        "methods",
+        "accepted",
+        "credit card",
+        "debit card",
+        "upi"
+      ]
     },
     {
       "id": "13",
       "name": "Payment",
       "question": "Is my payment information secure?",
       "answer": "Yes, all payment information is encrypted and processed through a secure gateway. We do not store your credit card details on our servers.",
-      "tags": ["payment", "secure", "privacy", "security", "data"]
+      "tags": [
+        "payment",
+        "secure",
+        "privacy",
+        "security",
+        "data"
+      ]
     },
     {
       "id": "14",
       "name": "Payment",
       "question": "How do I view my past payment history?",
       "answer": "Your complete payment history is available in the 'Payment History' section of your account profile.",
-      "tags": ["payment", "history", "view", "past"]
+      "tags": [
+        "payment",
+        "history",
+        "view",
+        "past"
+      ]
     },
     {
       "id": "15",
       "name": "Payment",
       "question": "Can I get a refund?",
       "answer": "Refunds are processed according to our cancellation policy. If you believe you were charged incorrectly, please contact support with your transaction details.",
-      "tags": ["refund", "payment", "get", "charge"]
+      "tags": [
+        "refund",
+        "payment",
+        "get",
+        "charge"
+      ]
     },
     {
       "id": "16",
       "name": "Payment",
       "question": "My card was declined. What should I do?",
       "answer": "Please check your card details and try again. If the issue persists, contact your bank or try a different payment method.",
-      "tags": ["declined", "payment", "card", "issue"]
+      "tags": [
+        "declined",
+        "payment",
+        "card",
+        "issue"
+      ]
     },
     {
       "id": "17",
       "name": "Payment",
       "question": "Can I add multiple cards to my account?",
       "answer": "Yes, you can add and manage multiple payment methods in the 'Payment Settings' section of the app.",
-      "tags": ["payment", "multiple", "cards", "account"]
+      "tags": [
+        "payment",
+        "multiple",
+        "cards",
+        "account"
+      ]
     },
     {
       "id": "18",
       "name": "Payment",
       "question": "Are there any extra fees for using the service?",
       "answer": "All applicable fees are included in the price shown at checkout. There are no hidden charges.",
-      "tags": ["fees", "extra", "charge", "price"]
+      "tags": [
+        "fees",
+        "extra",
+        "charge",
+        "price"
+      ]
     },
     {
       "id": "19",
       "name": "Payment",
       "question": "How do I update my billing information?",
       "answer": "You can update your billing address and other information in your account settings.",
-      "tags": ["billing", "update", "information", "payment"]
+      "tags": [
+        "billing",
+        "update",
+        "information",
+        "payment"
+      ]
     },
     {
       "id": "20",
       "name": "Payment",
       "question": "Do you offer monthly payment plans?",
       "answer": "Currently, we only offer pay-per-use and reservation-based payments. Monthly plans are not available at this time.",
-      "tags": ["payment", "monthly", "plan", "subscription"]
+      "tags": [
+        "payment",
+        "monthly",
+        "plan",
+        "subscription"
+      ]
     },
     {
       "id": "21",
       "name": "InAndOut",
       "question": "How do I enter the parking facility?",
       "answer": "Upon arrival, simply scan the QR code from your app at the entry gate. The gate will open automatically.",
-      "tags": ["entry", "in", "gate", "qr code"]
+      "tags": [
+        "entry",
+        "in",
+        "gate",
+        "qr code"
+      ]
     },
     {
       "id": "22",
       "name": "InAndOut",
       "question": "What do I do if the gate doesn't open?",
       "answer": "If the gate does not open, ensure you are at the correct entry point and that your reservation is active. If the issue continues, use the 'Help' button to call for assistance.",
-      "tags": ["gate", "stuck", "entry", "problem", "help"]
+      "tags": [
+        "gate",
+        "stuck",
+        "entry",
+        "problem",
+        "help"
+      ]
     },
     {
       "id": "23",
       "name": "InAndOut",
       "question": "How does the system recognize my vehicle?",
       "answer": "Our system uses a combination of license plate recognition and a QR code scanner to identify your vehicle.",
-      "tags": ["vehicle", "recognition", "system", "plate", "license"]
+      "tags": [
+        "vehicle",
+        "recognition",
+        "system",
+        "plate",
+        "license"
+      ]
     },
     {
       "id": "24",
       "name": "InAndOut",
       "question": "Can a different vehicle use my reservation?",
       "answer": "The reservation is linked to a specific vehicle. You must update your vehicle information on the app before arriving to avoid issues at the gate.",
-      "tags": ["vehicle", "change", "different", "reservation"]
+      "tags": [
+        "vehicle",
+        "change",
+        "different",
+        "reservation"
+      ]
     },
     {
       "id": "25",
       "name": "InAndOut",
       "question": "What's the process for exiting the parking lot?",
       "answer": "When exiting, the system will automatically scan your license plate or QR code. The gate will open, and a payment will be processed if required.",
-      "tags": ["exit", "out", "gate", "leave"]
+      "tags": [
+        "exit",
+        "out",
+        "gate",
+        "leave"
+      ]
     },
     {
       "id": "26",
       "name": "InAndOut",
       "question": "My RFID tag is not working.",
       "answer": "If your RFID tag is not working, please use the QR code in your app to enter or exit. Contact support to get a replacement tag.",
-      "tags": ["rfid", "tag", "problem", "technical"]
+      "tags": [
+        "rfid",
+        "tag",
+        "problem",
+        "technical"
+      ]
     },
     {
       "id": "27",
       "name": "InAndOut",
       "question": "What if I lose my QR code?",
       "answer": "Your QR code is always available in the 'My Reservations' section of the app. You can also use your license plate to enter and exit.",
-      "tags": ["qr code", "lost", "access"]
+      "tags": [
+        "qr code",
+        "lost",
+        "access"
+      ]
     },
     {
       "id": "28",
       "name": "InAndOut",
       "question": "Is there a time limit for vehicle entry?",
       "answer": "You must enter the facility within 15 minutes of your reservation start time. After that, your reservation may be cancelled.",
-      "tags": ["entry", "limit", "time"]
+      "tags": [
+        "entry",
+        "limit",
+        "time"
+      ]
     },
     {
       "id": "29",
       "name": "InAndOut",
       "question": "How do I report a problem with a gate?",
       "answer": "You can report a gate issue by pressing the help button at the gate or by contacting our support line.",
-      "tags": ["gate", "report", "problem", "support"]
+      "tags": [
+        "gate",
+        "report",
+        "problem",
+        "support"
+      ]
     },
     {
       "id": "30",
       "name": "InAndOut",
       "question": "What if I park in the wrong spot?",
       "answer": "Parking in a spot other than the one you reserved may result in a fine. Please ensure you park in your assigned slot.",
-      "tags": ["parking", "wrong", "spot", "fine"]
+      "tags": [
+        "parking",
+        "wrong",
+        "spot",
+        "fine"
+      ]
     },
     {
       "id": "31",
       "name": "SlotBooking",
       "question": "How do I book a specific slot?",
       "answer": "When making a reservation, you can select 'Book Specific Slot' and choose your preferred spot on the map.",
-      "tags": ["slot", "book", "specific", "choose", "map"]
+      "tags": [
+        "slot",
+        "book",
+        "specific",
+        "choose",
+        "map"
+      ]
     },
     {
       "id": "32",
       "name": "SlotBooking",
       "question": "Can I book a slot for a specific time?",
       "answer": "Yes, our system allows you to book a slot for a specific date and time duration.",
-      "tags": ["slot", "book", "time", "duration"]
+      "tags": [
+        "slot",
+        "book",
+        "time",
+        "duration"
+      ]
     },
     {
       "id": "33",
       "name": "SlotBooking",
       "question": "How to find available slots on the map?",
       "answer": "The app's map displays real-time availability. Slots marked in green are available for booking.",
-      "tags": ["slot", "available", "find", "map", "check"]
+      "tags": [
+        "slot",
+        "available",
+        "find",
+        "map",
+        "check"
+      ]
     },
     {
       "id": "34",
       "name": "SlotBooking",
       "question": "Can I change my booked slot after booking?",
       "answer": "You can change your booked slot up to 30 minutes before your reservation starts, subject to availability.",
-      "tags": ["slot", "change", "modify", "booked"]
+      "tags": [
+        "slot",
+        "change",
+        "modify",
+        "booked"
+      ]
     },
     {
       "id": "35",
       "name": "SlotBooking",
       "question": "What is the difference between booking a slot and a reservation?",
       "answer": "Booking a slot refers to reserving a specific numbered spot, whereas a reservation secures a parking space in general.",
-      "tags": ["slot", "booking", "reservation", "difference"]
+      "tags": [
+        "slot",
+        "booking",
+        "reservation",
+        "difference"
+      ]
     },
     {
       "id": "36",
       "name": "SlotBooking",
       "question": "How do I know my slot is confirmed?",
       "answer": "You will receive a confirmation email and an in-app notification with your slot details after a successful booking.",
-      "tags": ["slot", "confirmed", "booking", "status"]
+      "tags": [
+        "slot",
+        "confirmed",
+        "booking",
+        "status"
+      ]
     },
     {
       "id": "37",
       "name": "SlotBooking",
       "question": "Can I book a slot for more than one day?",
       "answer": "Yes, you can book a slot for multiple days. Simply select the dates and times for your entire stay during the booking process.",
-      "tags": ["slot", "book", "multiple", "days"]
+      "tags": [
+        "slot",
+        "book",
+        "multiple",
+        "days"
+      ]
     },
     {
       "id": "38",
       "name": "SlotBooking",
       "question": "What if someone else is in my booked slot?",
       "answer": "Please contact a parking attendant or use the app to report the issue. Do not park in another slot to avoid a fine.",
-      "tags": ["slot", "taken", "booked", "occupied", "fine"]
+      "tags": [
+        "slot",
+        "taken",
+        "booked",
+        "occupied",
+        "fine"
+      ]
     },
     {
       "id": "39",
       "name": "SlotBooking",
       "question": "Is there a maximum booking duration?",
       "answer": "The maximum booking duration is 7 consecutive days.",
-      "tags": ["booking", "duration", "maximum", "limit"]
+      "tags": [
+        "booking",
+        "duration",
+        "maximum",
+        "limit"
+      ]
     },
     {
       "id": "40",
       "name": "SlotBooking",
       "question": "How do I check the status of my booked slot?",
       "answer": "You can check the real-time status of your booked slot in the 'My Bookings' section of the app.",
-      "tags": ["slot", "status", "check", "booked"]
+      "tags": [
+        "slot",
+        "status",
+        "check",
+        "booked"
+      ]
+    }
+  ],
+  "Feedback": [
+    {
+      "uid": "a101",
+      "rating": "good",
+      "text": "Happy Happy Happyyy",
+      "id": "a547"
+    },
+    {
+      "uid": "a102",
+      "rating": "very good",
+      "text": "Happy Happyyy",
+      "id": "5364"
+    },
+    {
+      "id": "d931",
+      "uid": "101",
+      "rating": "very good",
+      "text": "I love this website"
+    },
+    {
+      "id": "380b",
+      "uid": "101",
+      "rating": "very bad",
+      "text": "very angry"
+    },
+    {
+      "id": "d7df",
+      "uid": "101",
+      "rating": "good",
+      "text": "good"
+    },
+    {
+      "id": "bfff",
+      "uid": "101",
+      "rating": "very good",
+      "text": "I love this website"
+    },
+    {
+      "id": "727f",
+      "uid": "101",
+      "rating": "",
+      "text": ""
     }
   ]
 }

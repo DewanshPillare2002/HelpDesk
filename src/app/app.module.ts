@@ -8,6 +8,7 @@ import { HelpFeedbackComponent } from './help-feedback/help-feedback.component';
 import { PaymentComponent } from './payment/payment.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ChatbotComponent } from './chatbot/chatbot.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     FeedbackComponent,
     HelpFeedbackComponent,
-    PaymentComponent
+    PaymentComponent,
+    ChatbotComponent
   ],
   imports: [
     BrowserModule,

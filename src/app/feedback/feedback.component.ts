@@ -26,6 +26,30 @@ export class FeedbackComponent {
     })
   }
 
+  // *************************Print the emoji on the top*********************************
+  //dictionary of the emoji
+    myMap = new Map<string, string>([
+    ["very bad" , "😠"],
+    ["bad" , "😕"],
+    ["neutral" , "😐"],
+    ["good" , "🙂"],
+    ["very good" , "😀"]
+  ]);
+
+  // getting mapped emoji from rating
+  emoji! : string;
+  // get data from form
+  showEmoji(){
+    this.rating = this.feedbackForm.get(['rating'])!.value;
+    let emojiValue = this.myMap.get(this.rating);
+    // the map.get returns undefined|data type. so to handle this, we write if else part.
+    if(emojiValue){
+      this.emoji = emojiValue;
+    }else{
+      this.emoji = '';
+    }
+  }
+  
   feedbackList! : Feedback[]; // a variable of type pojo class
 
   // to get data

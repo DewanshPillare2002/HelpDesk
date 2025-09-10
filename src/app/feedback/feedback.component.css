@@ -4,7 +4,7 @@
 }
 
 /* Span class */
-.emoji { 
+.emoji {
   font-size: 3rem; /* Make the emoji larger */
   cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
   filter: grayscale(100%); /* Make emojis gray by default */
@@ -24,6 +24,134 @@ input[type="radio"]:checked + label .emoji {
   transform: scale(1.2); /* Make the selected emoji even larger */
 }
 
-.footerline{
+.footerline {
   border: 2px solid gray;
 }
+
+.Feedback {
+  width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.modal-title {
+  text-align: center;
+}
+.modal-title > .cross-button {
+  margin-left: 0px;
+}
+
+.modal-header {
+  font-size: 3rem;
+  border: 0px;
+  border-radius: 40px;
+  padding: 0px;
+}
+.btn-close.crossButton {
+  font-size: 20px;
+}
+.modal-content {
+  border-radius: 20px;
+  background: linear-gradient(to right, rgb(83, 144, 235), rgb(107, 232, 176));
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 40px;
+}
+
+.container {
+  padding: 0px;
+}
+.modal-body {
+  padding: 0px;
+}
+.card-body {
+  height: auto;
+  padding-top: 30px;
+}
+h3 {
+  font-family: 'Times New Roman', Times, serif;
+  padding-bottom: 50px;
+}
+.card {
+  border-radius: 40px;
+  margin-bottom: -160px;
+  margin-top: -130px;
+  margin-left: -40px;
+  margin-right: -40px;
+}
+.card-header {
+  /* margin-bottom: 200px; */
+  font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: rgb(255, 255, 255);
+  border: 0px;
+  border-radius: 50px;
+}
+#feedBackForm {
+  height: 360px;
+}
+.row.text-center.my-3 {
+  color: rgb(255, 255, 255);
+  
+}
+
+/* Custom CSS to bring emojis closer */
+.row.text-center.my-3 .col {
+  padding-left: 5px; /* Adjust as needed */
+  padding-right: 5px; /* Adjust as needed */
+}
+
+
+.form-control.me-2 {
+  background-color: rgb(255, 253, 253);
+  width: 100%;
+  border-radius: 25px;
+  border: 1px solid #ffffff;
+  padding: 12px 20px;
+  transition: all 0.3s ease;
+}
+#staticBackdropLabel {
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+}
+
+.cardLogo {
+  height: auto;
+  width: 200px;
+  display: flex;
+  align-self: center;
+  padding-bottom: 30px;
+}
+
+.btn.feedbackButton {
+  border-radius: 25px;
+  padding-left: 150px;
+  padding-right: 150px;
+  margin-left: 10px;
+  background-color: rgb(13, 199, 255);
+  border-color: #fafafa;
+  transition: background-color 0.3s ease;
+  transition: border-color 0.3s ease;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: sans-serif;
+  font-size: 0.9em;
+  min-width: 400px;
+}
+
+th,td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+thead tr {
+  background-color: #009879;
+  color: #ffffff;
+}
+
