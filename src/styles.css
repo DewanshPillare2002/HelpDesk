@@ -1,13 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
 body {
-  background-image: url('../public/marcus-wallis-YghnwsgQX_o-unsplash.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+     background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+

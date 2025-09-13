@@ -1,0 +1,170 @@
+{
+  "User": [
+    {
+      "role": "Customer",
+      "email": "dharun2@gmail.com",
+      "id": "dc00"
+    },
+    {
+      "id": "0c52",
+      "name": "vikasgandham",
+      "email": "vikas1@gmail.com",
+      "aadhar": 876543212345,
+      "password": "qor",
+      "role": "Staff"
+    },
+    {
+      "id": "a113",
+      "name": "rahulsen",
+      "email": "rah@gmail.com",
+      "aadhar": 234567654345,
+      "password": "opq",
+      "role": "Customer"
+    },
+    {
+      "id": "882b",
+      "name": "sourajoti",
+      "email": "sou@gmail.com",
+      "aadhar": 123454324444,
+      "password": "saw",
+      "role": "Customer"
+    },
+    {
+      "id": "4ff0",
+      "name": "arijit",
+      "email": "ar@gmail.com",
+      "aadhar": 876543523456,
+      "password": "sad",
+      "role": "Customer"
+    },
+    {
+      "id": "6537",
+      "name": "vikas",
+      "email": "vikasaditya20@gmail.com",
+      "aadhar": 762347625347,
+      "password": "123456",
+      "role": "Staff"
+    },
+    {
+      "id": "6537",
+      "name": "Admin",
+      "email": "admin@gmail.com",
+      "aadhar": 623476257367,
+      "password": "1234",
+      "role": "Admin"
+    }
+  ],
+  "Staff": [
+    {
+      "staffId": "101",
+      "name": "Vikas G",
+      "role": "Staff",
+      "phoneNo": "76253",
+      "aadhaar": "12343323",
+      "id": "76bf"
+    },
+    {
+      "staffId": "102",
+      "name": "Aditya",
+      "role": "Staff",
+      "phoneNo": "23223",
+      "aadhaar": "12324456",
+      "id": "2707"
+    },
+    {
+      "id": "",
+      "staffId": "103",
+      "name": "Sridar",
+      "role": "Staff",
+      "phoneNo": "8763463475",
+      "aadhaar": "837465384765"
+    }
+  ],
+  "Feedback": [
+    {
+      "username": "vikas",
+      "feedback": "Good. Great parking space!",
+      "id": "6c5e"
+    },
+    {
+      "username": "aditya",
+      "feedback": "Great parking space and customer friendly staff",
+      "id": "ece1"
+    },
+    {
+      "username": "sridar",
+      "feedback": "Excellent services from staff and through website",
+      "id": "76e6"
+    },
+    {
+      "username": "gandham",
+      "feedback": "Nice staff and good parking area, convinient to park vehicles",
+      "id": "65ae"
+    }
+  ],
+  "EntryDetails": [
+    {
+      "id": "7fa0",
+      "vehicleType": "Normal",
+      "wheelerType": "4W",
+      "vehicleNumber": "TN02AA0001",
+      "entryDate": "2025-09-10",
+      "entryTime": "11:28",
+      "custID": "EP12",
+      "slotID": "A8"
+    },
+    {
+      "id": "9717",
+      "vehicleType": "Normal",
+      "wheelerType": "3W",
+      "vehicleNumber": "TN09AL1234",
+      "entryDate": "2025-09-10",
+      "entryTime": "18:55",
+      "custID": "EP12",
+      "slotID": "M1"
+    },
+    {
+      "id": "2123",
+      "vehicleType": "Normal",
+      "wheelerType": "2W",
+      "vehicleNumber": "TN59BZ3000",
+      "entryDate": "2025-09-12",
+      "entryTime": "11:33",
+      "custID": "EP12",
+      "slotID": "A5"
+    },
+    {
+      "id": "07e7",
+      "vehicleType": "Normal",
+      "wheelerType": "3W",
+      "vehicleNumber": "AP40EH7315",
+      "entryDate": "2025-09-12",
+      "entryTime": "19:10",
+      "custID": "E2",
+      "slotID": "A1"
+    }
+  ],
+  "ExitDetails": [
+    {
+      "id": "7650",
+      "vehicleNumber": "TN02AA0001",
+      "slotID": "A8",
+      "exitDate": "2025-09-10",
+      "exitTime": "12:30"
+    },
+    {
+      "id": "e12b",
+      "vehicleNumber": "TN59BZ3000",
+      "slotID": "A5",
+      "exitDate": "2025-09-12",
+      "exitTime": "12:35"
+    },
+    {
+      "id": "8d17",
+      "vehicleNumber": "AP40EH7315",
+      "slotID": "A1",
+      "exitDate": "2025-09-12",
+      "exitTime": "19:11"
+    }
+  ]
+}

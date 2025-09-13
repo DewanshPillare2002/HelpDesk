@@ -1,0 +1,71 @@
+  <!--FORM FOR EXIT DETAILS-->
+  <div class="container-exitDetails">
+     <!--Header-->
+  <div class="d-flex" style="justify-content: space-between; padding: 20px 30px;">
+    <img style="height: 50px;" src="logowhite.png">
+  <div class="mt-3">
+          <button style="padding: 2px 15px; border: 2px solid rgba(255, 255, 255, 0.5); border-radius: 10px; background-color: rgba(255, 255, 255, 0.5); color: white;">Logout</button>
+  </div>
+  </div>
+   <h1>Vehicle Exit Logging</h1>
+   <div id="liveAlertPlaceholder" class="p-3"></div>
+   <div class="exitForm">
+    <!--<h3 class="text-center mb-4">Exit Details</h3>-->
+    <p class="text-muted-foreground mb-4">Vehicle Details For Exit Logging</p>
+    <form id="exitDetailsForm" [formGroup]="exitDetailsForm" (ngSubmit)="ExitForm()" novalidate>
+      <div class="form-floating mb-3">
+        <input type="text" id="vehicleNumber" name="vehicleNumber" class="form-control" formControlName="vehicleNumber" placeholder="Vehicle Number">
+        <label for="vehicleNumber">Vehicle Number</label>
+        <div *ngIf="vehicleNumber?.invalid && (vehicleNumber?.touched || vehicleNumber?.dirty)">
+          <div *ngIf="vehicleNumber?.errors?.['required']"><h6>*Vehicle Number can't be empty</h6></div>
+          <div *ngIf="vehicleNumber?.errors?.['maxlength']"><h6>*Vehicle Number is Invalid</h6></div>
+        </div>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input type="text" id="slotID" name="slotID" class="form-control" formControlName="slotID" placeholder="Slot ID">
+        <label for="slotID">Slot ID</label>
+        <div *ngIf="slotID?.invalid && (slotID?.touched || slotID?.dirty)">
+          <div *ngIf="slotID?.errors?.['required']"><h6>*Slot ID is required</h6></div>
+          <div *ngIf="slotID?.errors?.['maxlength']"><h6>*Pattern Mismatch</h6></div>
+        </div>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input type="date" id="exitDate" name="exitDate" class="form-control" formControlName="exitDate" placeholder="Exit Date">
+        <label for="exitDate">Exit Date</label>
+        <div *ngIf="exitDate?.invalid && (exitDate?.touched || exitDate?.dirty)">
+          <div *ngIf="exitDate?.errors?.['required']">
+            <h6>*Exit Date is Required</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input type="time" id="exitTime" name="exitTime" class="form-control" formControlName="exitTime" placeholder="Exit Time">
+        <label for="exitTime">Exit Time</label>
+        <div *ngIf="exitTime?.invalid && (exitTime?.touched || exitTime?.dirty)">
+          <div *ngIf="exitTime?.errors?.['required']">
+            <h6>*Exit Time is Required</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <button id="success" class="btn btn-success" type="submit">Submit</button>&nbsp;&nbsp;&nbsp;
+        <button class="btn btn-danger" type="button" (click)="goToHome()">Back</button>
+      </div>
+    </form>
+  </div>
+  </div>
+   <!--Footer-->
+<footer class="footer">
+  <div class="footer-content">
+    <span class="brand">
+      <i class="bi bi-car-front" style="font-size: 20px;"></i>
+      EliteParking
+    </span>
+    <span class="rights"> 2025 EliteParking Management. All rights reserved.</span>
+  </div>
+</footer>
+  <router-outlet></router-outlet>

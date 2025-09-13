@@ -1,0 +1,137 @@
+/* Background container */
+.container-home-background {
+    background-image: url('C:/Users/2440591/Project/Logging/public/pl4.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+    min-height: 100vh;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    font-size: 50px;
+    background: linear-gradient(to right, rgb(83, 144, 235), rgb(107, 232, 176));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    color: #2a4d8f;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+}
+
+/* Card container */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    align-items: stretch;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+/* Card styling */
+.card {
+    width: 100%;
+    height: 350px;
+    max-width: 350px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
+    overflow: hidden;
+    margin : 2rem auto;
+}
+
+/* Card image */
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: fill;
+    border-radius: 12px 12px 0 0;
+    display: block;
+    margin: 0; 
+    padding: 0; 
+}
+
+
+/* Card body */
+.card-body {
+    flex : 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+/* Card title */
+.card-body h5 {
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Card description */
+.card-body p {
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+/* Card hover effect */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Button styling */
+.btn {
+    background: linear-gradient(to right, rgb(83, 144, 235), rgb(107, 232, 176));
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Footer styling */
+.footer {
+    background: #f5f5f5;
+    padding: 1rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content .brand {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-content .rights {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}

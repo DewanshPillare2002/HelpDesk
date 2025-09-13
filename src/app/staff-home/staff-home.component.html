@@ -1,0 +1,63 @@
+<div class="container-home-background">
+   <!--Header-->
+ <div class="d-flex" style="justify-content: space-between; padding: 20px 30px;">
+    <img style="height: 50px;" src="logowhite.png" alt="logo">
+  <div class="mt-3">
+          <button style="padding: 2px 15px; border: 2px solid rgba(255, 255, 255, 0.5); border-radius: 10px; background-color: rgba(255, 255, 255, 0.5); color: white;">Logout</button>
+  </div>
+ </div>
+<h1>Logging Details</h1>
+<!---->
+<div *ngIf="bEntry==false"class="container">
+  <!--Card for Book Slot-->
+  <div class="card">
+    <img src="Slot.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Smart Slot Booking</h5>
+      <p class="card-text">Book your parking spot instanly</p>
+      <a href="#" class="btn btn-primary">Book Slot</a>
+    </div>
+  </div>
+
+  <!--Card for Entry details-->
+  <div class="card">
+    <img src="entrance.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Vehicle Entry Logging</h5>
+      <p class="card-text">Log vehicle entry in seconds</p>
+      <a routerLink="/Entry" routerLinkActive="active" class="btn btn-primary" (click)="goToEntryDetails()">Entry Details</a>
+    </div>
+  </div>
+
+  <!--Card for Exit details-->
+  <div class="card">
+    <img class="card-img-top" src="exit.jpg" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Vehicle Exit Logging</h5>
+      <p class="card-text">Record exit details effortlessly</p>
+      <a routerLink="/Exit" routerLinkActivate="active" class="btn btn-primary" (click)="goToExitDetails()">Exit Details</a>
+    </div>
+  </div>
+
+  <!--Card For History details-->
+  <div class="card">
+    <img src="search.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Parking History Lookup</h5>
+      <p class="card-text">Find past parking records fast</p>
+      <a routerLink="/History" routerLinkActive="active" class="btn btn-primary">History</a>
+    </div>
+  </div>
+</div>
+</div>
+<!--Footer-->
+<footer class="footer">
+  <div class="footer-content">
+    <span class="brand">
+      <i class="bi bi-car-front" style="font-size: 20px;"></i>
+      EliteParking
+    </span>
+    <span class="rights"> 2025 EliteParking Management. All rights reserved.</span>
+  </div>
+</footer>
+<router-outlet></router-outlet>

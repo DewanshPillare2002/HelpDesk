@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "vps": {
+    "ParkingSlotManagement": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/vps",
+            "outputPath": "dist/parking-slot-management",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -31,6 +31,8 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
+              "src/assets",
+              "src/favicon.ico",
               {
                 "glob": "**/*",
                 "input": "public"
@@ -38,7 +40,7 @@
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap-grid.min.css"
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           },
@@ -70,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "vps:build:production"
+              "buildTarget": "ParkingSlotManagement:build:production"
             },
             "development": {
-              "buildTarget": "vps:build:development"
+              "buildTarget": "ParkingSlotManagement:build:development"
             }
           },
           "defaultConfiguration": "development"

@@ -1,0 +1,266 @@
+.background{
+    background-image: url('C:/Users/2440793/angular/ParkingSlotManagement/public/adminDashboard/homePageBg.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+.foreground{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.foreground .heading{
+    padding: 20px 30px;
+}
+.foreground .infoCard{
+    width: 20%;
+    justify-self: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(80, 80, 80);
+}
+.foreground .infoCard .dataCardText{
+    align-self: center;
+}
+.foreground .infoCard .dataCardText .dataCardHeading{
+    color: white;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.foreground .dataCardText .dataCardValue{
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+.staffManagementHeading{
+    text-align: center;
+    padding: 20px 0px;
+}
+.staffTable td,th{
+    border: 2px solid black;
+}
+.staffTable{
+    width: 60%;
+    justify-self: center;
+    text-align: center;
+    position: relative;
+}
+.staffTable table{
+    justify-self: center;
+    width: 100%;
+}
+.popup{
+    position : absolute;
+    background-color: white;
+    border-radius: 20px;
+    top : 25px;
+    width: 100%;
+    display: flex;
+    padding: 50px 30px;
+    justify-self: center;
+    text-align: left;
+}
+.popup .closeButton{
+    text-align: end;
+    border: none;
+    background-color: white;
+}
+
+
+p{
+    margin-bottom: 0px;
+}
+.divHolder{
+    width: 90%;
+    border-radius: 20px;
+    background-color: rgb(63, 63, 63);
+    justify-self: center;
+    margin-top: 50px;
+    padding: 20px 0px;
+}
+.staffMemberDetailsHolder{
+    width: 90%;
+    border-radius: 10px;
+    padding: 10px 15px;
+    display: flex;
+    background-color: rgb(80, 80, 80);
+    justify-self: center;
+    margin: 10px auto;
+    color: white;
+    transition: .2s;
+}
+.staffMemberDetailsHolder .icon{
+    background-image: linear-gradient(to right, rgb(83, 144, 235), rgb(107, 232, 176));
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-top: 3px;
+}
+.staffMemberDetailsHolder .icon p{
+    text-align: center;
+    margin-top: 20%;
+}
+.staffMemberDetailsHolder .nameAndPhoneNo{
+    width: 90%;
+}
+.staffMemberDetailsHolder .nameAndPhoneNo .name{
+    font-size: 17px;
+    font-weight: 400;
+}
+.staffMemberDetailsHolder .nameAndPhoneNo .phoneNo{
+    font-weight: 300;
+    font-size: 14px;
+}
+.staffMemberDetailsHolder .more{
+    height: max-content;
+    align-self: center;
+    font-size: small;
+    font-weight: 500;
+    padding: 2px 10px;
+    background-color: rgb(83, 144, 235);
+    color: white;
+    border : none;
+    border-radius: 30px;
+    width:max-content;
+    text-align: center;
+    margin-right: 15px;
+}
+.staffMemberDetailsHolder:hover{
+    transform: scale(1.05);
+}
+
+.staffMemberInfo{
+    width: 90%;
+    justify-self: center;
+    background-color: rgb(80, 80, 80);
+    border-radius: 10px;
+    padding: 30px 0px 30px 15px;
+    margin-bottom: 20px;
+}
+.staffMemberInfo .colonL{
+    color: white;
+    font-weight: 600;
+    font-size: medium;
+}
+.staffMemberInfo .colonR{
+    color: white;
+    font-weight: 300;
+}
+.heading p{
+    background: linear-gradient(to right, rgb(83, 144, 235), rgb(107, 232, 176));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.staffMemberInfo .buttons{
+    width: 50%;
+}
+.divHolder .buttons button{
+    background: linear-gradient(to right, rgb(83, 144, 235), rgb(107, 232, 176));
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    padding: 5px 10px;
+    color: white;
+    font-size: medium;
+    font-weight: 700;
+}
+.divHolder .addButton{
+    width: 90%;
+    justify-self: center;
+}
+.divHolder .addButton button{
+    background: linear-gradient(to right, rgb(83, 144, 235), rgb(107, 232, 176));
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    padding: 5px 10px;
+    color: white;
+    font-size: medium;
+    font-weight: 700;
+}
+
+.formDiv{
+    width: 70%;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 15%;
+    padding: 20px 30px;
+    background-color: rgb(63, 63, 63);
+}
+.formDiv .formHeading{
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+}
+.formDiv .formHeading p{
+    background: linear-gradient(to right, rgb(83, 144, 235), rgb(107, 232, 176));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+}
+.formDiv form{
+    color: white;
+}
+.formDiv form p{
+    color: white;
+    font-weight: 600;
+    font-size: medium;
+    margin-bottom: 5px;
+}
+.formDiv form input{
+    border-radius: 10px;
+    border: none;
+    padding: 5px 5px;
+    margin-bottom: 10px;
+}
+.formDiv form button{
+    background: linear-gradient(to right, rgb(83, 144, 235), rgb(107, 232, 176));
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    padding: 5px 10px;
+    color: white;
+    font-size: medium;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.formDiv form .errorNote{
+    color: red;
+    font-weight: 500;
+}
+
+.footer{
+  background: #f5f5f5;
+  padding: 1rem;
+  margin-top: 50px;
+}
+.footer-content{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.brand{
+font-weight: bold;
+display: flex;
+align-items: center;
+gap: 0.5rem;
+}
+.rights{
+font-size: 0.9rem;
+color: #555;
+}
+.spacer{
+  flex: 1 1 auto;
+}

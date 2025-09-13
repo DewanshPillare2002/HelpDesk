@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { RestService } from './rest.service';
+import { Router } from '@angular/router';
+import { SlotBookingRestService } from './slotBookingRest.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,10 @@ import { RestService } from './rest.service';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'vps';
+  title = 'ParkingSlotManagement';
   slotmodule:any;
-  constructor(private restservice:RestService){}
+  constructor(private restservice:SlotBookingRestService, private route : Router){}
+  ngOnInit(){
+    this.route.navigate(['']);
+  }
 }
