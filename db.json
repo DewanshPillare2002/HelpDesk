@@ -1,0 +1,21 @@
+{
+  "subscriptions": [
+    {
+      "id": "0b51",
+      "userId": "U001",
+      "plan": "Gold",
+      "period": "30 days",
+      "amount": 799,
+      "status": "pending"
+    },
+    {
+      "id": "7414",
+      "userId": "U001",
+      "plan": "Platinum",
+      "period": "90 days",
+      "amount": 2999,
+      "status": "pending"
+    }
+  ],
+  "Invoice": []
+}
