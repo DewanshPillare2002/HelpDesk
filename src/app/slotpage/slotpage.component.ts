@@ -1,6 +1,6 @@
 import { Component,OnInit } from '@angular/core';
 import slotmodule from './slotmodule';
-import { RestService } from '../rest.service';
+import { SlotBookingRestService } from '../slotBookingRest.service';
 
 @Component({
   selector: 'app-slotpage',
@@ -14,7 +14,7 @@ export class SlotpageComponent implements OnInit{
   slotNumber:string='';
   entireSlot:slotmodule[]=[];
   selectedSlot:HTMLButtonElement | null=null;
-  constructor(private restService:RestService){}
+  constructor(private restService:SlotBookingRestService){}
   //Dynamic Calendar
   mindate!:string;
   maxdate!:string;

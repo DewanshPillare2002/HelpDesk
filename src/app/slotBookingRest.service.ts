@@ -6,7 +6,7 @@ import slotmodule from './slotpage/slotmodule';
 @Injectable({
   providedIn: 'root'
 })
-export class RestService {
+export class SlotBookingRestService {
 
   constructor(private rest:HttpClient) { }
   strUrl:string="http://localhost:3000/slotmodule";
