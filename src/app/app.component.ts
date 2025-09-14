@@ -13,6 +13,6 @@ export class AppComponent {
   slotmodule:any;
   constructor(private restservice:SlotBookingRestService, private route : Router){}
   ngOnInit(){
-    this.route.navigate(['']);
+    // this.route.navigate(['']);
   }
 }

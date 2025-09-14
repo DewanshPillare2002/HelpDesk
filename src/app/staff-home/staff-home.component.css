@@ -1,6 +1,6 @@
 /* Background container */
 .container-home-background {
-    background-image: url('C:/Users/2440591/Project/Logging/public/pl4.jpg');
+    background-image: url('/2440591/Project/Logging/public/pl4.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

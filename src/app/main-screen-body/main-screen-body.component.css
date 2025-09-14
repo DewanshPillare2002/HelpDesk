@@ -7,7 +7,7 @@
     margin-top: 50px;
 }*/
 .backGround{
-    background-image: url('C:/Users/2440591/Project/Logging/public/adminDashboard/homePageBg.jpg');
+    background-image: url('/Project/Logging/public/adminDashboard/homePageBg.jpg');
     background-size: 100%;
     background-repeat: no-repeat;
     background-color: black;

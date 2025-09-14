@@ -1,5 +1,5 @@
 .background{
-    background-image: url('C:/Users/2440793/angular/ParkingSlotManagement/public/adminDashboard/homePageBg.jpg');
+    background-image: url('/angular/ParkingSlotManagement/public/adminDashboard/homePageBg.jpg');
     background-size: 100%;
     background-repeat: no-repeat;
     background-color: black;

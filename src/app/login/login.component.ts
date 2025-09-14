@@ -42,24 +42,38 @@ export class LoginComponent {
       next: (users) => {
         const user = users.find(u => u.name === name);
 
-        if (!user) {
+        // if (!user) {
+        //   this.message = 'Not a registered Username';
+        // } else if (user.password !== password) {
+        //   this.message = 'Invalid Password';
+        // } else if (user.role !== role) {
+        //   this.message = 'Invalid Role';
+        // } 
+        //  else if(user.role == 'Admin'){
+        //   this.message = 'Login successful!';
+        //   this.router.navigate(['/adminScreen']); // Adjust route as needed
+        // }
+        // else if(user.role == 'Staff'){
+        //   this.message = 'Login successful!';
+        //   this.router.navigate(['/StaffHome']); // Adjust route as needed
+        // }
+        // else {
+        //   this.message = 'Login successful!';
+        //   //this.router.navigate(['/adminScreen']); // Adjust route as needed
+        // }
+         if (!user) {
           this.message = 'Not a registered Username';
         } else if (user.password !== password) {
           this.message = 'Invalid Password';
-        } else if (user.role !== role) {
-          this.message = 'Invalid Role';
-        } 
-         else if(user.role == 'Admin'){
-          this.message = 'Login successful!';
-          this.router.navigate(['/adminScreen']); // Adjust route as needed
+        } else if (user.role == 'admin') {
+           this.router.navigate(['/adminScreen']);
         }
-        else if(user.role == 'Staff'){
-          this.message = 'Login successful!';
-          this.router.navigate(['/StaffHome']); // Adjust route as needed
+        else if (user.role == 'Staff') {
+         
+           this.router.navigate(['/StaffHome']);
         }
-        else {
-          this.message = 'Login successful!';
-          //this.router.navigate(['/adminScreen']); // Adjust route as needed
+        else if (user.role == 'Customer') {
+           this.router.navigate(['/slotpage']);
         }
       },
       error: (err) => {

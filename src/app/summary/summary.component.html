@@ -105,19 +105,19 @@
             </div>
             <div class="card-content">
               <!-- Dropdown -->
-              <div class="dropdown-container">
-                <div class="dropdown-trigger" (click)="toggleDropdown()">
+              <div class="dropdown-container1">
+                <div class="dropdown-trigger1" (click)="toggleDropdown()">
                   <span>
                     {{ selectedMethod ? getLabel(selectedMethod) : 'Choose payment method' }}
                   </span>
                   <span class="arrow" [class.open]="isDropdownOpen">▼</span>
                 </div>
                 <!-- Dropdown menu -->
-                <div *ngIf="isDropdownOpen" class="dropdown-menu">
-                  <div class="dropdown-item" (click)="selectMethod('creditCard')">💳 Credit/Debit Card</div>
-                  <div class="dropdown-item" (click)="selectMethod('upi')">📱 UPI Payment</div>
+                <div *ngIf="isDropdownOpen" class="dropdown-menu1">
+                  <div class="dropdown-item1" (click)="selectMethod('creditCard')">💳 Credit/Debit Card</div>
+                  <div class="dropdown-item1" (click)="selectMethod('upi')">📱 UPI Payment</div>
                   <!-- <div class="dropdown-item" (click)="selectMethod('netbanking')">🏦 Net Banking</div> -->
-                  <div class="dropdown-item" (click)="selectMethod('cash')">💵 Cash</div>
+                  <div class="dropdown-item1" (click)="selectMethod('cash')">💵 Cash</div>
                 </div>
               </div>
               <form [formGroup]="paymentForm" (ngSubmit)="confirmPayment()" autocomplete="off">

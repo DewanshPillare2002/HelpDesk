@@ -12,6 +12,7 @@ import { EntryDetailsComponent } from './entry-details/entry-details.component';
 import { StaffHomeComponent } from './staff-home/staff-home.component';
 import { ExitDetailsComponent } from './exit-details/exit-details.component';
 import { HistoryDetailsComponent } from './history-details/history-details.component';
+import { SlotpageComponent } from './slotpage/slotpage.component';
 import { SubscriptionComponent } from './subscription/subscription.component';
 import { SuccessComponent } from './success/success.component';
 import { SummaryComponent } from './summary/summary.component';
@@ -32,6 +33,7 @@ const routes: Routes = [
   {path: 'Entry', component: EntryDetailsComponent},
   {path: 'Exit', component: ExitDetailsComponent},
   {path: 'History', component: HistoryDetailsComponent},
+  {path:'slotpage', component:SlotpageComponent},
 
   {path: 'sus' , component:SubscriptionComponent},
   {path: 'success', component: SuccessComponent},
