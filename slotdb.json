@@ -1,0 +1,32 @@
+{
+  "slotmodule": [
+    {
+      "id": "1",
+      "slot": "A1",
+      "date": "2025-09-09",
+      "userid": "#2grd",
+      "parkingType": "normalParking"
+    },
+    {
+      "id": "2",
+      "slot": "A2",
+      "date": "2025-09-09",
+      "userid": "#246d",
+      "parkingType": "normalParking"
+    },
+    {
+      "id": "1",
+      "slot": "A3",
+      "date": "2025-09-09",
+      "userid": "#2gde",
+      "parkingType": "normalParking"
+    },
+    {
+      "id": "1",
+      "slot": "EV1",
+      "date": "2025-09-08",
+      "userid": "#2gde",
+      "parkingType": "EVParking"
+    }
+  ]
+}

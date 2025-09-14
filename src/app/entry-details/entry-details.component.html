@@ -1,0 +1,232 @@
+<!--ORIGINAL FILE-->
+
+<!--Entry Form with BootStrap
+<div class="container-entryDetails">
+ <div class="d-flex" style="justify-content: space-between; padding: 20px 30px;">
+  <div>
+      <p style="font-weight: 700; font-size:xx-large; color: white; margin-bottom: 0px;">Elite Parking</p>
+      <p style="font-weight: 300; font-size: small; color: white; margin-bottom: 0px;">Vehicle Parking Management</p>
+  </div>
+  <div class="mt-3">
+          <button style="padding: 2px 15px; border: 2px solid rgba(255, 255, 255, 0.5); border-radius: 10px; background-color: rgba(255, 255, 255, 0.5); color: white;">Logout</button>
+  </div>
+ </div>
+ <h1>Vehicle Entry Logging</h1>
+ <div class="entryForm">
+  <p class="text-muted-foreground mb-4">Vehicle details for logging purpose</p>
+  <form id="entryDetailsForm" [formGroup]="entryDetailsForm" (ngSubmit)="EntryForm()" novalidate>
+    <div class="form-floating mb-3">
+      <select id="vehicleType" name="vehicleType" class="form-select" formControlName="vehicleType">
+        <option value="Normal">Normal</option>
+        <option value="EV">EV</option>
+      </select>
+      <label for="vehicleType">Vehicle Type</label>
+      <div *ngIf="vehicleType?.invalid && (vehicleType?.touched || vehicleType?.dirty)">
+        <div *ngIf="vehicleType?.errors?.['required']">
+          <h6>*select valid option</h6>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="form-floating mb-3">
+      <select id="wheelerType" name="wheelerType" class="form-select" formControlName="wheelerType">
+        <option value="2W">2 Wheeler</option>
+        <option value="3W">3 Wheeler</option>
+        <option value="4W">4 Wheeler</option>
+      </select>
+      <label for="wheelerType">Wheeler Type</label>
+      <div *ngIf="wheelerType?.invalid && (wheelerType?.touched || wheelerType?.dirty)">
+        <div *ngIf="wheelerType?.errors?.['required']">
+          <h6>*select valid option</h6>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-floating mb-3">
+      <input type="text" id="vehicleNumber" name="vehicleNumber" class="form-control" formControlName="vehicleNumber" placeholder="Vehicle Number">
+      <label for="vehicleNumber">Vehicle Number</label>
+      <div *ngIf="vehicleNumber?.invalid && (vehicleNumber?.touched || vehicleNumber?.dirty)">
+        <div *ngIf="vehicleNumber?.errors?.['required']"><h6>*Vehicle Number can't be empty</h6></div>
+        <div *ngIf="vehicleNumber?.errors?.['maxlength']"><h6>*Vehicle Number is Invalid</h6></div>
+      </div>
+    </div>
+
+    <div class="form-floating mb-3">
+      <input type="time" id="entryTime" name="entryTime" class="form-control" formControlName="entryTime" placeholder="Entry Time">
+      <label for="entryTime">Entry Time</label>
+      <div *ngIf="entryTime?.invalid && (entryTime?.touched || entryTime?.dirty)">
+        <div *ngIf="entryTime?.errors?.['required']">
+          <h6>*Entry Time is required</h6>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col form-floating">
+        <input type="text" id="custID" name="custID" class="form-control" formControlName="custID" placeholder="Customer ID">
+        <label for="custID">Customer ID</label>
+        <div *ngIf="custID?.invalid && (custID?.touched || custID?.dirty)">
+          <div *ngIf="custID?.errors?.['required']"><h6>*Customer ID is required</h6></div>
+          <div *ngIf="custID?.errors?.['maxlength']"><h6>*Pattern Mismatch</h6></div>
+        </div>
+      </div>
+
+      <div class="col form-floating">
+        <input type="text" id="slotID" name="slotID" class="form-control" formControlName="slotID" placeholder="Slot ID">
+        <label for="slotID">Slot ID</label>
+        <div *ngIf="slotID?.invalid && (slotID?.touched || slotID?.dirty)">
+          <div *ngIf="slotID?.errors?.['required']"><h6>*Slot ID is required</h6></div>
+          <div *ngIf="slotID?.errors?.['maxlength']"><h6>*Pattern Mismatch</h6></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <button id="success" class="btn btn-success" type="submit">Submit</button>&nbsp; &nbsp; &nbsp;
+      <button class="btn btn-danger" type="button" (click)="goToHome()">Back</button>
+    </div>
+  </form>
+</div>
+<footer class="footer">
+  <div class="footer-content">
+    <span class="brand">
+      <i class="bi bi-car-front" style="font-size: 20px;"></i>
+      EliteParking
+    </span>
+    <span class="rights"> 2025 EliteParking Management. All rights reserved.</span>
+  </div>
+</footer>
+</div>
+<router-outlet></router-outlet>
+
+-->
+
+
+
+
+
+
+
+<div class="container-entryDetails">
+  <div class="d-flex" style="justify-content: space-between; padding: 20px 30px;">
+    <img style="height: 50px;" src="logowhite.png" alt="logo">
+    <div class="mt-3">
+      <button
+        style="padding: 2px 15px; border: 2px solid rgba(255, 255, 255, 0.5); border-radius: 10px; background-color: rgba(255, 255, 255, 0.5); color: white;">Logout</button>
+    </div>
+  </div>
+  <h1>Vehicle Entry Logging</h1>
+  <div id="liveAlertPlaceholder" class="p-3"></div>
+  <div class="entryForm">
+    <p class="text-muted-foreground mb-4">Vehicle details for logging purpose</p>
+    <form id="entryDetailsForm" [formGroup]="entryDetailsForm" (ngSubmit)="EntryForm()" novalidate>
+      <div class="form-floating mb-3">
+        <select id="vehicleType" name="vehicleType" class="form-select" formControlName="vehicleType">
+          <option value="" disabled selected>Select a vehicle type</option>
+          <option value="Normal">Normal</option>
+          <option value="EV">EV</option>
+        </select>
+        <label for="vehicleType">Vehicle Type</label>
+        <div *ngIf="vehicleType?.invalid && (vehicleType?.touched || vehicleType?.dirty)">
+          <div *ngIf="vehicleType?.errors?.['required']">
+            <h6>*select valid option</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-floating mb-3">
+        <select id="wheelerType" name="wheelerType" class="form-select" formControlName="wheelerType">
+          <option value="" disabled selected>Select a wheeler type</option>
+          <option value="2W">2 Wheeler</option>
+          <option value="3W">3 Wheeler</option>
+          <option value="4W">4 Wheeler</option>
+        </select>
+        <label for="wheelerType">Wheeler Type</label>
+        <div *ngIf="wheelerType?.invalid && (wheelerType?.touched || wheelerType?.dirty)">
+          <div *ngIf="wheelerType?.errors?.['required']">
+            <h6>*select valid option</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input type="text" id="vehicleNumber" name="vehicleNumber" class="form-control" formControlName="vehicleNumber"
+          placeholder="Vehicle Number">
+        <label for="vehicleNumber">Vehicle Number</label>
+        <div *ngIf="vehicleNumber?.invalid && (vehicleNumber?.touched || vehicleNumber?.dirty)">
+          <div *ngIf="vehicleNumber?.errors?.['required']">
+            <h6>*Vehicle Number can't be empty</h6>
+          </div>
+          <div *ngIf="vehicleNumber?.errors?.['maxlength']">
+            <h6>*Vehicle Number is Invalid</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input type="date" id="entryDate" name="entryDate" class="form-control" formControlName="entryDate"
+          placeholder="Entry Date">
+        <label for="entryDate">Entry Date</label>
+        <div *ngIf="entryDate?.invalid && (entryDate?.touched || entryDate?.dirty)">
+          <div *ngIf="entryDate?.errors?.['required']">
+            <h6>*Entry Date is Required</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input type="time" id="entryTime" name="entryTime" class="form-control" formControlName="entryTime"
+          placeholder="Entry Time">
+        <label for="entryTime">Entry Time</label>
+        <div *ngIf="entryTime?.invalid && (entryTime?.touched || entryTime?.dirty)">
+          <div *ngIf="entryTime?.errors?.['required']">
+            <h6>*Entry Time is required</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col form-floating">
+          <input type="text" id="custID" name="custID" class="form-control" formControlName="custID"
+            placeholder="Customer ID">
+          <label for="custID">Customer ID</label>
+          <div *ngIf="custID?.invalid && (custID?.touched || custID?.dirty)">
+            <div *ngIf="custID?.errors?.['required']">
+              <h6>*Customer ID is required</h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="col form-floating">
+          <input type="text" id="slotID" name="slotID" class="form-control" formControlName="slotID"
+            placeholder="Slot ID">
+          <label for="slotID">Slot ID</label>
+          <div *ngIf="slotID?.invalid && (slotID?.touched || slotID?.dirty)">
+            <div *ngIf="slotID?.errors?.['required']">
+              <h6>*Slot ID is required</h6>
+            </div>
+            <div *ngIf="slotID?.errors?.['maxlength']">
+              <h6>*Pattern Mismatch</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <button id="success" class="btn btn-success" type="submit">Submit</button>&nbsp; &nbsp; &nbsp;
+        <button class="btn btn-danger" type="button" (click)="goToHome()">Back</button>
+      </div>
+    </form>
+  </div>
+  <footer class="footer">
+    <div class="footer-content">
+      <span class="brand">
+        <i class="bi bi-car-front" style="font-size: 20px;"></i>
+        EliteParking
+      </span>
+      <span class="rights"> 2025 EliteParking Management. All rights reserved.</span>
+    </div>
+  </footer>
+</div>
+<router-outlet></router-outlet>

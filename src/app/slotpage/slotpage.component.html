@@ -1,0 +1,293 @@
+<div class="background-container ">
+<div class="container-fluid">
+    <div class="container-fluid mb-3" >
+        <div class="navbar">
+            <div>
+                <img src="./logo.png" alt="logo" height="50px">
+            </div>
+            <div class="mt-3">
+                <button style="padding: 2px 15px; border: 2px solid rgba(255, 255, 255, 0.5); border-radius: 10px; background-color: rgba(255, 255, 255, 0.5); color: white;">Logout</button>
+            </div>
+       </div>
+        <div class="parkingtitle">
+            <p>Parking Reservation</p>
+        </div>                   
+        <div class="row mt-3 mx-1" name="parkingslotdescription" >        
+            <div class="col-6 mb-3">
+                <p class="text-white" >Select Date:</p>
+                <input style="background-color: rgb(80, 80, 80) ;border:none;" type="date" id="calendar" class="form-control text-white input-sm/md/lg/xl/xxl text-center d-flex justify-content-center" [(ngModel)]="selectedDate">
+            </div>            
+            <div class="col-6 mb-3">
+                <p class="text-white ">Vehicle Type:</p>
+                    <div class="dropdown">
+                        <button style="background-color: rgb(80, 80, 80)" class="btn btn-white text-white dropdown-toggle form-control input-sm/md/lg/xl/xxl" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Normal / EV 
+                        </button>
+                        <ul class="dropdown-menu form-control input-sm/md/lg/xl/xxl">
+                            <li><a class="dropdown-item bg-light text-dark text-center" href="#" (click)="showNormalSlots();getdatafromDate()">Normal Parking</a></li>
+                            <li><a class="dropdown-item  bg-light text-dark text-center" href="#"(click)="showEVSlots();getdatafromDate()">EV Parking</a></li>
+                        </ul>
+                   </div>
+             </div>
+        </div>
+       </div>
+       </div>
+       <div class="container-fluid  parkslotingcontainer">
+        <div class="row d-flex mx-5 description justify-content-center" *ngIf="parkinglayout==null">
+           <div class="col-12 alertmessage d-flex justify-content-center"><i class="bi bi-hand-index-thumb text-warning"> </i><b class="text-white">  Please enter the date and vehicle type in the above fields</b></div>
+        </div>
+
+       <div class="row mx-1 mx-4" name="parkingslot" *ngIf="parkinglayout==true">
+            <p class="slottitle pb-1 text-white mt-2">Available Parking Slots</p>
+            <p class="text text-white">Showing normal vehicle parking for {{selectedDate}}</p>
+            <br>
+            <br>
+            <p class="twowheelerslottitle text-white"><i class="fa-solid fa-motorcycle text-info"></i>  2-Wheeler Parking (Normal)</p>
+            <br>    
+            <br>        
+            <div class="container twowheelerslot">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-3 d-flex justify-content-center">
+                        <button class="slotbutton btn btn-primary" #slot1 id="A1" (click)="changeBlueButton(slot1)"><i class="fa-solid fa-motorcycle fa-lg mb-2 mt-3"></i>A1</button>
+                    </div>
+                     <div class="col-3 d-flex justify-content-center">
+                         <button class="slotbutton btn btn-primary" #slot2 id="A2"(click)="changeBlueButton(slot2)"><i class="fa-solid fa-motorcycle fa-lg mb-2 mt-3"></i>A2</button>
+                    </div>
+                     <div class="col-3 d-flex justify-content-center">
+                         <button class="slotbutton btn btn-primary" #slot3 id="A3" (click)="changeBlueButton(slot3)"><i class="fa-solid fa-motorcycle fa-lg mb-2 mt-3"></i>A3</button>
+                    </div>
+                     <div class="col-3 d-flex justify-content-center">
+                         <button class="slotbutton btn btn-primary" #slot4 id="A4" (click)="changeBlueButton(slot4)"><i class="fa-solid fa-motorcycle fa-lg mb-2 mt-3"></i>A4</button>
+                    </div>
+                </div>
+                <br>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-3 d-flex justify-content-center">
+                        <button class="slotbutton btn btn-primary" #slot5 id="A5" (click)="changeBlueButton(slot5)" ><i class="fa-solid fa-motorcycle fa-lg mb-2 mt-3"></i>A5</button>
+                    </div>
+                     <div class="col-3 d-flex justify-content-center">
+                         <button class="slotbutton btn btn-primary" #slot6 id="A6" (click)="changeBlueButton(slot6)"><i class="fa-solid fa-motorcycle fa-lg mb-2 mt-3"></i>A6</button>
+                    </div>
+                     <div class="col-3 d-flex justify-content-center">
+                         <button class="slotbutton btn btn-primary" #slot7 id="A7"(click)="changeBlueButton(slot7)"><i class="fa-solid fa-motorcycle fa-lg mb-2 mt-3"></i>A7</button>
+                    </div>
+                     <div class="col-3 d-flex justify-content-center">
+                         <button class="slotbutton btn btn-primary" #slot8 id="A8" (click)="changeBlueButton(slot8)"><i class="fa-solid fa-motorcycle fa-lg mb-2 mt-3"></i>A8</button>
+                    </div>
+                </div>
+                 <br>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-3 d-flex justify-content-center">
+                        <button class="slotbutton btn btn-primary" #slot9 id="A9" (click)="changeBlueButton(slot9)"><i class="fa-solid fa-motorcycle fa-lg mb-2 mt-3"></i>A9</button>
+                    </div>
+                     <div class="col-3 d-flex justify-content-center">
+                         <button class="slotbutton btn btn-primary" #slot10 id="A10" (click)="changeBlueButton(slot10)"><i class="fa-solid fa-motorcycle fa-lg mb-2 mt-3"></i>A10</button>
+                    </div>
+                     <div class="col-3 d-flex justify-content-center">
+                         <button class="slotbutton btn btn-primary" #slot11 id="A11" (click)="changeBlueButton(slot11)"><i class="fa-solid fa-motorcycle fa-lg mb-2 mt-3"></i>A11</button>
+                    </div>
+                     <div class="col-3 d-flex justify-content-center">
+                         <button class="slotbutton btn btn-primary" #slot12 id="A12" (click)="changeBlueButton(slot12)"><i class="fa-solid fa-motorcycle fa-lg mb-2 mt-3"></i>A12</button>
+                    </div>
+                </div>
+                 <br>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-3 d-flex justify-content-center">
+                        <button class="slotbutton btn btn-primary" #slot13 id="A13" (click)="changeBlueButton(slot13)"><i class="fa-solid fa-motorcycle fa-lg mb-2 mt-3"></i>A13</button>
+                    </div>
+                     <div class="col-3 d-flex justify-content-center">
+                         <button class="slotbutton btn btn-primary" #slot14 id="A14" (click)="changeBlueButton(slot14)"><i class="fa-solid fa-motorcycle fa-lg mb-2 mt-3"></i>A14</button>
+                    </div>
+                     <div class="col-3 d-flex justify-content-center">
+                         <button class="slotbutton btn btn-primary" #slot15 id="A15" (click)="changeBlueButton(slot15)"><i class="fa-solid fa-motorcycle fa-lg mb-2 mt-3"></i>A15</button>
+                    </div>
+                     <div class="col-3 d-flex justify-content-center">
+                         <button class="slotbutton btn btn-primary" #slot16 id="A16" (click)="changeBlueButton(slot16)"><i class="fa-solid fa-motorcycle fa-lg mb-2 mt-3"></i>A16</button>
+                    </div>                    
+                </div>
+               
+            </div>
+             <p class="endline border"></p>            
+            <br>
+            <br>
+            <p class="twowheelerslottitle text-white"><i class="fa-solid fa-car-side text-info"></i>  4-Wheeler Parking (Normal)</p>
+            <br>    
+            <br>        
+            <div class="container twowheelerslot">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-3 d-flex justify-content-center">
+                        <button class="slotbutton1 btn btn-primary" #slot17 id="A17" (click)="changeBlueButton(slot17)"><i class="fa-solid fa-car-side fa-lg mb-2 mt-3"></i>A17</button>
+                    </div>
+                     <div class="col-3 d-flex justify-content-center">
+                         <button class="slotbutton1 btn btn-primary" #slot18 id="A18" (click)="changeBlueButton(slot18)"><i class="fa-solid fa-car-side fa-lg mb-2 mt-3"></i>A18</button>
+                    </div>
+                     <div class="col-3 d-flex justify-content-center">
+                         <button class="slotbutton1 btn btn-primary" #slot19 id="A19" (click)="changeBlueButton(slot19)"><i class="fa-solid fa-car-side fa-lg mb-2 mt-3"></i>A19</button>
+                    </div>
+                     <div class="col-3 d-flex justify-content-center">
+                         <button class="slotbutton1 btn btn-primary" #slot20 id="A20" (click)="changeBlueButton(slot20)"><i class="fa-solid fa-car-side fa-lg mb-2 mt-3"></i>A20</button>
+                    </div>
+                </div>
+                <br>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-3 d-flex justify-content-center">
+                        <button class="slotbutton1 btn btn-primary" #slot21 id="A21" (click)="changeBlueButton(slot21)"><i class="fa-solid fa-car-side fa-lg mb-2 mt-3"></i>A21</button>
+                    </div>
+                     <div class="col-3 d-flex justify-content-center">
+                         <button class="slotbutton1 btn btn-primary" #slot22 id="A22" (click)="changeBlueButton(slot22)"><i class="fa-solid fa-car-side fa-lg mb-2 mt-3"></i>A22</button>
+                    </div>
+                     <div class="col-3 d-flex justify-content-center">
+                         <button class="slotbutton1 btn btn-primary" #slot23 id="A23" (click)="changeBlueButton(slot23)"><i class="fa-solid fa-car-side fa-lg mb-2 mt-3"></i>A23</button>
+                    </div>
+                     <div class="col-3 d-flex justify-content-center">
+                         <button class="slotbutton1 btn btn-primary" #slot24 id="A24" (click)="changeBlueButton(slot24)"><i class="fa-solid fa-car-side fa-lg mb-2 mt-3"></i>A24</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center mt-5">
+                    <div class="col-12 d-flex justify-content-center">
+                            <button class="billingbutton btn btn-secondary p-3"><b>Proceed to Payment</b></button>
+                    </div>
+                </div>
+                <br>   
+            </div>
+            <div *ngIf="parkinglayout==true">
+                <br>
+                <br>
+            </div>
+            
+        <div class="row mx-1 mx-4" name="parkingslot" *ngIf="parkinglayout==false">
+            <p class="slottitle text-white mt-2 pb-1">Available Parking Slots</p>
+            <p class="text text-white">Showing EV vehicle parking for {{selectedDate}} </p>
+            <br>
+            <br>
+            <p class="twowheelerslottitle text-white"><i class="fa-solid fa-motorcycle text-info"></i>  2-Wheeler Parking (EV)</p>
+            <br>    
+            <br>        
+            <div class="container twowheelerslot">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-3 d-flex justify-content-center">
+                        <button class="slotbutton btn btn-success" #EVslot1 id="EV1" (click)="changeGreenButton(EVslot1)"><i class="fa-solid fa-motorcycle fa-lg mb-2 mt-3"></i>EV1</button>
+                    </div>
+                     <div class="col-3 d-flex justify-content-center">
+                         <button class="slotbutton btn btn-success" #EVslot2 id="EV2" (click)="changeGreenButton(EVslot2)"><i class="fa-solid fa-motorcycle fa-lg mb-2 mt-3"></i>EV2</button>
+                    </div>
+                     <div class="col-3 d-flex justify-content-center">
+                         <button class="slotbutton btn btn-success" #EVslot3 id="EV3" (click)="changeGreenButton(EVslot3)"><i class="fa-solid fa-motorcycle fa-lg mb-2 mt-3"></i>EV3</button>
+                    </div>
+                     <div class="col-3 d-flex justify-content-center">
+                         <button class="slotbutton btn btn-success" #EVslot4 id="EV4" (click)="changeGreenButton(EVslot4)"><i class="fa-solid fa-motorcycle fa-lg mb-2 mt-3"></i>EV4</button>
+                    </div>
+                </div>
+                <br>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-3 d-flex justify-content-center">
+                        <button class="slotbutton btn btn-success" #EVslot5 id="EV5" (click)="changeGreenButton(EVslot5)"><i class="fa-solid fa-motorcycle fa-lg mb-2 mt-3"></i>EV5</button>
+                    </div>
+                     <div class="col-3 d-flex justify-content-center">
+                         <button class="slotbutton btn btn-success" #EVslot6 id="EV6" (click)="changeGreenButton(EVslot6)"><i class="fa-solid fa-motorcycle fa-lg mb-2 mt-3"></i>EV6</button>
+                    </div>
+                     <div class="col-3 d-flex justify-content-center">
+                         <button class="slotbutton btn btn-success" #EVslot7 id="EV7" (click)="changeGreenButton(EVslot7)"><i class="fa-solid fa-motorcycle fa-lg mb-2 mt-3"></i>EV7</button>
+                    </div>
+                     <div class="col-3 d-flex justify-content-center">
+                         <button class="slotbutton btn btn-success" #EVslot8 id="EV8" (click)="changeGreenButton(EVslot8)"><i class="fa-solid fa-motorcycle fa-lg mb-2 mt-3"></i>EV8</button>
+                    </div>
+                </div>
+                 <br>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-3 d-flex justify-content-center">
+                        <button class="slotbutton btn btn-success" #EVslot9 id="EV9" (click)="changeGreenButton(EVslot9)"><i class="fa-solid fa-motorcycle fa-lg mb-2 mt-3"></i>EV9</button>
+                    </div>
+                     <div class="col-3 d-flex justify-content-center">
+                         <button class="slotbutton btn btn-success" #EVslot10 id="EV10" (click)="changeGreenButton(EVslot10)"><i class="fa-solid fa-motorcycle fa-lg mb-2 mt-3"></i>EV10</button>
+                    </div>
+                     <div class="col-3 d-flex justify-content-center">
+                         <button class="slotbutton btn btn-success" #EVslot11 id="EV11" (click)="changeGreenButton(EVslot11)"><i class="fa-solid fa-motorcycle fa-lg mb-2 mt-3"></i>EV11</button>
+                    </div>
+                     <div class="col-3 d-flex justify-content-center">
+                         <button class="slotbutton btn btn-success" #EVslot12 id="EV12" (click)="changeGreenButton(EVslot12)"><i class="fa-solid fa-motorcycle fa-lg mb-2 mt-3"></i>EV12</button>
+                    </div>
+                </div>
+                 <br>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-3 d-flex justify-content-center">
+                        <button class="slotbutton btn btn-success" #EVslot13 id="EV13" (click)="changeGreenButton(EVslot13)"><i class="fa-solid fa-motorcycle fa-lg mb-2 mt-3"></i>EV13</button>
+                    </div>
+                     <div class="col-3 d-flex justify-content-center">
+                         <button class="slotbutton btn btn-success" #EVslot14 id="EV14" (click)="changeGreenButton(EVslot14)"><i class="fa-solid fa-motorcycle fa-lg mb-2 mt-3"></i>EV14</button>
+                    </div>
+                     <div class="col-3 d-flex justify-content-center">
+                         <button class="slotbutton btn btn-success" #EVslot15 id="EV15" (click)="changeGreenButton(EVslot15)"><i class="fa-solid fa-motorcycle fa-lg mb-2 mt-3"></i>EV15</button>
+                    </div>
+                     <div class="col-3 d-flex justify-content-center">
+                         <button class="slotbutton btn btn-success" #EVslot16 id="EV16" (click)="changeGreenButton(EVslot16)"><i class="fa-solid fa-motorcycle fa-lg mb-2 mt-3"></i>EV16</button>
+                    </div>                    
+                </div>               
+            </div>
+            
+                <br>
+                <p class="endline border"></p>            
+                <br>
+           
+            <p class="twowheelerslottitle text-white"><i class="fa-solid fa-car-side text-info"></i>  4-Wheeler Parking (EV)</p>
+            <br>    
+            <br>        
+            <div class="container twowheelerslot">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-3 d-flex justify-content-center">
+                        <button class="slotbutton1 btn btn-success" #EVslot17 id="EV17" (click)="changeGreenButton(EVslot17)"><i class="fa-solid fa-car-side fa-lg mb-2 mt-3"></i>EV17</button>
+                    </div>
+                     <div class="col-3 d-flex justify-content-center">
+                         <button class="slotbutton1 btn btn-success" #EVslot18 id="EV18" (click)="changeGreenButton(EVslot18)"><i class="fa-solid fa-car-side fa-lg mb-2 mt-3"></i>EV18</button>
+                    </div>
+                     <div class="col-3 d-flex justify-content-center">
+                         <button class="slotbutton1 btn btn-success" #EVslot19 id="EV19" (click)="changeGreenButton(EVslot19)"><i class="fa-solid fa-car-side fa-lg mb-2 mt-3"></i>EV19</button>
+                    </div>
+                     <div class="col-3 d-flex justify-content-center">
+                         <button class="slotbutton1 btn btn-success" #EVslot20 id="EV20" (click)="changeGreenButton(EVslot20)"><i class="fa-solid fa-car-side fa-lg mb-2 mt-3"></i>EV20</button>
+                    </div>
+                </div>
+                <br>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-3 d-flex justify-content-center">
+                        <button class="slotbutton1 btn btn-success" #EVslot21 id="EV21" (click)="changeGreenButton(EVslot21)"><i class="fa-solid fa-car-side fa-lg mb-2 mt-3"></i>EV21</button>
+                    </div>
+                     <div class="col-3 d-flex justify-content-center">
+                         <button class="slotbutton1 btn btn-success" #EVslot22 id="EV22" (click)="changeGreenButton(EVslot22)"><i class="fa-solid fa-car-side fa-lg mb-2 mt-3"></i>EV22</button>
+                    </div>
+                     <div class="col-3 d-flex justify-content-center">
+                         <button class="slotbutton1 btn btn-success" #EVslot23 id="EV23" (click)="changeGreenButton(EVslot23)"><i class="fa-solid fa-car-side fa-lg mb-2 mt-3"></i>EV23</button>
+                    </div>
+                     <div class="col-3 d-flex justify-content-center">
+                         <button class="slotbutton1 btn btn-success" #EVslot24 id="EV24" (click)="changeGreenButton(EVslot24)"><i class="fa-solid fa-car-side fa-lg mb-2 mt-3"></i>EV24</button>
+                    </div>
+                </div>                 
+            </div>
+            <br>
+              <div class="row d-flex justify-content-center mt-5">
+                    <div class="col-12 d-flex justify-content-center">
+                            <button class="billingbutton btn btn-secondary p-3"><b>Proceed to Payment</b></button>
+                    </div>
+                </div>
+                <br>
+        </div>
+        
+        <div *ngIf="parkinglayout==false">
+                <br>
+                <br>
+            </div>
+           
+      </div>
+    </div>
+         <!--Footer-->
+<footer class="footer mat-elevation-z2">
+  <div class="footer-content">
+    <span class="brand">
+      <img src="./car-front.svg" alt="icon">
+      EliteParking
+    </span>
+    <span class="rights"> 2025 EliteParking Management. All rights reserved.</span>
+  </div>
+</footer>
+   

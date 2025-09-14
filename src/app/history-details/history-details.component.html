@@ -1,0 +1,260 @@
+<!--FORM FOR HISTORY DETAILS
+  <h1>Parking History</h1>
+  <div *ngIf="bHistory" class="historyForm">
+    <h3 class="text-center mb-4">Vehicle Details</h3>
+    <form id="historyDetailsForm" [formGroup]="historyDetailsForm" (ngSubmit)="HistoryForm()" novalidate>
+      <div class="mb-3">
+        <label for="vehicleNumber" class="form-label">Vehicle Number</label>
+        <input type="text" id="vehicleNumber" name="vehicleNumber" class="form-control" formControlName="vehicleNumber">
+        <div *ngIf="vehicleNumber?.invalid && (vehicleNumber?.touched || vehicleNumber?.dirty)">
+          <div *ngIf="vehicleNumber?.errors?.['required']">
+            <h6>*Vehicle Number is required</h6>
+          </div>
+          <div *ngIf="vehicleNumber?.errors?.['maxlength']">
+            <h6>*Vehicle Number is Invalid</h6>
+          </div>
+        </div>
+      </div>
+      <div class="buttons d-flex justify-content-spacearound">
+        <button class="btn btn-success" type="submit">Search</button>&nbsp;
+        <button class="btn btn-danger" type="button" (click)="goToHome()">Back</button>
+      </div>
+    </form>
+  </div>
+  <div *ngIf="!bHistory" class="historyTable">
+    <h3 class="text-center mb-4">Results for "{{ historyDetailsForm.value.vehicleNumber }}"</h3>
+    <div *ngIf="historyRecords.length === 0" class="alert alert-info">
+      <p id="alertp">No Parking Records Found.</p>
+      <button id="alert" class="btn btn-secondary" (click)="goToSearch()">New Search</button>
+    </div>
+    <div *ngIf="historyRecords.length > 0" class="table-responsive">
+      <div>
+      <table class="table table-borderd table-striped align-middle">
+        <thead class="table-dark">
+        <tr>
+          <th>Vehicle Type</th>
+          <th>Wheeler Type</th>
+          <th>Vehicle Number</th>
+          <th>Entry Time</th>
+          <th>Exit Time</th>
+          <th>Customer ID</th>
+          <th>Slot ID</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let rec of historyRecords">
+          <td>{{ rec.vehicleType }}</td>
+          <td>{{ rec.wheelerType }}</td>
+          <td>{{ rec.vehicleNumber }}</td>
+          <td>{{ rec.entryTime }}</td>
+          <td>{{ rec.exitTime || 'null' }}</td>
+          <td>{{ rec.custID }}</td>
+          <td>{{ rec.slotID }}</td>
+        </tr>
+      </tbody>
+      </table>
+    </div>
+    <div class="d-flex justify-content-end gap-2 mt-4">
+      <button class="btn btn-secondary" (click)="goToSearch()">New Search</button>
+      <button class="btn btn-danger" (click)="goToHome()">Home</button>
+    </div>
+  </div>
+<router-outlet></router-outlet>
+-->
+
+<!--
+<div class="container-historyDetails">
+ 
+ <div class="d-flex" style="justify-content: space-between; padding: 20px 30px;">
+  <div>
+          <p style="font-weight: 700; font-size:xx-large; color: white; margin-bottom: 0px;">Elite Parking</p>
+          <p style="font-weight: 300; font-size: small; color: white; margin-bottom: 0px;">Vehicle Parking Management</p>
+  </div>
+  <div class="mt-3">
+          <button style="padding: 2px 15px; border: 2px solid rgba(255, 255, 255, 0.5); border-radius: 10px; background-color: rgba(255, 255, 255, 0.5); color: white;">Logout</button>
+  </div>
+ </div>
+  <h1>Parking History</h1>
+  <div *ngIf="bHistory" class="historyForm">
+    <p class="text-muted-foreground mb-4">Search the vehicle details logging into the slot</p>
+    <form id="historyDetailsForm" [formGroup]="historyDetailsForm" (ngSubmit)="HistoryForm()" novalidate>
+      <div class="form-floating mb-3">
+        <input type="date" id="exitDate" name="exitDate" class="form-control" formControlName="exitDate" placeholder="Exit Date">
+        <label for="exitDate">Exit Date</label>
+        <div *ngIf="exitDate?.invalid && (exitDate?.touched || exitDate?.dirty)">
+          <div *ngIf="exitDate?.errors?.['required']">
+            <h6>*Exit Date is required</h6>
+          </div>
+        </div>
+      </div>
+      <div class="buttons d-flex justify-content-center">
+        <button id="success" class="btn btn-success" type="submit">Search</button>&nbsp; &nbsp; &nbsp;
+        <button class="btn btn-danger" type="button" (click)="goToHome()">Back</button>
+      </div>
+    </form>
+  </div>
+  <div *ngIf="!bHistory" class="historyResults">
+    <h3 class="text-center mb-4 text-white">Results for "{{ historyDetailsForm.value.exitDate }}"</h3>
+    <div *ngIf="historyRecords.length === 0" class="alert alert-info">
+      <p id="alertp">No Parking Records Found.</p>
+      <div class="d-flex justify-content-center">
+        <button id="alert" class="btn btn-secondary" (click)="goToSearch()">New Search</button>
+      </div>
+    </div>
+    <div *ngIf="historyRecords.length > 0" class="table-responsive historyTable">
+      <div>
+        <table class="table table-borderd table-striped align-middle">
+          <thead class="table-dark">
+            <tr>
+              <th>Vehicle Type</th>
+              <th>Wheeler Type</th>
+              <th>Vehicle Number</th>
+              <th>Entry Time</th>
+              <th>Exit Date</th>
+              <th>Exit Time</th>
+              <th>Customer ID</th>
+              <th>Slot ID</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let rec of historyRecords">
+              <td>{{ rec.vehicleType }}</td>
+              <td>{{ rec.wheelerType }}</td>
+              <td>{{ rec.vehicleNumber }}</td>
+              <td>{{ rec.entryTime }}</td>
+              <td>{{ rec.exitDate || 'null' }}</td>
+              <td>{{ rec.exitTime || 'null' }}</td>
+              <td>{{ rec.custID }}</td>
+              <td>{{ rec.slotID }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="d-flex justify-content-center gap-2 mt-4">
+        <button id="alert" class="btn btn-secondary" (click)="goToSearch()">New Search</button> &nbsp;&nbsp;&nbsp;
+        <button class="btn btn-danger" (click)="goToHome()">Home</button>
+      </div>
+    </div>
+  </div>
+  </div>
+  Footer
+<footer class="footer">
+  <div class="footer-content">
+    <span class="brand">
+      <i class="bi bi-car-front" style="font-size: 20px;"></i>
+      EliteParking
+    </span>
+    <span class="rights"> 2025 EliteParking Management. All rights reserved.</span>
+  </div>
+</footer>
+  <router-outlet></router-outlet>
+
+-->
+
+
+
+
+<div class="container-historyDetails">
+  <div class="d-flex" style="justify-content: space-between; padding: 20px 30px;">
+    <img style="height: 50px;" src="logowhite.png">
+    <div class="mt-3">
+      <button
+        style="padding: 2px 15px; border: 2px solid rgba(255, 255, 255, 0.5); border-radius: 10px; background-color: rgba(255, 255, 255, 0.5); color: white;">Logout</button>
+    </div>
+  </div>
+  <h1>Parking History</h1>
+  <div *ngIf="bHistory" class="historyForm">
+    <p class="text-muted-foreground mb-4">Search the vehicle details logging into the slot</p>
+    <form id="historyDetailsForm" [formGroup]="historyDetailsForm" (ngSubmit)="HistoryForm()" novalidate>
+      <div class="form-floating mb-3">
+        <input type="date" id="exitDate" name="exitDate" class="form-control" formControlName="exitDate"
+          placeholder="Exit Date">
+        <label for="exitDate">Enter Date</label>
+        <div *ngIf="exitDate?.invalid && (exitDate?.touched || exitDate?.dirty)">
+          <div *ngIf="exitDate?.errors?.['required']">
+            <h6>*Date is required</h6>
+          </div>
+        </div>
+      </div>
+      <div class="buttons d-flex justify-content-center">
+        <button id="success" class="btn btn-success" type="submit">Search</button>&nbsp; &nbsp; &nbsp;
+        <button class="btn btn-danger" type="button" (click)="goToHome()">Back</button>
+      </div>
+    </form>
+  </div>
+  <div *ngIf="!bHistory" class="historyResults">
+    <h3 class="text-center mb-4 text-white">Results for "{{ historyDetailsForm.value.exitDate }}"</h3>
+    <div *ngIf="entryRecords.length === 0 && exitRecords.length === 0" class="alert alert-info">
+      <p id="alertp">No Parking Records Found.</p>
+      <div class="d-flex justify-content-center">
+        <button id="alert" class="btn btn-secondary" (click)="goToSearch()">New Search</button>
+      </div>
+    </div>
+    <div *ngIf="entryRecords.length > 0">
+      <h4 class="text-white mt-4">Entry Details</h4>
+      <div class="table-responsive historyTable">
+        <table class="table table-borderd table-striped align-middle">
+          <thead class="table-dark">
+            <tr>
+              <th>Vehicle Type</th>
+              <th>Wheeler Type</th>
+              <th>Vehicle Number</th>
+              <th>Entry Date</th>
+              <th>Entry Time</th>
+              <th>Slot ID</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let rec of entryRecords">
+              <td>{{ rec.vehicleType }}</td>
+              <td>{{ rec.wheelerType }}</td>
+              <td>{{ rec.vehicleNumber }}</td>
+              <td>{{ rec.entryDate }}</td>
+              <td>{{ rec.entryTime }}</td>
+              <td>{{ rec.slotID }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div *ngIf="exitRecords.length > 0">
+      <h4 class="text-white mt-4">Exit Details</h4>
+      <div class="table-responsive historyTable">
+        <table class="table table-borderd table-striped align-middle">
+          <thead class="table-dark">
+            <tr>
+              <th>Vehicle Number</th>
+              <th>Exit Date</th>
+              <th>Exit Time</th>
+              <th>Slot ID</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let rec of exitRecords">
+              <td>{{ rec.vehicleNumber }}</td>
+              <td>{{ rec.exitDate || 'null' }}</td>
+              <td>{{ rec.exitTime || 'null' }}</td>
+              <td>{{ rec.slotID }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-center gap-2 mt-4">
+      <button id="alert" class="btn btn-secondary" (click)="goToSearch()">New Search</button> &nbsp;&nbsp;&nbsp;
+      <button class="btn btn-danger" (click)="goToHome()">Home</button>
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="footer-content">
+    <span class="brand">
+      <i class="bi bi-car-front" style="font-size: 20px;"></i>
+      EliteParking
+    </span>
+    <span class="rights"> 2025 EliteParking Management. All rights reserved.</span>
+  </div>
+</footer>
+<router-outlet></router-outlet>

@@ -1,0 +1,180 @@
+<!--<div class="staffManagementHeading">
+    <h2>STAFF DETAILS</h2>
+</div>
+<div class="staffTable">
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Phone Number</th>
+            <th>Details</th>
+        </tr>
+        <tr *ngFor="let staffMember of staffList">
+            <td>{{staffMember.staffId}}</td>
+            <td>{{staffMember.name}}</td>
+            <td>{{staffMember.phoneNo}}</td>
+            <td>  <button class="btn btn-warning" (click)="displayStaffDetails(staffMember)"> Click here </button></td>
+        </tr>
+    </table>
+    <div class="popup row" *ngIf="popupEnable==true">
+        <button class="closeButton" (click)="hideStaffDetails()">X Close</button>
+        <br><br><br>
+        <p class="col-lg-4">ID : {{staffId}}</p>
+        <p class="col-lg-4">Name : {{name}}</p>
+        <p class="col-lg-4">Role : {{role}}</p>
+        <p class="col-lg-4">Phone Number : {{phoneNo}}</p>
+        <p class="col-lg-4">Aadhaar : {{aadhaar}}</p>
+    </div>
+</div>-->
+<div class="background">
+    <div class="foreground">
+        <div class="heading d-flex" style="justify-content: space-between;">
+            <div>
+                <img src="/adminDashboard/logo.png" style="height: 60px;">
+            </div>
+            <div class="mt-3">
+                <button
+                    style="padding: 2px 15px; border: 2px solid rgba(255, 255, 255, 0.5); border-radius: 10px; background-color: rgba(255, 255, 255, 0.5); color: white;">Logout</button>
+            </div>
+        </div>
+        <div class="infoCard">
+            <div style="display: flex; justify-content: space-between; padding: 0px 20px;">
+                <div class="dataCardText">
+                    <p class="dataCardHeading">Total Staff</p>
+                    <p class="dataCardValue">2</p>
+                </div>
+                <div class="dataCardIcon">
+                    <i class="bi bi-people-fill" style="color: rgb(68, 108, 216); font-size: 40px;"></i>
+                </div>
+            </div>
+        </div>
+        <div class="divHolder mb-5">
+            <div style="display: flex; justify-self: center; padding: 10px; width: 90%; align-items: center;">
+                <i class="bi bi-people-fill" style="font-size: 30px; color: white;"></i> &nbsp; &nbsp;
+                <p style="color: white; font-size: x-large; font-weight: 500;">Staff</p>
+            </div>
+            <div *ngFor="let staffMember of staffList">
+                <div class="staffMemberDetailsHolder">
+                    <div class="icon">
+                        <p>JS</p>
+                    </div>
+                    <div class="nameAndPhoneNo">
+                        <p class="name">{{staffMember.name}}</p>
+                        <p class="phoneNo">{{staffMember.phoneNo}}</p>
+                    </div>
+                    <button class="more" (click)="displayStaffMemberDetails(staffMember)">view</button>
+                </div>
+            </div>
+            <div *ngIf="displayDetails==true" class="staffMemberInfo">
+                <div class="heading">
+                    <p>STAFF MEMBER DETAILS</p>
+                </div>
+                <br>
+                <div class="row mb-3">
+                    <div class="col-4">
+                        <p class="colonL">ID </p>
+                        <p class="colonR">{{staffId}}</p>
+                    </div>
+                    <div class="col-4">
+                        <p class="colonL">NAME </p>
+                        <p class="colonR">{{name}}</p>
+                    </div>
+                    <div class="col-4">
+                        <p class="colonL">AADHAAR </p>
+                        <p class="colonR">{{aadhaar}}</p>
+                    </div>
+                    <div class="col-4">
+                        <p class="colonL">PHONE NUMBER </p>
+                        <p class="colonR">{{phoneNo}}</p>
+                    </div>
+                </div>
+                <div class="buttons mb-3">
+                    <button (click)="editButtonClicked()">EDIT</button> &nbsp; &nbsp; &nbsp; &nbsp;
+                    <button (click)="deleteButtonClicked()">DELETE</button>
+                </div>
+                <div *ngIf="editButtonBool==true" class="formDiv">
+                    <div class="formHeading">
+                        <p>EDIT DETAILS</p>
+                    </div>
+                    <form [formGroup]="editForm">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <p>ID</p>
+                                <input type="text" formControlName="staffId">
+                            </div>
+                            <div class="col-lg-6">
+                                <p>Name</p>
+                                <input type="text" formControlName="name">
+                            </div>
+                            <div class="col-lg-6">
+                                <p>Role</p>
+                                <input type="text" formControlName="role">
+                            </div>
+                            <div class="col-lg-6">
+                                <p>Phone Number</p>
+                                <input type="text" formControlName="phoneNo">
+                            </div>
+                            <div class="col-lg-6">
+                                <p>Aadhaar</p>
+                                <input type="text" formControlName="aadhaar">
+                            </div>
+                        </div>
+                        <button (click)="editInBackend()">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="addButton">
+                <button (click)="addButtonClicked()">ADD</button>
+            </div>
+            <div *ngIf="addButtonBool==true" class="formDiv" style="background-color: rgb(80, 80, 80);">
+                <div class="formHeading">
+                    <p class="col-11">ADD DETAILS</p>
+                    <i (click)="closeButtonClickedA()" style="color: white; font-size: 20px;" class="bi bi-x-lg"></i>
+                </div>
+                <form [formGroup]="addForm">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p>ID</p>
+                            <input type="text" formControlName="staffId">
+                        </div>
+                        <div class="col-lg-6">
+                            <p>Name</p>
+                            <input type="text" formControlName="name">
+                            <div *ngIf="getNameA()?.invalid && (getNameA()?.touched || getNameA()?.dirty)">
+                                <p class="errorNote">Enter valid name</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <p>Role</p>
+                            <input type="text" formControlName="role">
+                        </div>
+                        <div class="col-lg-6">
+                            <p>Phone Number</p>
+                            <input type="text" formControlName="phoneNo">
+                            <div *ngIf="getPhoneNoA()?.invalid && (getPhoneNoA()?.touched || getPhoneNoA()?.dirty)">
+                                <p class="errorNote">Enter valid phone number</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <p>Aadhaar</p>
+                            <input type="text" formControlName="aadhaar">
+                            <div *ngIf="getAadhaarA()?.invalid && (getAadhaarA()?.touched || getAadhaarA()?.dirty)">
+                                <p class="errorNote">Enter valid aadhaar number</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button (click)="addInBackend()">Submit</button>
+                </form>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer-content">
+                <span class="brand">
+                    <i class="bi bi-car-front" style="font-size: 20px;"></i>
+                    EliteParking
+                </span>
+                <span class="rights"> 2025 EliteParking Management. All rights reserved.</span>
+            </div>
+        </footer>
+    </div>
+</div>

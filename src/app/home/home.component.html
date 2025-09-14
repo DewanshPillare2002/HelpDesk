@@ -1,0 +1,139 @@
+
+<mat-toolbar class="mat-elevation-z4 toolbar-transparent">
+  <span class="brand">
+    <mat-icon>directions_car</mat-icon>
+    EliteParking
+  </span>
+  <span class="spacer"></span>
+  <button mat-button class="btn-signin-white" routerLink="/login" (click)="GoToLoginPage()">
+  Sign In
+</button>
+
+  <button class="btn-get-started" routerLink="/register" routerLinkActive="active" (click)="GoToRegisterPage()">
+    Get Started Free
+  </button>
+</mat-toolbar>
+
+
+
+
+
+
+
+
+
+
+<div class="hero" [style.background-image]="'url(' + parkingHeroBg +')'" >
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>
+  Smart Parking <br/>
+  <span class="highlight">Made Simple</span>
+</h1>
+    <p>
+      Experience the future of parking with our intelligent management system.
+      Find, book, and pay for parking spaces effortlessly.
+    </p>
+
+
+
+
+
+<div class="actions">
+<button class="btn-get-started" type="button" routerLink="/register" (click)="displayAddForm()">
+  Get Started Free
+  <mat-icon class="arrow-icon">arrow_forward</mat-icon>
+</button> 
+ <button mat-stroked-button color="primary" routerLink="/login" class="signin-btn"  type="button" (click)="GoToLoginPage()">
+  Sign In
+</button>
+    </div>
+
+
+    
+<mat-grid-list cols="3" rowHeight="100px" gutterSize="16px" class="stats">
+  <mat-grid-tile>
+    <div class="stat-wrapper">
+      <div class="stat-value">50+</div>
+      <div class="stat-label">Parking Spots</div>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <div class="stat-wrapper">
+      <div class="stat-value blue-text">10,000+</div>
+      <div class="stat-label">Happy Customers</div>
+    </div>
+
+    
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <div class="stat-wrapper">
+      <div class="stat-value">99.9%</div>
+      <div class="stat-label">Uptime</div>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
+
+
+  </div>
+</div>
+
+
+
+<section class="section">
+  <h2 class="section-title">Why Choose <span class="highlight">EliteParking</span>?</h2>
+  <p class="section-subtitle">
+    Our comprehensive parking management system offers everything you need for a seamless parking experience.
+  </p>
+ 
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card">
+        <img src="/Users/card1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+         Secure Parking
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img src="/Users/card2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+         Parking in Budget
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img src="/Users/card3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          Hassle-free parking
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img src="/Users/card4.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          Reliable
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+
+
+<footer class="footer mat-elevation-z2">
+  <div class="footer-content">
+    <span class="brand">
+      <i class="bi bi-car-front custom-icon"></i>
+      EliteParking
+    </span>
+    <span class="rights"> 2025 EliteParking Management. All rights reserved.</span>
+  </div>
+</footer>
