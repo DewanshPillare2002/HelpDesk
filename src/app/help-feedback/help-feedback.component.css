@@ -40,7 +40,7 @@ h1, h3{
   margin: 0px;
 }
 .box{
-  background-image: url("/backgroundImg.jpg");
+  background-image: url("../../../public/help-feedback/backgroundImg.jpg");
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -163,4 +163,26 @@ h1, h3{
   border-top: 1px solid #dee2e6; /* Adds a top border to a body element that immediately follows another. */
 }
 
-
+.footer{
+  background: #f5f5f5;
+  padding: 1rem;
+ 
+  .footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ 
+  .brand{
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+ 
+  }
+  .rights{
+    font-size: 0.9rem;
+    color: #555;
+ 
+  }
+  }
+}

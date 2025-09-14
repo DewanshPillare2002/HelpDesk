@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { FeedbackService } from '../feedback.service';
 import Feedback from './feedback' // this syntax because the class is default.
+import { Router } from '@angular/router';
 // the import with curly braces are called named export. You can export multiple things (classes, functions, variables) from a single module.
 // The import without curly brace is called default export. we can export only one module in this.
 
@@ -19,7 +20,7 @@ export class FeedbackComponent {
 
   feedbackForm! : FormGroup;
 
-  constructor(private feedbackService : FeedbackService, private fb: FormBuilder){
+  constructor(private feedbackService : FeedbackService, private fb: FormBuilder, private router: Router){
     this.feedbackForm = this.fb.group({
       rating : ["", Validators.required],
       text : ["", Validators.required]
@@ -38,10 +39,11 @@ export class FeedbackComponent {
 
   // getting mapped emoji from rating
   emoji! : string;
+  ratingGiven! : string;
   // get data from form
   showEmoji(){
-    this.rating = this.feedbackForm.get(['rating'])!.value;
-    let emojiValue = this.myMap.get(this.rating);
+    this.ratingGiven = this.feedbackForm.get(['rating'])!.value;
+    let emojiValue = this.myMap.get(this.ratingGiven);
     // the map.get returns undefined|data type. so to handle this, we write if else part.
     if(emojiValue){
       this.emoji = emojiValue;
@@ -62,7 +64,13 @@ export class FeedbackComponent {
   }
 
   // insert value
+  message!: string;
   AddDataInBackend(){
+    // don't allow to fill data if form is invalid
+    if(this.feedbackForm.invalid){
+      alert('Please enter all required field correctly.');
+      return;
+    }
     // get data from form
     let rating: string = this.feedbackForm.get(['rating'])!.value;
     let text: string = this.feedbackForm.get(['text'])!.value;
@@ -74,7 +82,9 @@ export class FeedbackComponent {
 
     //Call the service with this data to insert record in database.
     this.feedbackService.insertData(feedbackRecord).subscribe({
-      next : (data) => {alert('Insert operation is successful..'); this.getDataFromService();},
+      next : (data) => {alert('Insert operation is successful..'); this.getDataFromService();
+        this.router.navigate(['/home'])
+      },
       error : (err) => alert(JSON.stringify(err)),
       complete : () => console.log("Insert operation is successful...")
     })
