@@ -1,0 +1,75 @@
+{
+  "Staff": [
+    {
+      "staffId": "101",
+      "name": "Vikas",
+      "role": "Staff",
+      "phoneNo": "76253",
+      "aadhaar": "12343323",
+      "id": "76bf"
+    },
+    {
+      "staffId": "102",
+      "name": "Aditya",
+      "role": "Staff",
+      "phoneNo": "23223",
+      "aadhaar": "12324456",
+      "id": "2707"
+    },
+    {
+      "id": "",
+      "staffId": "103",
+      "name": "Sridar",
+      "role": "Staff",
+      "phoneNo": "7643475634",
+      "aadhaar": "456448756855"
+    }
+  ],
+  "Users": [
+    {
+      "userId": "1",
+      "userName": "Vikas",
+      "role": "member",
+      "subscription": "gold",
+      "email": "vikas@gmail.com",
+      "userAadhaar": "87647",
+      "userPhoneNo": "98456"
+    },
+    {
+      "userId": "2",
+      "userName": "Aditya",
+      "role": "member",
+      "subscription": "silver",
+      "email": "aditya@gmail.com",
+      "userAadhaar": "23432",
+      "userPhoneNo": "34234"
+    },
+    {
+      "userId": "3",
+      "userName": "Sridar",
+      "role": "member",
+      "subscription": "platinum",
+      "email": "sridar@gmail.com",
+      "userAadhaar": "87456",
+      "userPhoneNo": "83485"
+    }
+  ],
+  "Feedback": [
+    {
+      "username": "vikas",
+      "feedback": "Good. Great parking space!"
+    },
+    {
+      "username": "aditya",
+      "feedback": "Great parking space and customer friendly staff"
+    },
+    {
+      "username": "sridar",
+      "feedback": "Excellent services from staff and through website"
+    },
+    {
+      "username": "gandham",
+      "feedback": "Nice staff and good parking area, convinient to park vehicles"
+    }
+  ]
+}

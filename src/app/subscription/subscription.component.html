@@ -1,0 +1,31 @@
+<div class="subscription">
+  <h2 class="title">Choose Your Plan</h2>
+  <p class="subtitle">Unlock the full potential of your parking management system</p>
+
+  <div class="plans">
+    <div *ngFor="let plan of plans" class="plan-card">
+      <!-- Plan Header -->
+      <div class="plan-header">
+        <span class="badge">{{ plan.badge }}</span>
+        <h3>{{ plan.name }}</h3>
+        <div class="price">
+          ₹{{ plan.price }}
+          <span class="old-price">₹{{ plan.oldPrice }}</span>
+        </div>
+        <p class="period">{{ plan.period }}</p>
+      </div>
+
+      <!-- Features -->
+      <ul class="features">
+        <li *ngFor="let feature of plan.features">✔ {{ feature }}</li>
+      </ul>
+
+      <!-- Button -->
+      <button class="subscribe-btn" [style.background]="plan.color"
+        (click)="subscribe(plan)">
+        Subscribe Now
+      </button>
+    </div>
+  </div>
+</div>
+

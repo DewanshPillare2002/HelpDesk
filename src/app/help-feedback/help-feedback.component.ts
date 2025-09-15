@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SearchQueService } from '../search-que.service';
 import { FormsModule } from '@angular/forms';
 import { FAQ } from './faq';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-help-feedback',
@@ -17,7 +18,7 @@ export class HelpFeedbackComponent implements OnInit{
   stopwords = new Set([
   'a', 'an', 'and', 'are', 'as', 'at', 'be', 'by', 'for', 'from', 'has', 'he','in', 'is', 'it', 'its', 'of', 'on', 'that', 'the', 'to', 'was', 'were', 'will','with', 'you', 'your', 'but', 'how', 'what', 'which', 'who', 'whom', 'where','why', 'can', 'could', 'should', 'would', 'may', 'might', 'must', 'have', 'had', 'do', 'does', 'did', 'am', 'is', 'are', 'was', 'were', 'be', 'been', 'being'
 ]);
-  constructor(private searchQuestionService : SearchQueService){};
+  constructor(private searchQuestionService : SearchQueService, private router : Router){};
 
   ngOnInit(): void {
     this.searchQuestionService.getFaqs().subscribe({
@@ -28,6 +29,10 @@ export class HelpFeedbackComponent implements OnInit{
       },
       complete : () => console.log('Getting data from backend')
     });
+  }
+
+  goToSlotPage(){
+    this.router.navigate(['/slotpage']);
   }
 
   onSearch(){

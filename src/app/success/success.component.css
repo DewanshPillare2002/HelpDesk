@@ -1,0 +1,102 @@
+.outer{
+background-image: url('https://www.visa.co.in/dam/VCOM/regional/ap/india/home-page/images/fuel-payment-with-contactless-visa-card-1600x900.jpg');
+  background-size: cover;
+  /* background-image: url('https://www.shutterstock.com/shutterstock/photos/1834545343/display_1500/stock-photo-photo-of-charming-girl-ride-drive-car-enter-shopping-mall-pay-parking-lot-credit-card-swipe-paypass-1834545343.jpg'); */
+color: white;
+}
+.outer1{
+  background: rgba(0, 0, 0, 0.676);
+}
+.img{
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.success-container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    
+}
+.payment-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;  
+width: 300px;
+  background: white;
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+}
+.invoice-container{
+  width: 250px;
+  
+}
+.invoice-container p{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+p{
+    padding: 5px;
+    font-size: 14px;
+    margin: 0;
+}
+.icon{
+  width: 30px;
+}
+
+.invoice-btn button{
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  background: #07abd3;
+padding: 5px;
+border-radius: 10px;
+}
+.success{
+  
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 20px;
+   height: 100vh;
+}
+.payment-thank{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+ height: fit-content;
+ text-align: center;
+}
+.feedback-container{
+  text-align: center;
+}
+#feedback-link{
+    color: rgb(72, 184, 228);
+    font-weight: 600;
+    cursor: pointer;
+    
+}
+.waviy {
+  position: relative;
+  display: inline-block;
+  color: #AFDBF5;
+}
+.waviy span {
+  position: relative;
+  display: inline-block;
+  /* font-size: 40px; */
+  /* color: #fff; */
+  /* text-transform: uppercase; */
+  animation: flip 2s infinite;
+  animation-delay: calc(.2s * var(--i))
+}
+@keyframes flip {
+  0%,80% {
+    transform: rotateY(360deg) 
+  }
+}

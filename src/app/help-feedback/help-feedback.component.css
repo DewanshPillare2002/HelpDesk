@@ -40,7 +40,7 @@ h1, h3{
   margin: 0px;
 }
 .box{
-  background-image: url("../../../public/help-feedback/backgroundImg.jpg");
+  background-image: url("/backgroundImg.jpg");
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -152,11 +152,13 @@ h1, h3{
 }
 
 /* Accordion body styles */
-.accordion-body {
+  div .accordion-body {
   padding: 20px; /* Adds 20px of space inside the body, around the answer text. */
   font-size: 1rem; /* Sets the font size to 1rem (16px by default). */
   line-height: 1.6; /* Sets the spacing between lines of text for better readability. */
-  color: #555; /* Sets the text color to a lighter grey. */
+  color: white; /* Sets the text color to a lighter grey. */
+  background-color: rgb(118, 118, 118);
+
 }
 
 .accordion-body + .accordion-body {

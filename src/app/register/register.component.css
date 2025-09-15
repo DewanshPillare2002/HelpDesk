@@ -1,0 +1,146 @@
+/* Form wrapper */
+.form-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-image: url('/Users/photo1.avif');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Dark overlay */
+.gradient-dark {
+  background: linear-gradient(135deg, hsl(240, 10%, 3.9%), hsl(240, 5%, 10%));
+  opacity: 0.8;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* Form container */
+.form-content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 28rem;
+  padding: 1.5rem;
+}
+
+/* Transparent card styling */
+.gradient-card {
+  background: transparent;
+  border-radius: 0.75rem;
+  
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  border: 3px solid rgba(255, 255, 255, 0.4); /* Thicker border */
+}
+
+
+/* Header section */
+.header-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.icon-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, hsl(217, 91%, 60%), hsl(142, 69%, 58%));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-large {
+  font-size: 32px;
+  color: #fff;
+}
+.text-2xl {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.text-gradient {
+  background: linear-gradient(135deg, hsl(217, 91%, 60%), hsl(142, 69%, 58%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.text-muted-foreground {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Form fields */
+.mat-form-field {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+input[matInput] {
+  background-color: rgba(255, 247, 247, 0.991);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #171717;
+  padding-left: 1rem;
+}
+input[ mat-select] {
+  background-color: white;
+
+}
+
+input[matInput]:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: hsl(217, 91%, 60%);
+  outline: none;
+}
+
+/* Submit button */
+.btn-gradient {
+  background: linear-gradient(135deg, hsl(217, 91%, 60%), hsl(142, 69%, 58%));
+  color: #fff;
+  font-weight: 600;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  border: none;
+  width: 100%;
+  transition: background 0.3s ease;
+}
+.btn-gradient:hover {
+  background: linear-gradient(135deg, hsl(217, 91%, 70%), hsl(142, 69%, 68%));
+}
+
+/* Back link */
+.back-link {
+  margin-bottom: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.3s ease;
+}
+.back-link:hover {
+  color: hsl(217, 91%, 60%);
+}
+
+
+mat-error {
+  color: #ff2121 !important;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+
+::ng-deep .mat-form-field .mat-select-placeholder {
+  color: #000000 !important;
+}
+
+
+
+/* Ensure mat-select fills the form field */
+.mat-form-field .mat-select {
+  width: 100%;
+}

@@ -1,0 +1,253 @@
+.background{
+    background-image: url('/angular/ParkingSlotManagement/public/adminDashboard/homePageBg.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+.foreground{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.foreground .heading{
+    padding: 20px 30px;
+}
+.foreground .infoCard{
+    width: 20%;
+    justify-self: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(80, 80, 80);
+}
+.foreground .infoCard .dataCardText{
+    align-self: center;
+}
+.foreground .infoCard .dataCardText .dataCardHeading{
+    color: white;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.foreground .dataCardText .dataCardValue{
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+
+.userManagementHeading{
+    text-align: center;
+    padding: 20px 0px;
+}
+.userTable td,th{
+    border: 2px solid black;
+}
+.userTable{
+    width: 60%;
+    justify-self: center;
+    text-align: center;
+}
+.userTable table{
+    justify-self: center;
+    width: 100%;
+}
+
+
+p{
+    margin-bottom: 0px;
+}
+.divHolder{
+    width: 90%;
+    border-radius: 20px;
+    background-color: rgb(63, 63, 63);
+    justify-self: center;
+    margin-top: 50px;
+    padding: 20px 0px;
+}
+.userDetailsHolder{
+    width: 90%;
+    border-radius: 10px;
+    padding: 10px 15px;
+    display: flex;
+    background-color: rgb(80, 80, 80);
+    justify-self: center;
+    margin: 10px auto;
+    color: white;
+    transition: .2s;
+}
+.userDetailsHolder .icon{
+    background-image: linear-gradient(to right, rgb(83, 144, 235), rgb(107, 232, 176));
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-top: 3px;
+}
+.userDetailsHolder .icon p{
+    text-align: center;
+    margin-top: 20%;
+}
+.userDetailsHolder .nameAndEmail{
+    width: 80%;
+}
+.userDetailsHolder .nameAndEmail .name{
+    font-size: 17px;
+    font-weight: 400;
+}
+.userDetailsHolder .nameAndEmail .email{
+    font-weight: 300;
+    font-size: 14px;
+}
+.userDetailsHolder .subscription{
+    width: 10%;
+    height: max-content;
+    justify-items: center;
+    align-self: center;
+}
+.userDetailsHolder .subscription p{
+    font-size: small;
+    font-weight: 500;
+    padding: 2px 10px;
+    background-color: rgb(57, 104, 57);
+    color: rgb(1, 199, 1);
+    border-radius: 30px;
+    width:max-content;
+    text-align: center;
+}
+.userDetailsHolder .more{
+    height: max-content;
+    align-self: center;
+    font-size: small;
+    font-weight: 500;
+    padding: 2px 10px;
+    background-color: rgb(83, 144, 235);
+    color: white;
+    border : none;
+    border-radius: 30px;
+    width:max-content;
+    text-align: center;
+}
+.userDetailsHolder:hover{
+    transform: scale(1.05);
+}
+
+.col-4{
+    margin-bottom: 20px;
+}
+.userInfo{
+    width: 90%;
+    justify-self: center;
+    background-color: rgb(80, 80, 80);
+    border-radius: 10px;
+    display: flex;
+    padding: 30px 0px 30px 15px;
+}
+.userInfo .colonL{
+    color: white;
+    font-weight: 600;
+    font-size: medium;
+}
+.userInfo .colonR{
+    color: white;
+    font-weight: 300;
+}
+.userInfo .heading p{
+    background: linear-gradient(to right, rgb(83, 144, 235), rgb(107, 232, 176));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.userInfo .buttons button{
+    background: linear-gradient(to right, rgb(83, 144, 235), rgb(107, 232, 176));
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    padding: 5px 10px;
+    color: white;
+    font-size: medium;
+    font-weight: 700;
+}
+.formDiv{
+    width: 70%;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 15%;
+    padding: 20px 30px;
+    background-color: rgb(63, 63, 63);
+}
+.formDiv .formHeading{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.formDiv .formHeading i{
+    font-size: 20px;
+    color: white;
+}
+.formDiv .formHeading p{
+    background: linear-gradient(to right, rgb(83, 144, 235), rgb(107, 232, 176));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+}
+.formDiv form{
+    color: white;
+}
+.formDiv form p{
+    color: white;
+    font-weight: 600;
+    font-size: medium;
+    margin-bottom: 5px;
+}
+.formDiv form input{
+    border-radius: 10px;
+    border: none;
+    padding: 5px 5px;
+    margin-bottom: 10px;
+}
+.formDiv form button{
+    background: linear-gradient(to right, rgb(83, 144, 235), rgb(107, 232, 176));
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    padding: 5px 10px;
+    color: white;
+    font-size: medium;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.formDiv form .errorNote{
+    font-weight: 500;
+    color: red
+}
+
+.footer{
+  background: #f5f5f5;
+  padding: 1rem;
+  margin-top: 50px;
+}
+.footer-content{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.brand{
+font-weight: bold;
+display: flex;
+align-items: center;
+gap: 0.5rem;
+}
+.rights{
+font-size: 0.9rem;
+color: #555;
+}
+.spacer{
+  flex: 1 1 auto;
+}

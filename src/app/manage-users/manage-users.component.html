@@ -1,0 +1,164 @@
+<!--<div class="userManagementHeading">
+    <h2>USERS' DETAILS</h2>
+</div>
+<div class="userTable">
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Phone Number</th>
+            <th>Details</th>
+        </tr>
+        <tr *ngFor="let user of usersList">
+            <td>{{user.userId}}</td>
+            <td>{{user.userName}}</td>
+            <td>{{user.userPhoneNo}}</td>
+            <td> <button (click)="displayUserDetails(user)">Click here</button> </td>
+        </tr>
+    </table>
+    <div *ngIf="popupEnable==true">
+        <p>ID : {{userId}}</p>
+        <p>Name : {{userName}}</p>
+        <p>Role : {{role}}</p>
+        <p>Subscription : {{subscription}}</p>
+        <p>Email : {{email}}</p>
+        <p>Aadhaar : {{userAadhaar}}</p>
+        <p>Phone Number : {{userPhoneNo}}</p>
+    </div>
+</div>-->
+<div class="background">
+    
+    <div class="foreground">
+        <div class="heading d-flex" style="justify-content: space-between;">
+            <div>
+                <img src="/adminDashboard/logo.png" style="height: 60px;">
+            </div>
+            <div class="mt-3">
+                <button
+                    style="padding: 2px 15px; border: 2px solid rgba(255, 255, 255, 0.5); border-radius: 10px; background-color: rgba(255, 255, 255, 0.5); color: white;">Logout</button>
+            </div>
+        </div>
+        <div class="infoCard">
+            <div style="display: flex; justify-content: space-between; padding: 0px 20px;">
+                <div class="dataCardText">
+                    <p class="dataCardHeading">Total Staff</p>
+                    <p class="dataCardValue">2</p>
+                </div>
+                <div class="dataCardIcon">
+                    <i class="bi bi-people-fill" style="color: rgb(68, 108, 216); font-size: 40px;"></i>
+                </div>
+            </div>
+        </div>
+<div class="divHolder mb-5">
+    <div style="display: flex; justify-self: center; padding: 10px; width: 90%; align-items: center;">
+        <i class="bi bi-people-fill" style="font-size: 30px; color: white;"></i> &nbsp; &nbsp;
+        <p style="color: white; font-size: x-large; font-weight: 500;">Users</p>
+    </div>
+    <div *ngFor="let user of usersList">
+        <div class="userDetailsHolder">
+            <div class="icon">
+                <p>JS</p>
+            </div>
+            <div class="nameAndEmail">
+                <p class="name">{{user.userName}}</p>
+                <p class="email">{{user.email}}</p>
+            </div>
+            <div class="subscription">
+                <p>{{user.subscription}}</p>
+            </div>
+            <button class="more" (click)="displayUserDetails(user)">view</button>
+        </div>
+    </div>
+    <div *ngIf="displayDetails==true" class="userInfo row mb-5">
+        <div class="heading">
+            <p>USER DETAILS</p>
+        </div>
+        <br> <br>   
+        <div class="row mb-4">
+            <div class="col-4">
+                <p class="colonL">ID </p>
+                <p class="colonR">{{userId}}</p>
+            </div>
+            <div class="col-4">
+                <p class="colonL">NAME </p>
+                <p class="colonR">{{userName}}</p>
+            </div>
+            <div class="col-4">
+                <p class="colonL">SUBSCRIPTION </p>
+                <p class="colonR">{{subscription}}</p>
+            </div>
+            <div class="col-4">
+                <p class="colonL">EMAIL </p>
+                <p class="colonR">{{email}}</p>
+            </div>
+            <div class="col-4">
+                <p class="colonL">AADHAAR </p>
+                <p class="colonR">{{userAadhaar}}</p>
+            </div>
+            <div class="col-4">
+                <p class="colonL">PHONE NUMBER </p>
+                <p class="colonR">{{userPhoneNo}}</p>
+            </div>
+        </div>
+        <div class="buttons mb-2">
+            <button (click)="editButtonClicked()">EDIT</button> &nbsp; &nbsp; &nbsp; &nbsp;
+            <button (click)="deleteButtonClicked()">DELETE</button>
+        </div>
+        <div *ngIf="editButtonBool==true" class="formDiv">
+            <div class="formHeading">
+                <p class="col-11">EDIT DETAILS</p>
+                <i class="bi bi-x-lg" (click)="closeButtonClicked()"></i>
+            </div>
+            <form [formGroup]="editForm">
+                <div class="row">
+                    <div class="col-lg-6"><p>ID</p>
+                    <input type="text" formControlName="userId"></div>
+                    <div class="col-lg-6">
+                        <p>Name</p>
+                        <input type="text" formControlName="userName">
+                        <div *ngIf="getName()?.invalid && (getName()?.touched || getName()?.dirty)">
+                            Enter Valid Name
+                        </div>
+                    </div>
+                    <div class="col-lg-6"><p>Role</p>
+                    <input type="text" formControlName="role"></div>
+                    <div class="col-lg-6"><p>Subscription</p>
+                    <input type="text" formControlName="subscription"></div>
+                    <div class="col-lg-6">
+                        <p>Email</p>
+                        <input type="text" formControlName="email">
+                        <div *ngIf="getEmail()?.invalid && (getEmail()?.touched || getEmail()?.dirty)">
+                            <p class="errorNote">Enter Valid Email</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <p>Aadhaar</p>
+                        <input type="text" formControlName="userAadhaar">
+                        <div *ngIf="getAadhaar()?.invalid && (getAadhaar()?.dirty || getAadhaar()?.touched)">
+                            <p class="errorNote">Enter Valid Aadhaar Details</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <p>Phone Number</p>
+                        <input type="text" formControlName="userPhoneNo">
+                        <div *ngIf="getPhoneNo()?.invalid && (getPhoneNo()?.dirty || getPhoneNo()?.touched)">
+                            <p class="errorNote">Enter Valid Phone Number</p>
+                        </div>
+                    </div>
+                </div>
+                <button (click)="editInBackend()">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+            <div class="footer-content">
+                <span class="brand">
+                    <i class="bi bi-car-front" style="font-size: 20px;"></i>
+                    EliteParking
+                </span>
+                <span class="rights"> 2025 EliteParking Management. All rights reserved.</span>
+            </div>
+        </footer>
+</div>
+</div>

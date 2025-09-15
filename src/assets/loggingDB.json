@@ -1,0 +1,50 @@
+{
+  "EntryDetails": [
+    {
+      "id": "7fa0",
+      "vehicleType": "Normal",
+      "wheelerType": "4W",
+      "vehicleNumber": "TN02AA0001",
+      "entryDate": "2025-09-10",
+      "entryTime": "11:28",
+      "custID": "EP12",
+      "slotID": "A8"
+    },
+    {
+      "id": "9717",
+      "vehicleType": "Normal",
+      "wheelerType": "3W",
+      "vehicleNumber": "TN09AL1234",
+      "entryDate": "2025-09-10",
+      "entryTime": "18:55",
+      "custID": "EP12",
+      "slotID": "M1"
+    },
+    {
+      "id": "2123",
+      "vehicleType": "Normal",
+      "wheelerType": "2W",
+      "vehicleNumber": "TN59BZ3000",
+      "entryDate": "2025-09-12",
+      "entryTime": "11:33",
+      "custID": "EP12",
+      "slotID": "A5"
+    }
+  ],
+  "ExitDetails": [
+    {
+      "id": "7650",
+      "vehicleNumber": "TN02AA0001",
+      "slotID": "A8",
+      "exitDate": "2025-09-10",
+      "exitTime": "12:30"
+    },
+    {
+      "id": "e12b",
+      "vehicleNumber": "TN59BZ3000",
+      "slotID": "A5",
+      "exitDate": "2025-09-12",
+      "exitTime": "12:35"
+    }
+  ]
+}
