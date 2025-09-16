@@ -1,6 +1,6 @@
 export class feedbackInterface{
     uid : string = '';
-    rating : string = '';
+    name : string = '';
     text : string = '';
     id : string = '';
 }

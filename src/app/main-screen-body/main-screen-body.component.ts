@@ -28,4 +28,7 @@ export class MainScreenBodyComponent {
   displayStaffDataComp(){
     this.route.navigate(['/manageStaff']);
   }
+  logoutFunctionFromAdmin(){
+    this.route.navigate(['']);
+  }
 }

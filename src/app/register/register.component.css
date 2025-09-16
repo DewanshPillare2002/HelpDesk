@@ -32,11 +32,9 @@
 .gradient-card {
   background: transparent;
   border-radius: 0.75rem;
-  
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-  border: 3px solid rgba(255, 255, 255, 0.4); /* Thicker border */
+  border: 3px solid rgba(255, 255, 255, 0.4);
 }
-
 
 /* Header section */
 .header-stack {
@@ -81,21 +79,41 @@
   width: 100%;
   margin-bottom: 1rem;
 }
+
+/* Input field styling */
 input[matInput] {
   background-color: rgba(255, 247, 247, 0.991);
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: #171717;
   padding-left: 1rem;
 }
-input[ mat-select] {
-  background-color: white;
-
-}
 
 input[matInput]:focus {
   background-color: rgba(255, 255, 255, 0.1);
   border-color: hsl(217, 91%, 60%);
   outline: none;
+}
+
+/* Role dropdown only — make it white */
+::ng-deep .mat-select {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border-radius: 4px;
+  padding-left: 1rem;
+}
+
+::ng-deep .mat-select-value {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+::ng-deep .mat-select-placeholder {
+  color: #888888 !important;
+}
+
+::ng-deep .mat-select-panel .mat-option {
+  background-color: #ffffff !important;
+  color: #000000 !important;
 }
 
 /* Submit button */
@@ -126,19 +144,17 @@ input[matInput]:focus {
   color: hsl(217, 91%, 60%);
 }
 
-
+/* Error messages */
 mat-error {
   color: #ff2121 !important;
   font-weight: 500;
   font-size: 1rem;
 }
 
-
+/* Placeholder fix */
 ::ng-deep .mat-form-field .mat-select-placeholder {
   color: #000000 !important;
 }
-
-
 
 /* Ensure mat-select fills the form field */
 .mat-form-field .mat-select {

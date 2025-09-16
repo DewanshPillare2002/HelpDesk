@@ -80,7 +80,7 @@
 
 /* CSS for BootStrap form */
 .container-entryDetails{
-    background-image: url('/Project/Logging/public/pl.jpg');
+    background-image: url('/pl.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

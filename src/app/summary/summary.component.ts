@@ -5,6 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 import { PayementDataService } from '../payement-data.service';
 import { PaymentService } from '../payment.service';
+import { SlotBookingRestService } from '../slotBookingRest.service';
 
 @Component({
   selector: 'app-summary',
@@ -16,7 +17,7 @@ export class SummaryComponent implements OnInit {
 
   
   constructor(private router: Router,
-    private PaymentserviceObj: PayementDataService, private fb: FormBuilder, private route :ActivatedRoute, private paymentAPI : PaymentService) {
+    private PaymentserviceObj: PayementDataService, private fb: FormBuilder, private route :ActivatedRoute, private paymentAPI : PaymentService, private sloTAPI : SlotBookingRestService) {
     
 
   }
@@ -91,9 +92,9 @@ export class SummaryComponent implements OnInit {
 
 
 
+
+
   }
-
-
 
 
 
@@ -351,8 +352,30 @@ calculateCharges() {
      
 this.PaymentserviceObj.updatePaymentDetails(this.createInvoice());
       // console.log(details);
+      if(this.type== 'parkingPayments'){ this.confirmslot();}
       this.router.navigate(['/success']);
     }
+  }
+
+  //confirm slot for current Parking
+confirmslot():void{
+  let paymentDetails = this.paymentDetails;
+    const slotData ={
+      slot: this.paymentDetails.slot,
+      date: this.paymentDetails.date,
+      userid: this.paymentDetails.userId,
+      parkingType: this.paymentDetails.period
+    };
+    this.sloTAPI.insertData(slotData).subscribe({
+      next:(response)=>{
+        console.log('Slot Booking is Successful'+response);
+     
+      },
+      error:(err)=>{
+        console.log('Error Booking Slot:',err);
+        alert('failed to book your slot');
+      }
+    })
   }
 
   // payment forms validation

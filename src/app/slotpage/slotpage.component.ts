@@ -33,7 +33,7 @@ export class SlotpageComponent implements OnInit{
      }
   }
   goToHelpPage() {
-      this.router.navigate(['/help&support']); 
+    this.router.navigate(['/help&support']); 
   }
   private formatDate(date:Date):string{
     var year=date.getFullYear();
@@ -79,13 +79,11 @@ export class SlotpageComponent implements OnInit{
      if(button.classList.contains('btn-primary')){
          button.classList.remove('btn-primary');
          button.classList.add('btn-danger');
-         alert('You have choosen the : '+ this.slotNumber +' slot');
          this.selectedSlot=button;
      }
      else{
          button.classList.remove('btn-danger');
          button.classList.add('btn-primary');
-         alert('You have removed the : '+ this.slotNumber +' slot');
          this.selectedSlot=null;
      }
 
@@ -93,7 +91,6 @@ export class SlotpageComponent implements OnInit{
   changeGreenButton(button:HTMLButtonElement):void{
       this.slotNumber=button.id;
       this.parkingType='EVvehicle';
-      this.bookslot(this.slotNumber);
       if(button.classList.contains('btn-secondary')){
         alert("This seat is already occupied");
         return;
@@ -105,13 +102,11 @@ export class SlotpageComponent implements OnInit{
       if(button.classList.contains('btn-success')){
          button.classList.remove('btn-success');
          button.classList.add('btn-danger');
-         alert('You have choosen the : '+ this.slotNumber +' slot');
          this.selectedSlot=button;
      }
      else{
          button.classList.remove('btn-danger');
          button.classList.add('btn-success');
-         alert('You have removed the : '+ this.slotNumber +' slot');
          this.selectedSlot=null;
      }
   }
@@ -163,25 +158,26 @@ export class SlotpageComponent implements OnInit{
   }
     
    //delete the json data once vehicles need to be exit 
-   deleteSlot(slotToDelete:string,dateToDelete:string):void{
-    const recordToDelete=this.entireSlot.find(
-      (slot)=>slot.slot===slotToDelete && slot.date===dateToDelete
-    );
-    console.log(recordToDelete);
-    if(recordToDelete){
-      this.restService.deleteRecord(recordToDelete.id).subscribe({
-          next:()=>{
-            alert('Slot Deleted Successfully!');
-            this.getdatafromDate();
-          },
-          error:(err)=>{
-            console.error('Error deleting slot:',err);
-            alert('Failed to delete slot.');
-          },
-          complete:()=>{console.log("Deletion is successful");}
-      });
-    }
-   }
+  //  deleteSlot(slotToDelete:string,dateToDelete:string):void{
+  //   const recordToDelete=this.entireSlot.find(
+  //     (slot)=>slot.slot===slotToDelete && slot.date===dateToDelete
+  //   );
+  //   console.log(recordToDelete);
+  //   if(recordToDelete){
+  //     this.restService.deleteRecord(recordToDelete.id).subscribe({
+  //         next:()=>{
+  //           alert('Slot Deleted Successfully!');
+  //           this.getdatafromDate();
+  //         },
+  //         error:(err)=>{
+  //           console.error('Error deleting slot:',err);
+  //           alert('Failed to delete slot.');
+  //         },
+  //         complete:()=>{console.log("Deletion is successful");}
+  //     });
+  //   }
+  //  }
+ 
   
   
   //checkout to payment
@@ -198,6 +194,8 @@ export class SlotpageComponent implements OnInit{
     this.router.navigate(['checkout'],
       { queryParams : {id: newSub.id, type: 'parkingPayments'}});
   });
+
+  
 }
 
   

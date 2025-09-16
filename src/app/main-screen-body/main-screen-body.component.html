@@ -5,7 +5,7 @@
         <img src="/adminDashboard/logo.png" style="height: 60px;">
       </div>
       <div class="mt-3">
-        <button style="padding: 2px 15px; border: 2px solid rgba(255, 255, 255, 0.5); border-radius: 10px; background-color: rgba(255, 255, 255, 0.5); color: white;">Logout</button>
+        <button style="padding: 2px 15px; border: 2px solid rgba(255, 255, 255, 0.5); border-radius: 10px; background-color: rgba(255, 255, 255, 0.5); color: white;" (click)="logoutFunctionFromAdmin()" >Logout</button>
       </div>
     </div>
     <div class="adminNote">
@@ -15,7 +15,7 @@
       <div class="card" (click)="displayUsersDataComp()">
         <img src="/adminDashboard/userManagementCardBg.jpg" alt="">
         <div class="cardFg">
-          <p>User Management</p>
+          <p>Member Management</p>
         </div>
       </div>
       <div class="card" (click)="displayStaffDataComp()">
@@ -76,7 +76,7 @@
         <div *ngFor="let feedbackCard of feedbacks" class="mb-4 col-lg-4">
           <div class="feedbackCard">
             <div class="userName">
-              {{feedbackCard.id}}
+              {{feedbackCard.name}}
             </div>
             <div class="feedback">
               {{feedbackCard.text}}

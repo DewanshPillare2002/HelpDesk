@@ -292,6 +292,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { DbServiceService } from '../db-service.service';
 import ExitDetails from '../ExitDetails';
+import { SlotBookingRestService } from '../slotBookingRest.service';
+import slotmodule from '../slotpage/slotmodule';
 declare var bootstrap: any;
 
 @Component({
@@ -303,8 +305,8 @@ declare var bootstrap: any;
 export class ExitDetailsComponent {
   title = 'Exit Details';
   exitDetailsForm!: FormGroup;
-
-  constructor(private router: Router, private fb: FormBuilder, private db: DbServiceService) {
+   entireSlot:slotmodule[]=[];
+  constructor(private router: Router, private fb: FormBuilder, private db: DbServiceService,private sd:SlotBookingRestService ) {
     this.exitDetailsForm = this.fb.group({
       vehicleNumber: ['', [Validators.required, Validators.maxLength(10)]],
       slotID: ['', [Validators.required, Validators.maxLength(4)]],
@@ -312,6 +314,7 @@ export class ExitDetailsComponent {
       exitTime: ['', Validators.required]
     });
   }
+ 
 
   ExitForm(): void {
     if (this.exitDetailsForm.invalid) {
@@ -319,6 +322,12 @@ export class ExitDetailsComponent {
       this.exitDetailsForm.markAllAsTouched();
       return;
     }
+     this.sd.getAllData().subscribe({
+        next:(data:any[])=>{
+          this.entireSlot=data;
+        }
+        
+  })
 
     const vehicleNumber = this.exitDetailsForm.get('vehicleNumber')?.value;
 
@@ -330,6 +339,15 @@ export class ExitDetailsComponent {
         const exitDate = this.exitDetailsForm.get('exitDate')?.value;
 
         const exitDetailsRec: ExitDetails = new ExitDetails(vehicleNumber, slotID, exitDate, exitTime);
+
+        this.sd.deleteRecord(slotID,exitDate,this.entireSlot).subscribe({
+    next:()=>{
+      alert('deleted');
+    },
+    error:(err)=>{
+      alert(err.message);
+    }
+  })
 
         this.db.insertExitDetails(exitDetailsRec).subscribe({
           next: (data) => {
@@ -344,6 +362,9 @@ export class ExitDetailsComponent {
         this.showAlert('Vehicle not found or has already exited.', 'danger');
       }
     });
+
+
+    
   }
 
   showAlert(message: string, type: string) {
@@ -383,4 +404,6 @@ export class ExitDetailsComponent {
   goToHome() {
     this.router.navigate(['/StaffHome']);
   }
+ 
+
 }

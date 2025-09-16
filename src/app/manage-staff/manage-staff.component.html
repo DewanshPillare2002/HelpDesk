@@ -34,7 +34,7 @@
             </div>
             <div class="mt-3">
                 <button
-                    style="padding: 2px 15px; border: 2px solid rgba(255, 255, 255, 0.5); border-radius: 10px; background-color: rgba(255, 255, 255, 0.5); color: white;">Logout</button>
+                    style="padding: 2px 15px; border: 2px solid rgba(255, 255, 255, 0.5); border-radius: 10px; background-color: rgba(255, 255, 255, 0.5); color: white;" routerLink="" >Logout</button>
             </div>
         </div>
         <div class="infoCard">
@@ -94,7 +94,8 @@
                 </div>
                 <div *ngIf="editButtonBool==true" class="formDiv">
                     <div class="formHeading">
-                        <p>EDIT DETAILS</p>
+                        <p class="col-11">EDIT DETAILS</p>
+                        <i class="bi bi-x-lg" style="color: white; font-size: 20px;" (click)="closeButtonClicked()"></i>
                     </div>
                     <form [formGroup]="editForm">
                         <div class="row">

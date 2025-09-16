@@ -35,13 +35,13 @@
             </div>
             <div class="mt-3">
                 <button
-                    style="padding: 2px 15px; border: 2px solid rgba(255, 255, 255, 0.5); border-radius: 10px; background-color: rgba(255, 255, 255, 0.5); color: white;">Logout</button>
+                    style="padding: 2px 15px; border: 2px solid rgba(255, 255, 255, 0.5); border-radius: 10px; background-color: rgba(255, 255, 255, 0.5); color: white;" routerLink="" >Logout</button>
             </div>
         </div>
         <div class="infoCard">
             <div style="display: flex; justify-content: space-between; padding: 0px 20px;">
                 <div class="dataCardText">
-                    <p class="dataCardHeading">Total Staff</p>
+                    <p class="dataCardHeading">Total Members</p>
                     <p class="dataCardValue">2</p>
                 </div>
                 <div class="dataCardIcon">
@@ -52,7 +52,7 @@
 <div class="divHolder mb-5">
     <div style="display: flex; justify-self: center; padding: 10px; width: 90%; align-items: center;">
         <i class="bi bi-people-fill" style="font-size: 30px; color: white;"></i> &nbsp; &nbsp;
-        <p style="color: white; font-size: x-large; font-weight: 500;">Users</p>
+        <p style="color: white; font-size: x-large; font-weight: 500;">Members</p>
     </div>
     <div *ngFor="let user of usersList">
         <div class="userDetailsHolder">
@@ -71,7 +71,7 @@
     </div>
     <div *ngIf="displayDetails==true" class="userInfo row mb-5">
         <div class="heading">
-            <p>USER DETAILS</p>
+            <p>MEMBER DETAILS</p>
         </div>
         <br> <br>   
         <div class="row mb-4">

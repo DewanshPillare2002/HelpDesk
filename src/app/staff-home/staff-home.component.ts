@@ -17,13 +17,12 @@ export class StaffHomeComponent {
 
    goToEntryDetails()
   {
-       this.bEntry = true;
        this.router.navigate(['/Entry']);
   }
 
   goToExitDetails()
   {
-      this.bEntry = true;
+
       this.router.navigate(['/Exit']);
   }
 

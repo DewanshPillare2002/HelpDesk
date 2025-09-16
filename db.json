@@ -79,6 +79,132 @@
       "date": "2025-09-16",
       "amount": 80,
       "status": "pending"
+    },
+    {
+      "id": "a732",
+      "userId": "U001",
+      "slot": "A2",
+      "period": "normalParking",
+      "date": "2025-09-17",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "8c14",
+      "userId": "U001",
+      "slot": "EV2",
+      "period": "EVvehicle",
+      "date": "2025-09-16",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "a3ba",
+      "userId": "U001",
+      "slot": "EV2",
+      "period": "EVvehicle",
+      "date": "2025-09-16",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "6ded",
+      "userId": "U001",
+      "slot": "A1",
+      "period": "normalParking",
+      "date": "2025-09-18",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "cd71",
+      "userId": "U001",
+      "slot": "",
+      "period": "",
+      "date": "2025-09-18",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "40d0",
+      "userId": "U001",
+      "slot": "A15",
+      "period": "normalParking",
+      "date": "2025-09-19",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "c94c",
+      "userId": "U001",
+      "slot": "A14",
+      "period": "normalParking",
+      "date": "2025-09-17",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "be03",
+      "userId": "U001",
+      "slot": "A14",
+      "period": "normalParking",
+      "date": "2025-09-17",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "b568",
+      "userId": "U001",
+      "slot": "A16",
+      "period": "normalParking",
+      "date": "2025-09-16",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "0954",
+      "userId": "U001",
+      "slot": "A1",
+      "period": "normalParking",
+      "date": "2025-09-20",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "8b96",
+      "userId": "U001",
+      "slot": "A2",
+      "period": "normalParking",
+      "date": "2025-09-20",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "d93e",
+      "userId": "U001",
+      "slot": "A1",
+      "period": "normalParking",
+      "date": "2025-09-30",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "e82b",
+      "userId": "U001",
+      "slot": "A3",
+      "period": "normalParking",
+      "date": "2025-09-16",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "2a15",
+      "userId": "U001",
+      "slot": "A3",
+      "period": "normalParking",
+      "date": "2025-09-17",
+      "amount": 80,
+      "status": "pending"
     }
   ],
   "User": [
@@ -205,63 +331,33 @@
   "Feedback": [
     {
       "uid": "a101",
-      "rating": "good",
-      "text": "Happy Happy Happyyy",
+      "name": "Vikas",
+      "text": "Great Parking Service.",
       "id": "a547"
     },
     {
       "uid": "a102",
-      "rating": "very good",
-      "text": "Happy Happyyy",
+      "name": "Aditya",
+      "text": "Great Parking Lot and Lovely Staff",
       "id": "5364"
     },
     {
       "id": "d931",
       "uid": "101",
-      "rating": "very good",
-      "text": "I love this website"
+      "name": "Sridar",
+      "text": "Staff service is very good. Helped me get my slot!"
     },
     {
       "id": "380b",
       "uid": "101",
-      "rating": "very bad",
-      "text": "very angry"
+      "name": "Gandham",
+      "text": "Good membership plans, they are budget-friendly. Now I am able to get parking area very conviniently"
     },
     {
       "id": "d7df",
       "uid": "101",
-      "rating": "good",
-      "text": "good"
-    },
-    {
-      "id": "bfff",
-      "uid": "101",
-      "rating": "very good",
-      "text": "I love this website"
-    },
-    {
-      "id": "727f",
-      "uid": "101",
-      "rating": "",
-      "text": ""
-    },
-    {
-      "id": "cd5f",
-      "uid": "101",
-      "rating": "very good",
-      "text": ""
-    },
-    {
-      "id": "ee1d",
-      "uid": "101",
-      "rating": "neutral",
-      "text": "happy"
-    },
-    {
-      "id": "a357",
-      "uid": "101",
-      "rating": "neutral",
-      "text": "happy"
+      "name": "Teja",
+      "text": "Help and Support page helped really well"
     }
   ],
   "EntryDetails": [
@@ -314,6 +410,56 @@
       "entryTime": "09:02",
       "custID": "462",
       "slotID": "A1"
+    },
+    {
+      "id": "f90e",
+      "vehicleType": "Normal",
+      "wheelerType": "2W",
+      "vehicleNumber": "TN01AA0001",
+      "entryDate": "2025-09-18",
+      "entryTime": "15:56",
+      "custID": "123",
+      "slotID": "A1"
+    },
+    {
+      "id": "b507",
+      "vehicleType": "Normal",
+      "wheelerType": "2W",
+      "vehicleNumber": "TN02AA0001",
+      "entryDate": "2025-09-16",
+      "entryTime": "16:50",
+      "custID": "231",
+      "slotID": "A16"
+    },
+    {
+      "id": "5456",
+      "vehicleType": "Normal",
+      "wheelerType": "2W",
+      "vehicleNumber": "TN03AA0001",
+      "entryDate": "2025-09-20",
+      "entryTime": "17:26",
+      "custID": "1234",
+      "slotID": "A1"
+    },
+    {
+      "id": "e0c6",
+      "vehicleType": "Normal",
+      "wheelerType": "2W",
+      "vehicleNumber": "TN04AA0001",
+      "entryDate": "2025-09-20",
+      "entryTime": "17:30",
+      "custID": "8907",
+      "slotID": "A2"
+    },
+    {
+      "id": "266e",
+      "vehicleType": "Normal",
+      "wheelerType": "2W",
+      "vehicleNumber": "TN10AA0001",
+      "entryDate": "2025-09-30",
+      "entryTime": "18:22",
+      "custID": "ASD2",
+      "slotID": "A1"
     }
   ],
   "ExitDetails": [
@@ -337,6 +483,41 @@
       "slotID": "A1",
       "exitDate": "2025-09-12",
       "exitTime": "19:11"
+    },
+    {
+      "id": "ee76",
+      "vehicleNumber": "TN01AA0001",
+      "slotID": "A1",
+      "exitDate": "2025-09-18",
+      "exitTime": "16:18"
+    },
+    {
+      "id": "6e87",
+      "vehicleNumber": "TN02AA0001",
+      "slotID": "A16",
+      "exitDate": "2025-09-16",
+      "exitTime": "17:52"
+    },
+    {
+      "id": "f968",
+      "vehicleNumber": "TN03AA0001",
+      "slotID": "A1",
+      "exitDate": "2025-09-20",
+      "exitTime": "18:28"
+    },
+    {
+      "id": "408b",
+      "vehicleNumber": "TN04AA0001",
+      "slotID": "A2",
+      "exitDate": "2025-09-20",
+      "exitTime": "18:32"
+    },
+    {
+      "id": "c2cd",
+      "vehicleNumber": "TN10AA0001",
+      "slotID": "A1",
+      "exitDate": "2025-09-30",
+      "exitTime": "19:23"
     }
   ],
   "slotmodule": [
@@ -346,6 +527,54 @@
       "date": "2025-09-18",
       "userid": "124",
       "parkingType": "EVvehicle"
+    },
+    {
+      "id": 0,
+      "slot": "EV3",
+      "date": "2025-09-17",
+      "userid": "124",
+      "parkingType": "EVvehicle"
+    },
+    {
+      "id": "96ba",
+      "slot": "EV2",
+      "date": "2025-09-16",
+      "userid": "U001"
+    },
+    {
+      "id": "7b1b",
+      "slot": "A16",
+      "date": "2025-09-16",
+      "userid": "U001",
+      "parkingType": "normalParking"
+    },
+    {
+      "id": "de69",
+      "slot": "A1",
+      "date": "2025-09-20",
+      "userid": "U001",
+      "parkingType": "normalParking"
+    },
+    {
+      "id": "d913",
+      "slot": "A2",
+      "date": "2025-09-20",
+      "userid": "U001",
+      "parkingType": "normalParking"
+    },
+    {
+      "id": "8770",
+      "slot": "A3",
+      "date": "2025-09-16",
+      "userid": "U001",
+      "parkingType": "normalParking"
+    },
+    {
+      "id": "86ac",
+      "slot": "A3",
+      "date": "2025-09-17",
+      "userid": "U001",
+      "parkingType": "normalParking"
     }
   ],
   "faqs": [
