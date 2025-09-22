@@ -205,22 +205,333 @@
       "date": "2025-09-17",
       "amount": 80,
       "status": "pending"
+    },
+    {
+      "id": "f3f6",
+      "userId": "U001",
+      "slot": "A2",
+      "period": "normalParking",
+      "date": "2025-09-18",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "fd9b",
+      "userId": "U001",
+      "slot": "A2",
+      "period": "normalParking",
+      "date": "2025-09-19",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "14b2",
+      "userId": "U001",
+      "slot": "",
+      "period": "",
+      "date": "2025-09-17",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "6eb9",
+      "userId": "U001",
+      "slot": "A2",
+      "period": "normalParking",
+      "date": "2025-09-17",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "db16",
+      "userId": "U001",
+      "slot": "",
+      "period": "",
+      "date": "2025-09-18",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "9277",
+      "userId": "U001",
+      "slot": "A3",
+      "period": "normalParking",
+      "date": "2025-09-19",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "92b6",
+      "userId": "U001",
+      "slot": "",
+      "period": "",
+      "date": "2025-09-18",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "f581",
+      "userId": "U001",
+      "slot": "",
+      "period": "",
+      "date": "2025-09-18",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "5598",
+      "userId": "U001",
+      "slot": "",
+      "period": "",
+      "date": "2025-09-18",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "1e79",
+      "userId": "U001",
+      "slot": "A1",
+      "period": "normalParking",
+      "date": "2025-09-19",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "2ba6",
+      "userId": "U001",
+      "slot": "",
+      "period": "",
+      "date": "2025-09-19",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "6dc5",
+      "userId": "U001",
+      "slot": "",
+      "period": "",
+      "date": "2025-09-18",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "b0e6",
+      "userId": "U001",
+      "slot": "EV2",
+      "period": "EVvehicle",
+      "date": "2025-09-18",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "a76f",
+      "userId": "U001",
+      "slot": "EV18",
+      "period": "EVvehicle",
+      "date": "2025-09-18",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "502f",
+      "userId": "U001",
+      "slot": "EV18",
+      "period": "EVvehicle",
+      "date": "2025-09-18",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "6ab1",
+      "userId": "U001",
+      "slot": "A19",
+      "period": "normalParking",
+      "date": "2025-09-18",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "feae",
+      "userId": "U001",
+      "slot": "A18",
+      "period": "normalParking",
+      "date": "2025-09-18",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "0945",
+      "userId": "U001",
+      "slot": "A19",
+      "period": "normalParking",
+      "date": "2025-09-18",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "5bb4",
+      "userId": "U001",
+      "slot": "EV6",
+      "period": "EVvehicle",
+      "date": "2025-09-20",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "66dd",
+      "userId": "U001",
+      "slot": "EV3",
+      "period": "EVvehicle",
+      "date": "2025-09-20",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "8d2d",
+      "userId": "U001",
+      "slot": "A19",
+      "period": "normalParking",
+      "date": "2025-09-20",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "fdbb",
+      "userId": "U001",
+      "slot": "EV23",
+      "period": "EVvehicle",
+      "date": "2025-09-20",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "3f8d",
+      "userId": "U001",
+      "slot": "A19",
+      "period": "normalParking",
+      "date": "2025-09-20",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "e3a4",
+      "userId": "U001",
+      "slot": "A8",
+      "period": "normalParking",
+      "date": "2025-09-20",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "b9e6",
+      "userId": "U001",
+      "slot": "",
+      "period": "normalParking",
+      "date": "2025-09-20",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "01e3",
+      "userId": "U001",
+      "slot": "EV15",
+      "period": "normalParking",
+      "date": "2025-09-20",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "78e0",
+      "userId": "U001",
+      "slot": "EV10",
+      "period": "normalParking",
+      "date": "2025-09-20",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "0ff9",
+      "userId": "U001",
+      "slot": "A3",
+      "period": "normalParking",
+      "date": "2025-09-20",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "cdc2",
+      "userId": "U001",
+      "slot": "A1",
+      "period": "normalParking",
+      "date": "2025-09-22",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "6110",
+      "userId": "U001",
+      "slot": "EV1",
+      "period": "normalParking",
+      "date": "2025-09-22",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "afd6",
+      "userId": "U001",
+      "slot": "A1",
+      "period": "normalParking",
+      "date": "2025-09-22",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "5cec",
+      "userId": "U001",
+      "slot": "A2",
+      "period": "normalParking",
+      "date": "2025-09-22",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "cc72",
+      "userId": "U001",
+      "slot": "A24",
+      "period": "normalParking",
+      "date": "2025-09-22",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "9447",
+      "userId": "U001",
+      "slot": "A3",
+      "period": "normalParking",
+      "date": "2025-09-22",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "224c",
+      "userId": "U001",
+      "slot": "A2",
+      "period": "normalParking",
+      "date": "2025-09-23",
+      "amount": 80,
+      "status": "pending"
+    },
+    {
+      "id": "83e6",
+      "userId": "U001",
+      "slot": "A19",
+      "period": "normalParking",
+      "date": "2025-09-23",
+      "amount": 80,
+      "status": "pending"
     }
   ],
   "User": [
-    {
-      "role": "Customer",
-      "email": "dharun2@gmail.com",
-      "id": "dc00"
-    },
-    {
-      "id": "0c52",
-      "name": "vikasgandham",
-      "email": "vikas1@gmail.com",
-      "aadhar": 876543212345,
-      "password": "qor",
-      "role": "Staff"
-    },
     {
       "id": "a113",
       "name": "rahulsen",
@@ -300,12 +611,21 @@
       "aadhar": 123456788974,
       "password": "brobro",
       "role": "Customer"
+    },
+    {
+      "id": "f68e",
+      "name": "vikas aditya",
+      "email": "vikasaditya20@gmail.com",
+      "aadhar": 764583764597,
+      "password": "Vikas@2004",
+      "role": "Customer",
+      "member": false
     }
   ],
   "Staff": [
     {
       "staffId": "101",
-      "name": "Vikas G",
+      "name": "Vikas",
       "role": "Staff",
       "phoneNo": "76253",
       "aadhaar": "12343323",
@@ -358,6 +678,18 @@
       "uid": "101",
       "name": "Teja",
       "text": "Help and Support page helped really well"
+    },
+    {
+      "id": "c48b",
+      "uid": "101",
+      "rating": "neutral",
+      "text": "I am very Happy"
+    },
+    {
+      "id": "cfc1",
+      "uid": "101",
+      "rating": "very good",
+      "text": "I love this website"
     }
   ],
   "EntryDetails": [
@@ -460,6 +792,26 @@
       "entryTime": "18:22",
       "custID": "ASD2",
       "slotID": "A1"
+    },
+    {
+      "id": "3a89",
+      "vehicleType": "Normal",
+      "wheelerType": "2W",
+      "vehicleNumber": "AP01AA0001",
+      "entryDate": "2025-09-22",
+      "entryTime": "09:25",
+      "custID": "EVP01",
+      "slotID": "A1"
+    },
+    {
+      "id": "02ac",
+      "vehicleType": "EV",
+      "wheelerType": "2W",
+      "vehicleNumber": "AP01BB0001",
+      "entryDate": "2025-09-22",
+      "entryTime": "09:28",
+      "custID": "EVP01",
+      "slotID": "EV1"
     }
   ],
   "ExitDetails": [
@@ -518,6 +870,20 @@
       "slotID": "A1",
       "exitDate": "2025-09-30",
       "exitTime": "19:23"
+    },
+    {
+      "id": "7f53",
+      "vehicleNumber": "AP01AA0001",
+      "slotID": "A1",
+      "exitDate": "2025-09-22",
+      "exitTime": "10:26"
+    },
+    {
+      "id": "e75b",
+      "vehicleNumber": "AP01BB0001",
+      "slotID": "EV1",
+      "exitDate": "2025-09-22",
+      "exitTime": "10:30"
     }
   ],
   "slotmodule": [
@@ -529,7 +895,7 @@
       "parkingType": "EVvehicle"
     },
     {
-      "id": 0,
+      "id": "0",
       "slot": "EV3",
       "date": "2025-09-17",
       "userid": "124",
@@ -575,6 +941,121 @@
       "date": "2025-09-17",
       "userid": "U001",
       "parkingType": "normalParking"
+    },
+    {
+      "id": "159d",
+      "slot": "A2",
+      "date": "2025-09-18",
+      "userid": "U001",
+      "parkingType": "normalParking"
+    },
+    {
+      "id": "78ef",
+      "slot": "A2",
+      "date": "2025-09-19",
+      "userid": "U001",
+      "parkingType": "normalParking"
+    },
+    {
+      "id": "881a",
+      "slot": "A2",
+      "date": "2025-09-17",
+      "userid": "U001",
+      "parkingType": "normalParking"
+    },
+    {
+      "id": "5959",
+      "slot": "A3",
+      "date": "2025-09-19",
+      "userid": "U001",
+      "parkingType": "normalParking"
+    },
+    {
+      "id": "f311",
+      "slot": "A3",
+      "date": "2025-09-20",
+      "userid": "U001",
+      "parkingType": "normalParking"
+    },
+    {
+      "id": "941c",
+      "slot": "A1",
+      "date": "2025-09-22",
+      "userid": "U001",
+      "parkingType": "normalParking"
+    },
+    {
+      "id": "8cc3",
+      "slot": "A1",
+      "date": "2025-09-22",
+      "userid": "U001",
+      "parkingType": "normalParking"
+    },
+    {
+      "id": "d23d",
+      "slot": "A1",
+      "date": "2025-09-22",
+      "userid": "U001",
+      "parkingType": "normalParking"
+    },
+    {
+      "id": "981c",
+      "slot": "A2",
+      "date": "2025-09-22",
+      "userid": "U001",
+      "parkingType": "normalParking"
+    },
+    {
+      "id": "9de9",
+      "slot": "A2",
+      "date": "2025-09-22",
+      "userid": "U001",
+      "parkingType": "normalParking"
+    },
+    {
+      "id": "1d24",
+      "slot": "A2",
+      "date": "2025-09-22",
+      "userid": "U001",
+      "parkingType": "normalParking"
+    },
+    {
+      "id": "32dd",
+      "slot": "A2",
+      "date": "2025-09-22",
+      "userid": "U001",
+      "parkingType": "normalParking"
+    },
+    {
+      "id": "17a4",
+      "slot": "A24",
+      "date": "2025-09-22",
+      "userid": "U001",
+      "parkingType": "normalParking"
+    },
+    {
+      "id": "efad",
+      "slot": "A24",
+      "date": "2025-09-22",
+      "userid": "U001"
+    },
+    {
+      "id": "4f84",
+      "slot": "A24",
+      "date": "2025-09-22",
+      "userid": "U001"
+    },
+    {
+      "id": "ab13",
+      "slot": "A2",
+      "date": "2025-09-23",
+      "userid": "U001"
+    },
+    {
+      "id": "389b",
+      "slot": "A19",
+      "date": "2025-09-23",
+      "userid": "U001"
     }
   ],
   "faqs": [

@@ -1,9 +1,7 @@
 .outer{
-    /* background-image: url('https://static.saint-pauldevence.com/wp-content/uploads/2017/08/parking-1-1600x900.jpg'); */
+   
     background-image: url('/Payment/john-matychuk-yvfp5YHWGsc-unsplash.jpg');
-    /* background-image: url('https://thfvnext.bing.com/th/id/OIP.qHvShoEP6w6Kq8OL-wimtwHaEJ?r=0&cb=thfvnextucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3'); */
-    /* background-blend-mode: overlay;
-    background: rgba(255, 255, 255, 0.989); */
+
     background-size: contain;
 }
 
@@ -133,6 +131,9 @@ background: linear-gradient(90deg, rgba(245, 245, 245, 1) 0%, rgba(133, 129, 131
     border-radius: 10px;
     font-size: 12px;
    
+}
+.summary-element p{
+  margin: 0;
 }
 #duration{
     border: 1px solid green;

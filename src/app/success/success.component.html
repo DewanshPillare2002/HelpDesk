@@ -17,40 +17,15 @@
         </h1>
         <img style="width: 100px;" src="Payment/Payment Success.gif" alt="">
     </div>
-    <div class="payment-thank">
-
-            <h2>Thank You for Choosing Us!</h2>
-            <p>We appreciate your business and look forward to serving you again.</p>
-
-        </div>
+ 
     <div class="success-container">
         <div class="payment-info">
-            <!-- <div class="invoice-container">
-               <div style="display: flex; align-items: center; gap: 10px; padding: 10px 0px;"> <img src="/payment.png" alt="" class="icon"><h2>Invoice</h2></div> 
-                <div class="invoice-header">
-                    <p><strong>Invoice ID:</strong> {{ paymentDetails.InvoiceId }}</p>
-                    <p><strong>Payment Method :</strong>{{ paymentDetails.paymentMethod}}</p>
-                    <p><strong>Date:</strong> {{ paymentDetails.Timestamp | date:'medium' }}</p>
-                </div>
-                <hr>
-                <div class="invoice-details">
-                    <p><strong>Vehicle Number:</strong> {{ paymentDetails.vehicleNumber }}</p>
-                    <p><strong>Parking Spot:</strong> {{ paymentDetails.parkingSpot }}</p>
-                    <p><strong>Entry Time:</strong> {{ paymentDetails.entryTime }}</p>
-                    <p><strong>Exit Time:</strong> {{ paymentDetails.exitTime}}</p>
-                    <p><strong>Duration:</strong> {{ paymentDetails.duration }}</p>
-                </div>
-                <div class="invoice-total">
-                    <p><strong>Total Amount:</strong> ₹{{ paymentDetails.amount }}</p>
-                </div>
-
-            </div> -->
 <div class="invoice-container">
   <div style="display: flex; align-items: center; gap: 10px; padding: 10px 0px;">
     <img src="Payment/payment.png" alt="" class="icon" />
     <h2>Invoice</h2>
   </div>
-
+ 
   <!-- Common Header -->
   <div class="invoice-header">
     <p><strong>Invoice ID:</strong> {{ paymentDetails.InvoiceId }}</p>
@@ -58,23 +33,23 @@
     <p><strong>Date:</strong> {{ paymentDetails.Timestamp | date: 'medium' }}</p>
   </div>
   <hr />
-
+ 
   <!-- Parking Invoice -->
-  <div class="invoice-details" *ngIf="paymentDetails.type === 'parking'">
-    <p><strong>Vehicle Number:</strong> {{ paymentDetails.vehicleNumber }}</p>
-    <p><strong>Parking Spot:</strong> {{ paymentDetails.parkingSpot }}</p>
-    <p><strong>Entry Time:</strong> {{ paymentDetails.entryTime }}</p>
-    <p><strong>Exit Time:</strong> {{ paymentDetails.exitTime }}</p>
-    <p><strong>Duration:</strong> {{ paymentDetails.duration }} hrs</p>
+  <div class="invoice-details" *ngIf="paymentDetails.type === 'parkingPayments'">
+    <p><strong>User ID</strong> {{ paymentDetails.userId }}</p>
+    <p><strong>Parking Spot:</strong> {{ paymentDetails.slot }}</p>
+    <p><strong>Entry Time:</strong> {{ paymentDetails.date }}</p>
+    <p><strong>Paring Type : </strong> {{ paymentDetails.period }}</p>
+   
   </div>
-
+ 
   <!-- Subscription Invoice -->
   <div class="invoice-details" *ngIf="paymentDetails.type === 'subscriptions'">
     <p><strong>User ID:</strong> {{ paymentDetails.userId }}</p>
     <p><strong>Plan:</strong> {{ paymentDetails.plan }}</p>
     <p><strong>Period:</strong> {{ paymentDetails.duration }} days</p>
   </div>
-
+ 
   <!-- Penalty Invoice -->
   <div class="invoice-details" *ngIf="paymentDetails.type === 'penalty'">
     <p><strong>Vehicle Number:</strong> {{ paymentDetails.vehicleNumber }}</p>
@@ -83,23 +58,29 @@
     <p><strong>Base Charge:</strong> ₹{{ paymentDetails.baseCharge }}</p>
     <p><strong>Extra Charge:</strong> ₹{{ paymentDetails.extraCharge }}</p>
   </div>
-
+ 
   <!-- Common Total -->
   <div class="invoice-total">
     <p><strong>Total Amount:</strong> ₹{{ paymentDetails.amount }}</p>
   </div>
 </div>
-
-
-
+ 
             <div class="invoice-btn">
-            <button> <img src="Payment/download.png" alt="" class="icon">   Download Invoice</button>
+            <button (click)="downloadPDF()" > <img src="Payment/download.png" alt="" class="icon">   Download Invoice</button>
             </div>
         </div>
-        
+       
     </div>
+      <div class="payment-thank">
+ 
+            <h2>Thank You for Choosing Us!</h2>
+            <p>We appreciate your business and look forward to serving you again.</p>
+ 
+        </div>
     <div class="feedback-container">
-        <p>Liked Our Service? Give us a feedback <span id="feedback-link">Here</span></p>
+        <p>Liked Our Service? Give us a feedback <span id="feedback-link"> <div class="feedback-container">
+          <app-feedback></app-feedback>
+        </div></span></p>
     </div>
 </div>
 </div>

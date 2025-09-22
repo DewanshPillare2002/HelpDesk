@@ -54,9 +54,10 @@ AddDataInBackend(){
   let aadhar=this.addOrEditForm.get(['aadhar'])?.value;
   let password=this.addOrEditForm.get(['password'])?.value;
   let role=this.addOrEditForm.get(['role'])?.value;
+  let member = false;
 
 
-  let userRec: User = new User(name,email,aadhar,password,role);
+  let userRec: User = new User(name,email,aadhar,password,role,member);
   
   this.restService.insertData(userRec).subscribe({
     next:(data: any) => {alert('Registration successful'); this.getDataFromService();},

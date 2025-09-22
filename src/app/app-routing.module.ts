@@ -18,6 +18,8 @@ import { SlotpageComponent } from './slotpage/slotpage.component';
 import { SubscriptionComponent } from './subscription/subscription.component';
 import { SuccessComponent } from './success/success.component';
 import { SummaryComponent } from './summary/summary.component';
+import { authGuardGuard } from './auth-guard.guard';
+import { PaymentProgressComponent } from './payment-progress/payment-progress.component';
 
 
 
@@ -37,12 +39,16 @@ const routes: Routes = [
   {path: 'Entry', component: EntryDetailsComponent},
   {path: 'Exit', component: ExitDetailsComponent},
   {path: 'History', component: HistoryDetailsComponent},
-  {path:'slotpage', component:SlotpageComponent},
+  {path:'slotpage', component:SlotpageComponent, canActivate : [authGuardGuard]},
 
+  {path : 'progress', component: PaymentProgressComponent},
   {path: 'sus' , component:SubscriptionComponent},
   {path: 'success', component: SuccessComponent},
     {path:'checkout', component: SummaryComponent,
-        children : [{path: 'subscriptions/:id', component : SummaryComponent}]
+        children : [
+          {path: 'subscriptions/:id', component : SummaryComponent},
+          
+        ]
     }
 ];
 

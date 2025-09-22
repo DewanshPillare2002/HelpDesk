@@ -1,5 +1,7 @@
 
-
+<button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="background-color: transparent; border: 0px; font-size: 15px; color: rgb(93, 136, 255);">
+        Here
+</button>
 <!-- Modal -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -75,20 +77,3 @@
     </div>
 </div>
 
-<button class="btn btn-outline-success" (click)="getDataFromService()"> Display all feedbacks</button>
-
-<table class="table table-hover table-bordered">
-    <thead>
-        <th>uid</th>
-        <th>rating</th>
-        <th>text</th>
-    </thead>
-
-    <tbody>
-        <tr *ngFor="let feedback of feedbackList">
-            <td>{{feedback.uid}}</td>
-            <td>{{feedback.rating}}</td>
-            <td>{{feedback.text}}</td>
-        </tr>
-    </tbody>
-</table>

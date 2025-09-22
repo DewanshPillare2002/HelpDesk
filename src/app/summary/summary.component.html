@@ -3,7 +3,7 @@
     <div class="parking-heading">
       <h1 class="gradient">Parking Checkout</h1>
     </div>
-
+ 
     <div class="payment-container">
       <div class="payment-summary">
         <div class="details">
@@ -11,94 +11,94 @@
               src="Payment/753118_parking_car_packing_sign_vehicle_icon.png" alt="">Vehicle & Parking Details</div>
           <div class="hz"></div>
           <div class="details-capsule" *ngIf="type==='parkingPayments'" style="margin-top: 20px;">
-  <div class="summary-element"><strong>Vehicle No :</strong>
-    <p>{{ paymentDetails.vehicle_no }}</p>
-  </div>
-  <div class="summary-element">
-    <div style="display: flex; align-items: center;">
-      <img class="icons" src="Payment/510869_calendar_date_event_schedule_icon.svg" alt="">
-      <strong>Parting Type :</strong>
-    </div>
-    <p>{{ paymentDetails.period }}</p>
-  </div>
-  <div class="summary-element">
-    <div style="display: flex; align-items: center;">
-      <img class="icons" style="width: 14px;" src="Payment/326689_schedule_icon.svg" alt="">
-      <strong>Exit Time :</strong>
-    </div>
-    <p>{{ paymentDetails.exit_time }}</p>
-  </div>
-  <div id="duration" class="summary-element">
-    <div style="display: flex; align-items: center;">
-      <img class="icons" style="width: 12px" src="Payment/2075826_clock_duration_notification_time_icon.svg" alt="">
-      <strong>Duration :</strong>
-    </div>
-    <p>{{ paymentDetails.date }}</p>
-  </div>
-  <div id="slot" class="summary-element">
-    <div style="display: flex; align-items: center;">
-      <img class="icons" style="width: 18px;" src="Payment/3586361_location_map_navigation_pointer_icon.svg" alt="">
-      <strong>Parking Slot :</strong>
-    </div>
-    <p>Slot {{ paymentDetails.slot }}</p>
-  </div>
-  <div class="summary-element"><strong>Additional Hours :</strong>
-    <p>{{ paymentDetails.additional_hours }}</p>
-  </div>
-</div>
-
-
-<div class="details-capsule" *ngIf="type==='subscriptions'" style="margin-top: 20px;">
-  <div class="summary-element"><strong>User ID :</strong>
-    <p>{{ paymentDetails.userId }}</p>
-  </div>
-  <div class="summary-element">
-    <div style="display: flex; align-items: center;">
-      <img class="icons" src="Payment/510869_calendar_date_event_schedule_icon.svg" alt="">
-      <strong>Plan :</strong>
-    </div>
-    <p>{{ paymentDetails.plan }}</p>
-  </div>
-  <div id="duration" class="summary-element">
-    <div style="display: flex; align-items: center;">
-      <img class="icons" style="width: 12px" src="Payment/2075826_clock_duration_notification_time_icon.svg" alt="">
-      <strong>Period :</strong>
-    </div>
-    <p>{{ paymentDetails.period }}</p>
-  </div>
-</div>
-
-
-<div class="details-capsule" *ngIf="type==='penalty'" style="margin-top: 20px;">
-  <div class="summary-element"><strong>Vehicle No :</strong>
-    <p>{{ paymentDetails.vehicle_no }}</p>
-  </div>
-  <div class="summary-element">
-    <div style="display: flex; align-items: center;">
-      <img class="icons" src="Payment/510869_calendar_date_event_schedule_icon.svg" alt="">
-      <strong>Overstay Hours :</strong>
-    </div>
-    <p>{{ paymentDetails.overstay_hours }}</p>
-  </div>
-  <div class="summary-element">
-    <div style="display: flex; align-items: center;">
-      <img class="icons" style="width: 14px;" src="Payment/326689_schedule_icon.svg" alt="">
-      <strong>Fine Amount :</strong>
-    </div>
-    <p>{{ paymentDetails.fine }}</p>
-  </div>
-  <div id="duration" class="summary-element">
-    <div style="display: flex; align-items: center;">
-      <img class="icons" style="width: 12px" src="Payment/2075826_clock_duration_notification_time_icon.svg" alt="">
-      <strong>Total Due :</strong>
-    </div>
-    <p>{{ paymentDetails.total }}</p>
-  </div>
-</div>
-
+            <div class="summary-element">
+              <div style="display: flex; align-items: center;">
+                <img class="icons" src="Payment\icons8-user-30.png" style="width: 20px; height: 20px;" alt="">
+                <strong>User ID :</strong>
+              </div>
+              <p>{{ paymentDetails.userId }}</p>
+            </div>
+            <div class="summary-element">
+              <div style="display: flex; align-items: center;">
+                <img class="icons" src="Payment\icons8-parking-50.png" style="padding: 4px;" alt="">
+                <strong>Parking :</strong>
+              </div>
+              <p>{{ paymentDetails.period }}</p>
+            </div>
+           
+            <div id="duration" class="summary-element">
+              <div style="display: flex; align-items: center;">
+                <img class="icons" style="width: 12px" src="Payment/2075826_clock_duration_notification_time_icon.svg"
+                  alt="">
+                <strong>Duration :</strong>
+              </div>
+              <p>{{ paymentDetails.date }}</p>
+            </div>
+            <div id="slot" class="summary-element">
+              <div style="display: flex; align-items: center;">
+                <img class="icons" style="width: 18px;" src="Payment/3586361_location_map_navigation_pointer_icon.svg"
+                  alt="">
+                <strong>Parking Slot :</strong>
+              </div>
+              <p>Slot {{ paymentDetails.slot }}</p>
+            </div>
+           
+          </div>
+ 
+ 
+          <div class="details-capsule" *ngIf="type==='subscriptions'" style="margin-top: 20px;">
+            <div class="summary-element"><strong>User ID :</strong>
+              <p>{{ paymentDetails.userId }}</p>
+            </div>
+            <div class="summary-element">
+              <div style="display: flex; align-items: center;">
+                <img class="icons" src="Payment/510869_calendar_date_event_schedule_icon.svg" alt="">
+                <strong>Plan :</strong>
+              </div>
+              <p>{{ paymentDetails.plan }}</p>
+            </div>
+            <div id="duration" class="summary-element">
+              <div style="display: flex; align-items: center;">
+                <img class="icons" style="width: 12px" src="Payment/2075826_clock_duration_notification_time_icon.svg"
+                  alt="">
+                <strong>Period :</strong>
+              </div>
+              <p>{{ paymentDetails.period }}</p>
+            </div>
+          </div>
+ 
+ 
+          <div class="details-capsule" *ngIf="type==='penalty'" style="margin-top: 20px;">
+            <div class="summary-element"><strong>Vehicle No :</strong>
+              <p>{{ paymentDetails.vehicle_no }}</p>
+            </div>
+            <div class="summary-element">
+              <div style="display: flex; align-items: center;">
+                <img class="icons" src="Payment/510869_calendar_date_event_schedule_icon.svg" alt="">
+                <strong>Overstay Hours :</strong>
+              </div>
+              <p>{{ paymentDetails.overstay_hours }}</p>
+            </div>
+            <div class="summary-element">
+              <div style="display: flex; align-items: center;">
+                <img class="icons" style="width: 14px;" src="Payment/326689_schedule_icon.svg" alt="">
+                <strong>Fine Amount :</strong>
+              </div>
+              <p>{{ paymentDetails.fine }}</p>
+            </div>
+            <div id="duration" class="summary-element">
+              <div style="display: flex; align-items: center;">
+                <img class="icons" style="width: 12px" src="Payment/2075826_clock_duration_notification_time_icon.svg"
+                  alt="">
+                <strong>Total Due :</strong>
+              </div>
+              <p>{{ paymentDetails.total }}</p>
+            </div>
+          </div>
+ 
         </div>
         <div class="payment-method">
-         <div class="method card">
+          <div class="method card">
             <div class="card-header">
               <h3 class="card-title"><img src="Payment/payment.png" alt="" class="icons"> Payment Method</h3>
               <div class="hz"></div>
@@ -124,7 +124,7 @@
                 <!-- Animated section for forms -->
                 <div class="method-form" *ngIf="selectedMethod">
                   <div [ngClass]="['form-wrapper', showForm ? 'show' : '']">
-
+ 
                     <!-- Card form -->
                     <ng-container *ngIf="selectedMethod === 'creditCard'" formGroupName="creditCard">
                       <label>Card Number</label>
@@ -145,7 +145,7 @@
                         Invalid CVV.
                       </div>
                     </ng-container>
-
+ 
                     <!-- UPI form -->
                     <ng-container *ngIf="selectedMethod === 'upi'" formGroupName="upi">
                       <label>UPI ID</label>
@@ -155,26 +155,15 @@
                         Invalid UPI ID.
                       </div>
                     </ng-container>
-
-                    <!-- Net Banking -->
-                    <!-- <ng-container *ngIf="selectedMethod === 'netbanking'">
-                      <label>Bank</label>
-                      <select >
-                        <option value="" disabled selected>Select Bank</option>
-                        <option value="SBI">SBI</option>
-                        <option value="HDFC">HDFC</option>
-                        <option value="ICICI">ICICI</option>
-                      </select>
-                    </ng-container> -->
-
+ 
                     <!-- Cash -->
                     <ng-container *ngIf="selectedMethod === 'cash'">
                       <p class="info-text">Please pay cash at the counter.</p>
                     </ng-container>
-
+ 
                   </div>
                 </div>
-
+ 
                 <!-- Payment Buttons -->
                 <div class="confirm-payment">
                   <button id="confirm-payment" type="submit">PAY NOW
@@ -188,18 +177,18 @@
                 encryption.</p>
             </div>
           </div>
-
-
-
-
-
+ 
+ 
+ 
+ 
+ 
         </div>
-
+ 
       </div>
-
+ 
       <div class="charges">
         <div style="padding: 10px 0px; font-size: larger;">Billing Summary</div>
-
+ 
         <div class="flex1">
           <p>Base Charge </p><span> {{ charges.baseCharge }}</span>
         </div>
@@ -211,44 +200,45 @@
         </div>
         <div class="hz"></div>
         <div class="flex1">
-          <h4 style="display: inline-block;">Total Amount : </h4> <span id="total-amount"> {{ charges.totalAmount }}</span>
+          <h4 style="display: inline-block;">Total Amount : </h4> <span id="total-amount"> {{ charges.totalAmount
+            }}</span>
         </div>
-
+ 
       </div>
     </div>
   </div>
   <footer class="footer">
     <div class="footer-container">
-     
+ 
       <div class="footer-brand">
-      
+ 
         <p class="tagline">Park Smart. Pay Secure.</p>
       </div>
-
+ 
       <!-- Security Info -->
       <div class="footer-security">
         <p>🔒 Secure Payments</p>
         <small>UPI • Credit/Debit Cards • Net Banking • Cash</small>
       </div>
-
-      
+ 
+ 
       <div class="footer-links">
         <a href="#">Terms</a>
         <a href="#">Privacy</a>
         <a href="#">Refund Policy</a>
         <a href="#">Contact</a>
       </div>
-
-      
+ 
+ 
       <div class="footer-support">
         <p>📞 +91-9876543210 | ✉ support&#64;smartparking.com</p>
       </div>
-
-      
+ 
+ 
       <div class="footer-copy">
         <small>© 2025 Smart Parking System. All Rights Reserved.</small>
       </div>
     </div>
   </footer>
-
+ 
 </div>

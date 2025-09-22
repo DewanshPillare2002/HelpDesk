@@ -30,9 +30,11 @@ import { ManageStaffComponent } from './manage-staff/manage-staff.component';
 import { HeaderComponent } from './header/header.component';
 import { MainScreenBodyComponent } from './main-screen-body/main-screen-body.component';
 import { StaffDetailsComponent } from './staff-details/staff-details.component';
+import { PaymentProgressComponent } from './payment-progress/payment-progress.component';
 
 
 @NgModule({
+  // Decalrations contains the names of all the components/directives/pipes that you have created
   declarations: [
     AppComponent,
     FeedbackComponent,
@@ -52,8 +54,10 @@ import { StaffDetailsComponent } from './staff-details/staff-details.component';
     ManageStaffComponent,
     HeaderComponent,
     MainScreenBodyComponent,
-    StaffDetailsComponent
+    StaffDetailsComponent,
+    PaymentProgressComponent
   ],
+  // imports contain the names of all the modules whose components are required in your module.
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -69,6 +73,7 @@ import { StaffDetailsComponent } from './staff-details/staff-details.component';
     MatInputModule,
     MatSelectModule
   ],
+  // providers is an array for registering services, so that they can be avaliable to every component.
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -1,101 +1,83 @@
 <div class="form-wrapper">
-  <!-- Dark overlay -->
   <div class="gradient-dark"></div>
-
-  <!-- Form container -->
+ 
   <div class="form-content">
-    <!-- Back link -->
-    <a routerLink="/" class="back-link">
-      <mat-icon class="w-4 h-4">arrow_back</mat-icon>
-      Back to Home
-    </a>
-
-
-    
-
-
-    <!-- Registration card -->
-    <mat-card class="shadow-luxury gradient-card backdrop-blur-sm">
-      <!-- Header -->
-      <mat-card-header class="text-center">
-        <div class="header-stack">
-          <div class="icon-circle">
-            <mat-icon class="icon-large">person_add</mat-icon>
+    <a routerLink="/" class="back-link">← Back to Home</a>
+ 
+    <div class="form-card">
+      <div class="header-stack">
+        <div class="icon-circle">👤</div>
+        <h2 class="text-2xl text-gradient">Create Account</h2>
+        <p class="text-muted-foreground">Join our parking management platform</p>
+      </div>
+ 
+      <form [formGroup]="addOrEditForm" (ngSubmit)="AddDataInBackend()">
+        <!-- Role -->
+        <div class="form-group">
+          <label for="role">Role</label>
+          <select id="role" formControlName="role" required>
+            <option value="">Select Role</option>
+            <option value="Customer">Customer</option>
+            <option value="Staff">Staff</option>
+          </select>
+          <div class="error" *ngIf="getname()?.invalid && (getname()?.touched || getname()?.dirty)">
+            Please select a valid Role
           </div>
-          <h2 class="text-2xl font-bold text-gradient">Create Account</h2>
-          <p class="text-muted-foreground">Join our parking management platform</p>
         </div>
-      </mat-card-header>
-
-      <!-- Form -->
-      <mat-card-content>
-        <form [formGroup]="addOrEditForm" (ngSubmit)="AddDataInBackend()">
-          <!-- Role -->
-            <mat-form-field appearance="fill" class="mat-form-field full-width mb-4">
-  <mat-label>Role</mat-label>`
-  <mat-select formControlName="role" required>
-    <mat-option value="Customer">Customer</mat-option>
-    <mat-option value="Staff">Staff</mat-option>
-  
-  </mat-select>
-            <mat-error *ngIf="addOrEditForm.get('role')?.invalid && (addOrEditForm.get('role')?.touched || addOrEditForm.get('role')?.dirty)">
-              Please select a valid Role
-            </mat-error>
-          </mat-form-field>
-
-          <!-- Name -->
-          <mat-form-field appearance="fill" class="mat-form-field">
-            <mat-label>Name</mat-label>
-            <input matInput type="text" formControlName="name" required />
-            <mat-error *ngIf="addOrEditForm.get('name')?.invalid && (addOrEditForm.get('name')?.touched || addOrEditForm.get('name')?.dirty)">
-              Please enter a valid Name
-            </mat-error>
-          </mat-form-field>
-
-          <!-- Email -->
-          <mat-form-field appearance="fill" class="mat-form-field">
-            <mat-label>Email</mat-label>
-            <input matInput type="email" formControlName="email" required />
-            <mat-error *ngIf="addOrEditForm.get('email')?.invalid && (addOrEditForm.get('email')?.touched || addOrEditForm.get('email')?.dirty)">
-              Please enter a valid Email
-            </mat-error>
-          </mat-form-field>
-
-          <!-- Aadhar -->
-          <mat-form-field appearance="fill" class="mat-form-field">
-            <mat-label>Aadhar</mat-label>
-            <input matInput type="number" formControlName="aadhar" required />
-            <mat-error *ngIf="addOrEditForm.get('aadhar')?.invalid && (addOrEditForm.get('aadhar')?.touched || addOrEditForm.get('aadhar')?.dirty)">
-              Please enter a 12-digit Aadhar number
-            </mat-error>
-          </mat-form-field>
-
-          <!-- Password -->
-          <mat-form-field appearance="fill" class="mat-form-field">
-            <mat-label>Password</mat-label>
-            <input matInput type="password" formControlName="password" required />
-             <mat-error *ngIf="addOrEditForm.get('password')?.invalid && (addOrEditForm.get('password')?.touched || addOrEditForm.get('password')?.dirty)">
-              Password must be atleast 6 digits
-            </mat-error>
-          </mat-form-field>
-
-
-
-
-
-            <div *ngIf="message" class="text-danger mb-3">
-            {{ message }}
+ 
+        <!-- Name -->
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" formControlName="name" required />
+          <div class="error" *ngIf="getname()?.invalid && (getname()?.touched || getname()?.dirty)">
+            Please enter a valid Name
           </div>
-
-
-
-          <!-- Submit Button -->
-          <button type="submit" class="btn-gradient">
-            Create Account
-          </button>
-
-        </form>
-      </mat-card-content>
-    </mat-card>
+        </div>
+ 
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" formControlName="email" required />
+          <div class="error" *ngIf="getemail()?.invalid && (getemail()?.touched || getemail()?.dirty)">
+            Please enter a valid Email
+          </div>
+        </div>
+ 
+        <!-- Aadhar -->
+        <div class="form-group">
+          <label for="aadhar">Aadhar</label>
+          <input type="number" id="aadhar" formControlName="aadhar" required />
+          <div class="error" *ngIf="getaadhar()?.invalid && (getaadhar()?.touched || getaadhar()?.dirty)">
+            Please enter a 12-digit Aadhar number
+          </div>
+        </div>
+ 
+        <!-- Password -->
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" formControlName="password" required />
+          <div class="error" *ngIf="getpassword()?.invalid && (getpassword()?.touched || getpassword()?.dirty)">
+            Password must be at least 6 characters
+          </div>
+        </div>
+ 
+        <!-- Confirm Password -->
+        <div class="form-group">
+          <label for="confirmPwd">Confirm Password</label>
+          <input type="password" id="confirmPwd" formControlName="confirmPwd" required />
+          <div class="error" *ngIf="addOrEditForm.get('confirmPwd')?.invalid && (addOrEditForm.get('confirmPwd')?.touched || addOrEditForm.get('confirmPwd')?.dirty)">
+            Please confirm your password
+          </div>
+        </div>
+ 
+        <!-- Message -->
+        <div *ngIf="message" class="error">
+          {{ message }}
+        </div>
+ 
+        <!-- Submit Button -->
+        <button type="submit" class="btn-gradient">Create Account</button>
+      </form>
+    </div>
   </div>
 </div>

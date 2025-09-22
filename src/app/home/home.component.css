@@ -67,10 +67,9 @@
 
 .actions button {
   transition: transform 0.3s ease, background 0.3s ease;
-  background: linear-gradient(135deg, #2196f3, #21cbf3); 
+  background: linear-gradient(135deg, #2196f3, #21cbf3);
   color: white;
-  border: none;
-  border-radius: 0;
+  border-radius: 5px;
 }
 
 .actions button:hover {
@@ -170,6 +169,7 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    color: #000000;
   }
   .rights{
     font-size: 0.9rem;
@@ -501,6 +501,21 @@ button[type="submit"]:hover {
 .custom-icon {
   font-size: 1.25rem; /* Adjust as needed */
 }
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #fff;
+}
+ 
+.brand mat-icon {
+  font-size: 24px;
+  vertical-align: middle;
+}
+ 
+ 
 
  
 

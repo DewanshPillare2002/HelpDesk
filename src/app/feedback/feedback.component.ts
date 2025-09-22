@@ -67,6 +67,7 @@ export class FeedbackComponent {
   message!: string;
   AddDataInBackend(){
     // don't allow to fill data if form is invalid
+    alert("Add data in backend triggered.")
     if(this.feedbackForm.invalid){
       alert('Please enter all required field correctly.');
       return;
@@ -74,6 +75,13 @@ export class FeedbackComponent {
     // get data from form
     let rating: string = this.feedbackForm.get(['rating'])!.value;
     let text: string = this.feedbackForm.get(['text'])!.value;
+  
+    if(rating != ""){
+      alert("Rating has been done.");
+    }
+    if(text != ""){
+      alert("text has been received");
+    }
     // the above syntax is to espically specify that value cannot be null. This is used because it throw error that value can be null instead of string. Because we are taking data from radio button.
     let uid = "101";
 
@@ -83,7 +91,7 @@ export class FeedbackComponent {
     //Call the service with this data to insert record in database.
     this.feedbackService.insertData(feedbackRecord).subscribe({
       next : (data) => {alert('Insert operation is successful..'); this.getDataFromService();
-        this.router.navigate(['/home'])
+        this.router.navigate(['/slotpage'])
       },
       error : (err) => alert(JSON.stringify(err)),
       complete : () => console.log("Insert operation is successful...")

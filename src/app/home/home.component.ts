@@ -55,7 +55,7 @@ title = 'MyProject2';
   this.bDisplayInsertRecordForm=true;
 }
 
-AddDataInBackend(){
+/*AddDataInBackend(){
   let name= this.addOrEditForm.get(['name'])?.value;
   let email=this.addOrEditForm.get(['email'])?.value;
   let aadhar=this.addOrEditForm.get(['aadhar'])?.value;
@@ -73,8 +73,7 @@ AddDataInBackend(){
  this.bDisplayInsertRecordForm=false;
 
 }
-
-  getDataFromService(){
+getDataFromService(){
     this.restService.getAllData().subscribe({
       next:(data: User[]) => {this.userLst = data;},
       error : (err: any) => alert(JSON.stringify(err)),
@@ -113,6 +112,7 @@ AddDataInBackend(){
  
     
 }
+*/
 
 
     

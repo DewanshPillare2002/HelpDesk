@@ -34,7 +34,7 @@ export class ManageStaffComponent {
       next : (data) => {this.staffList = data},
       error : (err) => {alert(JSON.stringify(err))},
       complete : () => {console.log('Done')}
-    })
+    });
   }
   staffId !: string;
   name !: string;

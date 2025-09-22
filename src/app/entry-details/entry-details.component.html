@@ -190,10 +190,10 @@
         <div class="col form-floating">
           <input type="text" id="custID" name="custID" class="form-control" formControlName="custID"
             placeholder="Customer ID">
-          <label for="custID">Customer ID</label>
+          <label for="custID">Staff ID</label>
           <div *ngIf="custID?.invalid && (custID?.touched || custID?.dirty)">
             <div *ngIf="custID?.errors?.['required']">
-              <h6>*Customer ID is required</h6>
+              <h6>*Staff ID is required</h6>
             </div>
           </div>
         </div>

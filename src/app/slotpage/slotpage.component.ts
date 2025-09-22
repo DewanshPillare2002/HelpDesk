@@ -63,7 +63,10 @@ export class SlotpageComponent implements OnInit{
    //get the data from slot button when it is clicked
    bluebutton:string='btn btn-primary';
    parkingType:string='';
-  changeBlueButton(button:HTMLButtonElement):void{
+  changeBlueButton(event:Event):void{
+    const button=event.target as HTMLButtonElement;
+    if(!button)
+      return;
      this.slotNumber=button.id;
      this.parkingType='normalParking';     
      if(button.classList.contains('btn-secondary')){
@@ -88,7 +91,10 @@ export class SlotpageComponent implements OnInit{
      }
 
   }
-  changeGreenButton(button:HTMLButtonElement):void{
+  changeGreenButton(event:Event):void{
+     const button=event.target as HTMLButtonElement;
+    if(!button)
+      return;
       this.slotNumber=button.id;
       this.parkingType='EVvehicle';
       if(button.classList.contains('btn-secondary')){
@@ -182,6 +188,10 @@ export class SlotpageComponent implements OnInit{
   
   //checkout to payment
   PaymentCheckout(){
+    if(this.selectedSlot===null){
+        alert('Choose the Slot First ');
+    }
+    else{
    const subObj={
       userId : 'U001',
       slot : this.slotNumber,
@@ -193,10 +203,31 @@ export class SlotpageComponent implements OnInit{
   this.paymentAPI.createPayment('parkingPayments', subObj).subscribe(newSub=>{
     this.router.navigate(['checkout'],
       { queryParams : {id: newSub.id, type: 'parkingPayments'}});
-  });
-
-  
+  }); 
+}  
 }
+   NormalSlotRows: string[][] = [
+  ['A1', 'A2', 'A3', 'A4'],
+  ['A5', 'A6', 'A7', 'A8'],
+  ['A9', 'A10', 'A11', 'A12'],
+  ['A13','A14','A15','A16'] 
+];
+  NormalCarSlotRows:string[][]=[
+    ['A17','A18','A19','A20'],
+    ['A21','A22','A23','A24']
+  ]
+  EvslotRows:string[][]=[
+    ['EV1','EV2','EV3','EV4'],
+    ['EV5','EV6','EV7','EV8'],
+    ['EV9','EV10','EV11','EV12'],
+    ['EV13','EV14','EV15','EV16']
+  ]
+  EvCarSlotRows:string[][]=[
+    ['EV17','EV18','EV19','EV20'],
+    ['EV21','EV22','EV23','EV24']
+  ]
+ 
+
 
   
 }

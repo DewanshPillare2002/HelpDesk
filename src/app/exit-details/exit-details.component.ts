@@ -342,7 +342,6 @@ export class ExitDetailsComponent {
 
         this.sd.deleteRecord(slotID,exitDate,this.entireSlot).subscribe({
     next:()=>{
-      alert('deleted');
     },
     error:(err)=>{
       alert(err.message);
